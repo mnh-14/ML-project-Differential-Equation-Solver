@@ -4,15 +4,21 @@ import random
 import argparse
 import sys
 import constants as C
+from sympy import Piecewise
 
 # Define symbols
 x = sp.Symbol('x')
 y = sp.Function('y')(x)
 C1 = sp.Symbol('C1')
 
+piecewise_log = Piecewise(
+    (sp.log(x), x>0),
+    (sp.log(-x), x<0)
+)
+
 def get_complex_expr(var, complexity=2):
     """Generates varied mathematical expressions to avoid duplicates."""
-    basics = [var, var**2, sp.sin(var), sp.exp(var), sp.cos(var), sp.log(sp.Abs(var) + 1)]
+    basics = [var, var**2, sp.sin(var), sp.cos(var), sp.tan(var), sp.exp(var), sp.acos(var), sp.asin(var), sp.atan(var), piecewise_log]
     expr = random.choice(basics) * random.randint(1, 5)
     for _ in range(complexity - 1):
         other = random.choice(basics) + random.randint(1, 3)
