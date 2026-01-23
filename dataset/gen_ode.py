@@ -48,13 +48,18 @@ def generate_linear():
     
     mu_int = sp.integrate(P_x, x)
     mu = sp.exp(mu_int)
+
+    both_side_int = sp.integrate(mu*Q_x, x)
+
+    if (not both_side_int.has(sp.Integral) or not mu_int.has(sp.Integral)):
+        return None
     
     steps = [
         {C.STEP: "Identify", C.OP: "Find P(x)", C.RESULT: f"P(x) = {sp.latex(P_x)}"},
         {C.STEP: "Int Factor_Setup", C.OP: "Set mu = exp(int P dx)", C.RESULT: f"\\mu(x) = e^{{\\int {sp.latex(P_x)} dx}}"},
         {C.STEP: "Int Factor_Calc", C.OP: "Calculate mu", C.RESULT: f"\\mu(x) = {sp.latex(mu)}"},
         {C.STEP: "Multiply", C.OP: "Apply mu to ODE", C.RESULT: f"\\frac{{d}}{{dx}}({sp.latex(mu)}y) = {sp.latex(sp.simplify(mu*Q_x))}"},
-        {C.STEP: "Integrate", C.OP: "Integrate both sides", C.RESULT: f"{sp.latex(mu)}y = {sp.latex(sp.integrate(mu*Q_x, x))} + C_1"}
+        {C.STEP: "Integrate", C.OP: "Integrate both sides", C.RESULT: f"{sp.latex(mu)}y = {sp.latex(both_side_int)} + C_1"}
     ]
     return "First-Order Linear", ode, steps
 
