@@ -27,7 +27,7 @@ def make_latex_file(filename: str, savefilename: str = None):
             for step in item[Q_STEPS]:
                 strings.append("\\item " + step[STEP] + " :  $" + step[RESULT] + "$\n")
             strings.append("\\end{enumerate}\n")
-            strings.append("\\textbf{Final Result:} $" + ", ".join(item[SOLUTION]) + "$\n\n")
+            strings.append("\\textbf{Final Result:} $" + item[SOLUTION] + "$\n\n")
 
     savefilename = savefilename or filename.replace('.json', '.tex')
     with open(savefilename, 'w') as f:

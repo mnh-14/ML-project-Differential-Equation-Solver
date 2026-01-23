@@ -1,0 +1,1542 @@
+[
+    {
+        "id": 0,
+        "family": "First-Order Linear",
+        "equation": "2 y{\\left(x \\right)} \\cos{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = 2 x",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = 2 \\cos{\\left(x \\right)}"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int 2 \\cos{\\left(x \\right)} dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{2 \\sin{\\left(x \\right)}}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{2 \\sin{\\left(x \\right)}}y) = 2 x e^{2 \\sin{\\left(x \\right)}}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{2 \\sin{\\left(x \\right)}}y = 2 \\int x e^{2 \\sin{\\left(x \\right)}}\\, dx + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + 2 \\int x e^{2 \\sin{\\left(x \\right)}}\\, dx\\right) e^{- 2 \\sin{\\left(x \\right)}}"
+    },
+    {
+        "id": 1,
+        "family": "First-Order Linear",
+        "equation": "3 y{\\left(x \\right)} \\cos{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = 4 x^{2}",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = 3 \\cos{\\left(x \\right)}"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int 3 \\cos{\\left(x \\right)} dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{3 \\sin{\\left(x \\right)}}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{3 \\sin{\\left(x \\right)}}y) = 4 x^{2} e^{3 \\sin{\\left(x \\right)}}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{3 \\sin{\\left(x \\right)}}y = 4 \\int x^{2} e^{3 \\sin{\\left(x \\right)}}\\, dx + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + 4 \\int x^{2} e^{3 \\sin{\\left(x \\right)}}\\, dx\\right) e^{- 3 \\sin{\\left(x \\right)}}"
+    },
+    {
+        "id": 2,
+        "family": "Separable",
+        "equation": "\\frac{d}{d x} y{\\left(x \\right)} = \\left(x^{2} + \\sin{\\left(x \\right)} + 3\\right) e^{y{\\left(x \\right)}}",
+        "steps": [
+            {
+                "step": "Classify",
+                "op": "Separate Variables",
+                "result": "\\frac{1}{e^{y}} dy = x^{2} + \\sin{\\left(x \\right)} + 3 dx"
+            },
+            {
+                "step": "Integrate LHS",
+                "op": "Integrate Left Side",
+                "result": "- e^{- y}"
+            },
+            {
+                "step": "Integrate RHS",
+                "op": "Integrate Right Side",
+                "result": "\\frac{x^{3}}{3} + 3 x - \\cos{\\left(x \\right)} + C_1"
+            },
+            {
+                "step": "Solve",
+                "op": "Isolate y",
+                "result": "\\log{\\left(- \\frac{1}{C_{1} + x^{3} + 9 x - 3 \\cos{\\left(x \\right)}} \\right)} + \\log{\\left(3 \\right)}"
+            }
+        ],
+        "solution": "- e^{- y{\\left(x \\right)}} = C_{1} + \\frac{x^{3}}{3} + 3 x - \\cos{\\left(x \\right)}"
+    },
+    {
+        "id": 3,
+        "family": "First-Order Linear",
+        "equation": "y{\\left(x \\right)} \\log{\\left(\\left|{x}\\right| + 1 \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = 2 \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = \\log{\\left(\\left|{x}\\right| + 1 \\right)}"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int \\log{\\left(\\left|{x}\\right| + 1 \\right)} dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{\\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{\\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}y) = 2 \\left(e^{\\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}\\right) \\cos{\\left(x \\right)}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{\\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}y = 2 \\int \\left(e^{\\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}\\right) \\cos{\\left(x \\right)}\\, dx + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + 2 \\int \\left(e^{\\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}\\right) \\cos{\\left(x \\right)}\\, dx\\right) e^{- \\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}"
+    },
+    {
+        "id": 4,
+        "family": "Separable",
+        "equation": "\\frac{d}{d x} y{\\left(x \\right)} = \\left(x + 5 \\sin{\\left(x \\right)} + 3\\right) y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step": "Classify",
+                "op": "Separate Variables",
+                "result": "\\frac{1}{y} dy = x + 5 \\sin{\\left(x \\right)} + 3 dx"
+            },
+            {
+                "step": "Integrate LHS",
+                "op": "Integrate Left Side",
+                "result": "\\log{\\left(y \\right)}"
+            },
+            {
+                "step": "Integrate RHS",
+                "op": "Integrate Right Side",
+                "result": "\\frac{x^{2}}{2} + 3 x - 5 \\cos{\\left(x \\right)} + C_1"
+            },
+            {
+                "step": "Solve",
+                "op": "Isolate y",
+                "result": "C_{1} e^{\\frac{x^{2}}{2} + 3 x - 5 \\cos{\\left(x \\right)}}"
+            }
+        ],
+        "solution": "\\log{\\left(y{\\left(x \\right)} \\right)} = C_{1} + \\frac{x^{2}}{2} + 3 x - 5 \\cos{\\left(x \\right)}"
+    },
+    {
+        "id": 5,
+        "family": "First-Order Linear",
+        "equation": "x^{2} y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = 3 \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = x^{2}"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int x^{2} dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{\\frac{x^{3}}{3}}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{\\frac{x^{3}}{3}}y) = 3 e^{\\frac{x^{3}}{3}} \\sin{\\left(x \\right)}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{\\frac{x^{3}}{3}}y = 3 \\int e^{\\frac{x^{3}}{3}} \\sin{\\left(x \\right)}\\, dx + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + 3 \\int e^{\\frac{x^{3}}{3}} \\sin{\\left(x \\right)}\\, dx\\right) e^{- \\frac{x^{3}}{3}}"
+    },
+    {
+        "id": 6,
+        "family": "First-Order Linear",
+        "equation": "2 y{\\left(x \\right)} e^{x} + \\frac{d}{d x} y{\\left(x \\right)} = x^{2}",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = 2 e^{x}"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int 2 e^{x} dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{2 e^{x}}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{2 e^{x}}y) = x^{2} e^{2 e^{x}}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{2 e^{x}}y = \\int x^{2} e^{2 e^{x}}\\, dx + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + \\int x^{2} e^{2 e^{x}}\\, dx\\right) e^{- 2 e^{x}}"
+    },
+    {
+        "id": 7,
+        "family": "Separable",
+        "equation": "\\frac{d}{d x} y{\\left(x \\right)} = \\left(5 x^{2} + e^{x} + 2\\right) e^{y{\\left(x \\right)}}",
+        "steps": [
+            {
+                "step": "Classify",
+                "op": "Separate Variables",
+                "result": "\\frac{1}{e^{y}} dy = 5 x^{2} + e^{x} + 2 dx"
+            },
+            {
+                "step": "Integrate LHS",
+                "op": "Integrate Left Side",
+                "result": "- e^{- y}"
+            },
+            {
+                "step": "Integrate RHS",
+                "op": "Integrate Right Side",
+                "result": "\\frac{5 x^{3}}{3} + 2 x + e^{x} + C_1"
+            },
+            {
+                "step": "Solve",
+                "op": "Isolate y",
+                "result": "\\log{\\left(- \\frac{1}{C_{1} + 5 x^{3} + 6 x + 3 e^{x}} \\right)} + \\log{\\left(3 \\right)}"
+            }
+        ],
+        "solution": "- e^{- y{\\left(x \\right)}} = C_{1} + \\frac{5 x^{3}}{3} + 2 x + e^{x}"
+    },
+    {
+        "id": 8,
+        "family": "Separable",
+        "equation": "\\frac{d}{d x} y{\\left(x \\right)} = \\left(x^{2} + \\log{\\left(\\left|{x}\\right| + 1 \\right)} + 3\\right) y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step": "Classify",
+                "op": "Separate Variables",
+                "result": "\\frac{1}{y} dy = x^{2} + \\log{\\left(\\left|{x}\\right| + 1 \\right)} + 3 dx"
+            },
+            {
+                "step": "Integrate LHS",
+                "op": "Integrate Left Side",
+                "result": "\\log{\\left(y \\right)}"
+            },
+            {
+                "step": "Integrate RHS",
+                "op": "Integrate Right Side",
+                "result": "\\int \\left(x^{2} + \\log{\\left(\\left|{x}\\right| + 1 \\right)} + 3\\right)\\, dx + C_1"
+            },
+            {
+                "step": "Solve",
+                "op": "Isolate y",
+                "result": "C_{1} e^{\\frac{x^{3}}{3} + 3 x + \\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}"
+            }
+        ],
+        "solution": "\\log{\\left(y{\\left(x \\right)} \\right)} = C_{1} + \\int \\left(x^{2} + \\log{\\left(\\left|{x}\\right| + 1 \\right)} + 3\\right)\\, dx"
+    },
+    {
+        "id": 9,
+        "family": "First-Order Linear",
+        "equation": "5 x^{2} y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = 3 x",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = 5 x^{2}"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int 5 x^{2} dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{\\frac{5 x^{3}}{3}}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{\\frac{5 x^{3}}{3}}y) = 3 x e^{\\frac{5 x^{3}}{3}}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{\\frac{5 x^{3}}{3}}y = \\frac{2 \\cdot 3^{\\frac{2}{3}} \\sqrt[3]{5} e^{- \\frac{2 i \\pi}{3}} \\Gamma\\left(\\frac{2}{3}\\right) \\gamma\\left(\\frac{2}{3}, \\frac{5 x^{3} e^{i \\pi}}{3}\\right)}{15 \\Gamma\\left(\\frac{5}{3}\\right)} + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + \\frac{2 \\cdot 3^{\\frac{2}{3}} \\sqrt[3]{5} e^{- \\frac{2 i \\pi}{3}} \\Gamma\\left(\\frac{2}{3}\\right) \\gamma\\left(\\frac{2}{3}, \\frac{5 x^{3} e^{i \\pi}}{3}\\right)}{15 \\Gamma\\left(\\frac{5}{3}\\right)}\\right) e^{- \\frac{5 x^{3}}{3}}"
+    },
+    {
+        "id": 10,
+        "family": "First-Order Linear",
+        "equation": "4 x^{2} y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x^{2}",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = 4 x^{2}"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int 4 x^{2} dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{\\frac{4 x^{3}}{3}}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{\\frac{4 x^{3}}{3}}y) = x^{2} e^{\\frac{4 x^{3}}{3}}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{\\frac{4 x^{3}}{3}}y = \\frac{e^{\\frac{4 x^{3}}{3}}}{4} + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + \\frac{e^{\\frac{4 x^{3}}{3}}}{4}\\right) e^{- \\frac{4 x^{3}}{3}}"
+    },
+    {
+        "id": 11,
+        "family": "Separable",
+        "equation": "\\frac{d}{d x} y{\\left(x \\right)} = \\left(3 \\sin{\\left(x \\right)} + 1\\right) y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step": "Classify",
+                "op": "Separate Variables",
+                "result": "\\frac{1}{y} dy = 3 \\sin{\\left(x \\right)} + 1 dx"
+            },
+            {
+                "step": "Integrate LHS",
+                "op": "Integrate Left Side",
+                "result": "\\log{\\left(y \\right)}"
+            },
+            {
+                "step": "Integrate RHS",
+                "op": "Integrate Right Side",
+                "result": "x - 3 \\cos{\\left(x \\right)} + C_1"
+            },
+            {
+                "step": "Solve",
+                "op": "Isolate y",
+                "result": "C_{1} e^{x - 3 \\cos{\\left(x \\right)}}"
+            }
+        ],
+        "solution": "\\log{\\left(y{\\left(x \\right)} \\right)} = C_{1} + x - 3 \\cos{\\left(x \\right)}"
+    },
+    {
+        "id": 12,
+        "family": "Separable",
+        "equation": "\\frac{d}{d x} y{\\left(x \\right)} = \\left(5 x^{2} + 15\\right) e^{y{\\left(x \\right)}} \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step": "Classify",
+                "op": "Separate Variables",
+                "result": "\\frac{1}{e^{y}} dy = \\left(5 x^{2} + 15\\right) \\sin{\\left(x \\right)} dx"
+            },
+            {
+                "step": "Integrate LHS",
+                "op": "Integrate Left Side",
+                "result": "- e^{- y}"
+            },
+            {
+                "step": "Integrate RHS",
+                "op": "Integrate Right Side",
+                "result": "- 5 x^{2} \\cos{\\left(x \\right)} + 10 x \\sin{\\left(x \\right)} - 5 \\cos{\\left(x \\right)} + C_1"
+            },
+            {
+                "step": "Solve",
+                "op": "Isolate y",
+                "result": "\\log{\\left(\\frac{1}{C_{1} + 5 x^{2} \\cos{\\left(x \\right)} - 10 x \\sin{\\left(x \\right)} + 5 \\cos{\\left(x \\right)}} \\right)}"
+            }
+        ],
+        "solution": "- e^{- y{\\left(x \\right)}} = C_{1} - 5 x^{2} \\cos{\\left(x \\right)} + 10 x \\sin{\\left(x \\right)} - 5 \\cos{\\left(x \\right)}"
+    },
+    {
+        "id": 13,
+        "family": "Separable",
+        "equation": "\\frac{d}{d x} y{\\left(x \\right)} = 5 x \\left(x^{2} + 3\\right) y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step": "Classify",
+                "op": "Separate Variables",
+                "result": "\\frac{1}{y^{2}} dy = 5 x \\left(x^{2} + 3\\right) dx"
+            },
+            {
+                "step": "Integrate LHS",
+                "op": "Integrate Left Side",
+                "result": "- \\frac{1}{y}"
+            },
+            {
+                "step": "Integrate RHS",
+                "op": "Integrate Right Side",
+                "result": "\\frac{5 x^{4}}{4} + \\frac{15 x^{2}}{2} + C_1"
+            },
+            {
+                "step": "Solve",
+                "op": "Isolate y",
+                "result": "- \\frac{4}{C_{1} + 5 x^{4} + 30 x^{2}}"
+            }
+        ],
+        "solution": "- \\frac{1}{y{\\left(x \\right)}} = C_{1} + \\frac{5 x^{4}}{4} + \\frac{15 x^{2}}{2}"
+    },
+    {
+        "id": 14,
+        "family": "Separable",
+        "equation": "\\frac{d}{d x} y{\\left(x \\right)} = \\left(x^{2} + e^{x} + 3\\right) e^{y{\\left(x \\right)}}",
+        "steps": [
+            {
+                "step": "Classify",
+                "op": "Separate Variables",
+                "result": "\\frac{1}{e^{y}} dy = x^{2} + e^{x} + 3 dx"
+            },
+            {
+                "step": "Integrate LHS",
+                "op": "Integrate Left Side",
+                "result": "- e^{- y}"
+            },
+            {
+                "step": "Integrate RHS",
+                "op": "Integrate Right Side",
+                "result": "\\frac{x^{3}}{3} + 3 x + e^{x} + C_1"
+            },
+            {
+                "step": "Solve",
+                "op": "Isolate y",
+                "result": "\\log{\\left(- \\frac{1}{C_{1} + x^{3} + 9 x + 3 e^{x}} \\right)} + \\log{\\left(3 \\right)}"
+            }
+        ],
+        "solution": "- e^{- y{\\left(x \\right)}} = C_{1} + \\frac{x^{3}}{3} + 3 x + e^{x}"
+    },
+    {
+        "id": 15,
+        "family": "First-Order Linear",
+        "equation": "y{\\left(x \\right)} \\log{\\left(\\left|{x}\\right| + 1 \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = 5 \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = \\log{\\left(\\left|{x}\\right| + 1 \\right)}"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int \\log{\\left(\\left|{x}\\right| + 1 \\right)} dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{\\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{\\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}y) = 5 \\left(e^{\\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}\\right) \\sin{\\left(x \\right)}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{\\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}y = 5 \\int \\left(e^{\\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}\\right) \\sin{\\left(x \\right)}\\, dx + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + 5 \\int \\left(e^{\\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}\\right) \\sin{\\left(x \\right)}\\, dx\\right) e^{- \\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}"
+    },
+    {
+        "id": 16,
+        "family": "First-Order Linear",
+        "equation": "x^{2} y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\log{\\left(\\left|{x}\\right| + 1 \\right)}",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = x^{2}"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int x^{2} dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{\\frac{x^{3}}{3}}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{\\frac{x^{3}}{3}}y) = e^{\\frac{x^{3}}{3}} \\log{\\left(\\left|{x}\\right| + 1 \\right)}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{\\frac{x^{3}}{3}}y = \\int e^{\\frac{x^{3}}{3}} \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + \\int e^{\\frac{x^{3}}{3}} \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx\\right) e^{- \\frac{x^{3}}{3}}"
+    },
+    {
+        "id": 17,
+        "family": "First-Order Linear",
+        "equation": "5 y{\\left(x \\right)} \\cos{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = 4 e^{x}",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = 5 \\cos{\\left(x \\right)}"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int 5 \\cos{\\left(x \\right)} dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{5 \\sin{\\left(x \\right)}}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{5 \\sin{\\left(x \\right)}}y) = 4 e^{x + 5 \\sin{\\left(x \\right)}}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{5 \\sin{\\left(x \\right)}}y = 4 \\int e^{x} e^{5 \\sin{\\left(x \\right)}}\\, dx + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + 4 \\int e^{x} e^{5 \\sin{\\left(x \\right)}}\\, dx\\right) e^{- 5 \\sin{\\left(x \\right)}}"
+    },
+    {
+        "id": 18,
+        "family": "Separable",
+        "equation": "\\frac{d}{d x} y{\\left(x \\right)} = \\left(3 e^{x} + 9\\right) y^{2}{\\left(x \\right)} \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step": "Classify",
+                "op": "Separate Variables",
+                "result": "\\frac{1}{y^{2}} dy = \\left(3 e^{x} + 9\\right) \\cos{\\left(x \\right)} dx"
+            },
+            {
+                "step": "Integrate LHS",
+                "op": "Integrate Left Side",
+                "result": "- \\frac{1}{y}"
+            },
+            {
+                "step": "Integrate RHS",
+                "op": "Integrate Right Side",
+                "result": "\\frac{3 e^{x} \\sin{\\left(x \\right)}}{2} + \\frac{3 e^{x} \\cos{\\left(x \\right)}}{2} + 9 \\sin{\\left(x \\right)} + C_1"
+            },
+            {
+                "step": "Solve",
+                "op": "Isolate y",
+                "result": "- \\frac{2}{C_{1} + 3 \\sqrt{2} e^{x} \\sin{\\left(x + \\frac{\\pi}{4} \\right)} + 18 \\sin{\\left(x \\right)}}"
+            }
+        ],
+        "solution": "- \\frac{1}{y{\\left(x \\right)}} = C_{1} + \\frac{3 e^{x} \\sin{\\left(x \\right)}}{2} + \\frac{3 e^{x} \\cos{\\left(x \\right)}}{2} + 9 \\sin{\\left(x \\right)}"
+    },
+    {
+        "id": 19,
+        "family": "First-Order Linear",
+        "equation": "3 x^{2} y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = 4 \\log{\\left(\\left|{x}\\right| + 1 \\right)}",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = 3 x^{2}"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int 3 x^{2} dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{x^{3}}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{x^{3}}y) = 4 e^{x^{3}} \\log{\\left(\\left|{x}\\right| + 1 \\right)}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{x^{3}}y = 4 \\int e^{x^{3}} \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + 4 \\int e^{x^{3}} \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx\\right) e^{- x^{3}}"
+    },
+    {
+        "id": 20,
+        "family": "Separable",
+        "equation": "\\frac{d}{d x} y{\\left(x \\right)} = \\left(3 \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)} + 2\\right) y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step": "Classify",
+                "op": "Separate Variables",
+                "result": "\\frac{1}{y^{2}} dy = 3 \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)} + 2 dx"
+            },
+            {
+                "step": "Integrate LHS",
+                "op": "Integrate Left Side",
+                "result": "- \\frac{1}{y}"
+            },
+            {
+                "step": "Integrate RHS",
+                "op": "Integrate Right Side",
+                "result": "2 x + \\sin{\\left(x \\right)} - 3 \\cos{\\left(x \\right)} + C_1"
+            },
+            {
+                "step": "Solve",
+                "op": "Isolate y",
+                "result": "- \\frac{1}{C_{1} + 2 x + \\sin{\\left(x \\right)} - 3 \\cos{\\left(x \\right)}}"
+            }
+        ],
+        "solution": "- \\frac{1}{y{\\left(x \\right)}} = C_{1} + 2 x + \\sin{\\left(x \\right)} - 3 \\cos{\\left(x \\right)}"
+    },
+    {
+        "id": 21,
+        "family": "First-Order Linear",
+        "equation": "4 y{\\left(x \\right)} e^{x} + \\frac{d}{d x} y{\\left(x \\right)} = 4 x",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = 4 e^{x}"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int 4 e^{x} dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{4 e^{x}}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{4 e^{x}}y) = 4 x e^{4 e^{x}}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{4 e^{x}}y = 4 \\int x e^{4 e^{x}}\\, dx + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + 4 \\int x e^{4 e^{x}}\\, dx\\right) e^{- 4 e^{x}}"
+    },
+    {
+        "id": 22,
+        "family": "Separable",
+        "equation": "\\frac{d}{d x} y{\\left(x \\right)} = 5 \\left(x + 2\\right) y{\\left(x \\right)} e^{x}",
+        "steps": [
+            {
+                "step": "Classify",
+                "op": "Separate Variables",
+                "result": "\\frac{1}{y} dy = 5 \\left(x + 2\\right) e^{x} dx"
+            },
+            {
+                "step": "Integrate LHS",
+                "op": "Integrate Left Side",
+                "result": "\\log{\\left(y \\right)}"
+            },
+            {
+                "step": "Integrate RHS",
+                "op": "Integrate Right Side",
+                "result": "\\left(5 x + 5\\right) e^{x} + C_1"
+            },
+            {
+                "step": "Solve",
+                "op": "Isolate y",
+                "result": "C_{1} e^{5 \\left(x + 1\\right) e^{x}}"
+            }
+        ],
+        "solution": "\\log{\\left(y{\\left(x \\right)} \\right)} = C_{1} + \\left(5 x + 5\\right) e^{x}"
+    },
+    {
+        "id": 23,
+        "family": "First-Order Linear",
+        "equation": "2 y{\\left(x \\right)} \\cos{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = 2 e^{x}",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = 2 \\cos{\\left(x \\right)}"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int 2 \\cos{\\left(x \\right)} dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{2 \\sin{\\left(x \\right)}}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{2 \\sin{\\left(x \\right)}}y) = 2 e^{x + 2 \\sin{\\left(x \\right)}}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{2 \\sin{\\left(x \\right)}}y = 2 \\int e^{x} e^{2 \\sin{\\left(x \\right)}}\\, dx + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + 2 \\int e^{x} e^{2 \\sin{\\left(x \\right)}}\\, dx\\right) e^{- 2 \\sin{\\left(x \\right)}}"
+    },
+    {
+        "id": 24,
+        "family": "First-Order Linear",
+        "equation": "4 y{\\left(x \\right)} \\log{\\left(\\left|{x}\\right| + 1 \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = 3 \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = 4 \\log{\\left(\\left|{x}\\right| + 1 \\right)}"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int 4 \\log{\\left(\\left|{x}\\right| + 1 \\right)} dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{4 \\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{4 \\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}y) = 3 \\left(e^{4 \\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}\\right) \\cos{\\left(x \\right)}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{4 \\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}y = 3 \\int \\left(e^{4 \\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}\\right) \\cos{\\left(x \\right)}\\, dx + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + 3 \\int \\left(e^{4 \\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}\\right) \\cos{\\left(x \\right)}\\, dx\\right) e^{- 4 \\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}"
+    },
+    {
+        "id": 25,
+        "family": "Separable",
+        "equation": "\\frac{d}{d x} y{\\left(x \\right)} = \\left(\\sin{\\left(x \\right)} + 1\\right) e^{x} e^{y{\\left(x \\right)}}",
+        "steps": [
+            {
+                "step": "Classify",
+                "op": "Separate Variables",
+                "result": "\\frac{1}{e^{y}} dy = \\left(\\sin{\\left(x \\right)} + 1\\right) e^{x} dx"
+            },
+            {
+                "step": "Integrate LHS",
+                "op": "Integrate Left Side",
+                "result": "- e^{- y}"
+            },
+            {
+                "step": "Integrate RHS",
+                "op": "Integrate Right Side",
+                "result": "\\frac{e^{x} \\sin{\\left(x \\right)}}{2} - \\frac{e^{x} \\cos{\\left(x \\right)}}{2} + e^{x} + C_1"
+            },
+            {
+                "step": "Solve",
+                "op": "Isolate y",
+                "result": "\\log{\\left(- \\frac{1}{C_{1} + e^{x} \\sin{\\left(x \\right)} - e^{x} \\cos{\\left(x \\right)} + 2 e^{x}} \\right)} + \\log{\\left(2 \\right)}"
+            }
+        ],
+        "solution": "- e^{- y{\\left(x \\right)}} = C_{1} + \\frac{e^{x} \\sin{\\left(x \\right)}}{2} - \\frac{e^{x} \\cos{\\left(x \\right)}}{2} + e^{x}"
+    },
+    {
+        "id": 26,
+        "family": "First-Order Linear",
+        "equation": "2 x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = 2 x",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = 2 x"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int 2 x dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{x^{2}}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{x^{2}}y) = 2 x e^{x^{2}}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{x^{2}}y = e^{x^{2}} + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + e^{x^{2}}\\right) e^{- x^{2}}"
+    },
+    {
+        "id": 27,
+        "family": "First-Order Linear",
+        "equation": "3 y{\\left(x \\right)} \\sin{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = 4 \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = 3 \\sin{\\left(x \\right)}"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int 3 \\sin{\\left(x \\right)} dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{- 3 \\cos{\\left(x \\right)}}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{- 3 \\cos{\\left(x \\right)}}y) = 4 e^{- 3 \\cos{\\left(x \\right)}} \\sin{\\left(x \\right)}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{- 3 \\cos{\\left(x \\right)}}y = \\frac{4 e^{- 3 \\cos{\\left(x \\right)}}}{3} + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + \\frac{4 e^{- 3 \\cos{\\left(x \\right)}}}{3}\\right) e^{3 \\cos{\\left(x \\right)}}"
+    },
+    {
+        "id": 28,
+        "family": "Separable",
+        "equation": "\\frac{d}{d x} y{\\left(x \\right)} = \\left(x + \\sin{\\left(x \\right)} + 1\\right) e^{y{\\left(x \\right)}}",
+        "steps": [
+            {
+                "step": "Classify",
+                "op": "Separate Variables",
+                "result": "\\frac{1}{e^{y}} dy = x + \\sin{\\left(x \\right)} + 1 dx"
+            },
+            {
+                "step": "Integrate LHS",
+                "op": "Integrate Left Side",
+                "result": "- e^{- y}"
+            },
+            {
+                "step": "Integrate RHS",
+                "op": "Integrate Right Side",
+                "result": "\\frac{x^{2}}{2} + x - \\cos{\\left(x \\right)} + C_1"
+            },
+            {
+                "step": "Solve",
+                "op": "Isolate y",
+                "result": "\\log{\\left(- \\frac{1}{C_{1} + x^{2} + 2 x - 2 \\cos{\\left(x \\right)}} \\right)} + \\log{\\left(2 \\right)}"
+            }
+        ],
+        "solution": "- e^{- y{\\left(x \\right)}} = C_{1} + \\frac{x^{2}}{2} + x - \\cos{\\left(x \\right)}"
+    },
+    {
+        "id": 29,
+        "family": "First-Order Linear",
+        "equation": "4 y{\\left(x \\right)} \\sin{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = 5 \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = 4 \\sin{\\left(x \\right)}"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int 4 \\sin{\\left(x \\right)} dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{- 4 \\cos{\\left(x \\right)}}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{- 4 \\cos{\\left(x \\right)}}y) = 5 e^{- 4 \\cos{\\left(x \\right)}} \\sin{\\left(x \\right)}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{- 4 \\cos{\\left(x \\right)}}y = \\frac{5 e^{- 4 \\cos{\\left(x \\right)}}}{4} + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + \\frac{5 e^{- 4 \\cos{\\left(x \\right)}}}{4}\\right) e^{4 \\cos{\\left(x \\right)}}"
+    },
+    {
+        "id": 30,
+        "family": "Separable",
+        "equation": "\\frac{d}{d x} y{\\left(x \\right)} = \\left(4 x + \\sin{\\left(x \\right)} + 2\\right) y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step": "Classify",
+                "op": "Separate Variables",
+                "result": "\\frac{1}{y} dy = 4 x + \\sin{\\left(x \\right)} + 2 dx"
+            },
+            {
+                "step": "Integrate LHS",
+                "op": "Integrate Left Side",
+                "result": "\\log{\\left(y \\right)}"
+            },
+            {
+                "step": "Integrate RHS",
+                "op": "Integrate Right Side",
+                "result": "2 x^{2} + 2 x - \\cos{\\left(x \\right)} + C_1"
+            },
+            {
+                "step": "Solve",
+                "op": "Isolate y",
+                "result": "C_{1} e^{2 x^{2} + 2 x - \\cos{\\left(x \\right)}}"
+            }
+        ],
+        "solution": "\\log{\\left(y{\\left(x \\right)} \\right)} = C_{1} + 2 x^{2} + 2 x - \\cos{\\left(x \\right)}"
+    },
+    {
+        "id": 31,
+        "family": "Separable",
+        "equation": "\\frac{d}{d x} y{\\left(x \\right)} = 4 \\left(\\sin{\\left(x \\right)} + 1\\right) y^{2}{\\left(x \\right)} \\log{\\left(\\left|{x}\\right| + 1 \\right)}",
+        "steps": [
+            {
+                "step": "Classify",
+                "op": "Separate Variables",
+                "result": "\\frac{1}{y^{2}} dy = 4 \\left(\\sin{\\left(x \\right)} + 1\\right) \\log{\\left(\\left|{x}\\right| + 1 \\right)} dx"
+            },
+            {
+                "step": "Integrate LHS",
+                "op": "Integrate Left Side",
+                "result": "- \\frac{1}{y}"
+            },
+            {
+                "step": "Integrate RHS",
+                "op": "Integrate Right Side",
+                "result": "4 \\left(\\int \\log{\\left(\\left|{x}\\right| + 1 \\right)} \\sin{\\left(x \\right)}\\, dx + \\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx\\right) + C_1"
+            },
+            {
+                "step": "Solve",
+                "op": "Isolate y",
+                "result": "- \\frac{1}{C_{1} + 4 \\int \\log{\\left(\\left|{x}\\right| + 1 \\right)} \\sin{\\left(x \\right)}\\, dx + 4 \\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}"
+            }
+        ],
+        "solution": "- \\frac{1}{y{\\left(x \\right)}} = C_{1} + 4 \\left(\\int \\log{\\left(\\left|{x}\\right| + 1 \\right)} \\sin{\\left(x \\right)}\\, dx + \\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx\\right)"
+    },
+    {
+        "id": 32,
+        "family": "Separable",
+        "equation": "\\frac{d}{d x} y{\\left(x \\right)} = \\left(\\log{\\left(\\left|{x}\\right| + 1 \\right)} + 4 \\sin{\\left(x \\right)} + 2\\right) y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step": "Classify",
+                "op": "Separate Variables",
+                "result": "\\frac{1}{y^{2}} dy = \\log{\\left(\\left|{x}\\right| + 1 \\right)} + 4 \\sin{\\left(x \\right)} + 2 dx"
+            },
+            {
+                "step": "Integrate LHS",
+                "op": "Integrate Left Side",
+                "result": "- \\frac{1}{y}"
+            },
+            {
+                "step": "Integrate RHS",
+                "op": "Integrate Right Side",
+                "result": "\\int \\left(\\log{\\left(\\left|{x}\\right| + 1 \\right)} + 4 \\sin{\\left(x \\right)} + 2\\right)\\, dx + C_1"
+            },
+            {
+                "step": "Solve",
+                "op": "Isolate y",
+                "result": "- \\frac{1}{C_{1} + 2 x + \\int \\left(\\log{\\left(\\left|{x}\\right| + 1 \\right)} + 4 \\sin{\\left(x \\right)}\\right)\\, dx}"
+            }
+        ],
+        "solution": "- \\frac{1}{y{\\left(x \\right)}} = C_{1} + \\int \\left(\\log{\\left(\\left|{x}\\right| + 1 \\right)} + 4 \\sin{\\left(x \\right)} + 2\\right)\\, dx"
+    },
+    {
+        "id": 33,
+        "family": "Separable",
+        "equation": "\\frac{d}{d x} y{\\left(x \\right)} = \\left(6 \\log{\\left(\\left|{x}\\right| + 1 \\right)} + 3\\right) e^{y{\\left(x \\right)}}",
+        "steps": [
+            {
+                "step": "Classify",
+                "op": "Separate Variables",
+                "result": "\\frac{1}{e^{y}} dy = 6 \\log{\\left(\\left|{x}\\right| + 1 \\right)} + 3 dx"
+            },
+            {
+                "step": "Integrate LHS",
+                "op": "Integrate Left Side",
+                "result": "- e^{- y}"
+            },
+            {
+                "step": "Integrate RHS",
+                "op": "Integrate Right Side",
+                "result": "3 \\left(\\int 1\\, dx + \\int 2 \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx\\right) + C_1"
+            },
+            {
+                "step": "Solve",
+                "op": "Isolate y",
+                "result": "\\log{\\left(- \\frac{1}{C_{1} + 3 x + 6 \\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx} \\right)}"
+            }
+        ],
+        "solution": "- e^{- y{\\left(x \\right)}} = C_{1} + 3 \\left(\\int 1\\, dx + \\int 2 \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx\\right)"
+    },
+    {
+        "id": 34,
+        "family": "First-Order Linear",
+        "equation": "3 x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = e^{x}",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = 3 x"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int 3 x dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{\\frac{3 x^{2}}{2}}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{\\frac{3 x^{2}}{2}}y) = e^{\\frac{x \\left(3 x + 2\\right)}{2}}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{\\frac{3 x^{2}}{2}}y = \\int e^{x} e^{\\frac{3 x^{2}}{2}}\\, dx + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + \\int e^{x} e^{\\frac{3 x^{2}}{2}}\\, dx\\right) e^{- \\frac{3 x^{2}}{2}}"
+    },
+    {
+        "id": 35,
+        "family": "Separable",
+        "equation": "\\frac{d}{d x} y{\\left(x \\right)} = \\left(3 x^{2} + 2\\right) e^{y{\\left(x \\right)}}",
+        "steps": [
+            {
+                "step": "Classify",
+                "op": "Separate Variables",
+                "result": "\\frac{1}{e^{y}} dy = 3 x^{2} + 2 dx"
+            },
+            {
+                "step": "Integrate LHS",
+                "op": "Integrate Left Side",
+                "result": "- e^{- y}"
+            },
+            {
+                "step": "Integrate RHS",
+                "op": "Integrate Right Side",
+                "result": "x^{3} + 2 x + C_1"
+            },
+            {
+                "step": "Solve",
+                "op": "Isolate y",
+                "result": "\\log{\\left(- \\frac{1}{C_{1} + x^{3} + 2 x} \\right)}"
+            }
+        ],
+        "solution": "- e^{- y{\\left(x \\right)}} = C_{1} + x^{3} + 2 x"
+    },
+    {
+        "id": 36,
+        "family": "Separable",
+        "equation": "\\frac{d}{d x} y{\\left(x \\right)} = \\left(5 x + \\cos{\\left(x \\right)} + 3\\right) y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step": "Classify",
+                "op": "Separate Variables",
+                "result": "\\frac{1}{y^{2}} dy = 5 x + \\cos{\\left(x \\right)} + 3 dx"
+            },
+            {
+                "step": "Integrate LHS",
+                "op": "Integrate Left Side",
+                "result": "- \\frac{1}{y}"
+            },
+            {
+                "step": "Integrate RHS",
+                "op": "Integrate Right Side",
+                "result": "\\frac{5 x^{2}}{2} + 3 x + \\sin{\\left(x \\right)} + C_1"
+            },
+            {
+                "step": "Solve",
+                "op": "Isolate y",
+                "result": "- \\frac{2}{C_{1} + 5 x^{2} + 6 x + 2 \\sin{\\left(x \\right)}}"
+            }
+        ],
+        "solution": "- \\frac{1}{y{\\left(x \\right)}} = C_{1} + \\frac{5 x^{2}}{2} + 3 x + \\sin{\\left(x \\right)}"
+    },
+    {
+        "id": 37,
+        "family": "First-Order Linear",
+        "equation": "5 y{\\left(x \\right)} \\log{\\left(\\left|{x}\\right| + 1 \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = 5 \\log{\\left(\\left|{x}\\right| + 1 \\right)}"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int 5 \\log{\\left(\\left|{x}\\right| + 1 \\right)} dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{5 \\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{5 \\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}y) = x e^{5 \\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{5 \\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}y = \\int x e^{5 \\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}\\, dx + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + \\int x e^{5 \\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}\\, dx\\right) e^{- 5 \\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}"
+    },
+    {
+        "id": 38,
+        "family": "First-Order Linear",
+        "equation": "y{\\left(x \\right)} \\cos{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = 3 \\log{\\left(\\left|{x}\\right| + 1 \\right)}",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = \\cos{\\left(x \\right)}"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int \\cos{\\left(x \\right)} dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{\\sin{\\left(x \\right)}}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{\\sin{\\left(x \\right)}}y) = 3 e^{\\sin{\\left(x \\right)}} \\log{\\left(\\left|{x}\\right| + 1 \\right)}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{\\sin{\\left(x \\right)}}y = 3 \\int e^{\\sin{\\left(x \\right)}} \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + 3 \\int e^{\\sin{\\left(x \\right)}} \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx\\right) e^{- \\sin{\\left(x \\right)}}"
+    },
+    {
+        "id": 39,
+        "family": "First-Order Linear",
+        "equation": "3 y{\\left(x \\right)} \\cos{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = 4 x",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = 3 \\cos{\\left(x \\right)}"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int 3 \\cos{\\left(x \\right)} dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{3 \\sin{\\left(x \\right)}}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{3 \\sin{\\left(x \\right)}}y) = 4 x e^{3 \\sin{\\left(x \\right)}}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{3 \\sin{\\left(x \\right)}}y = 4 \\int x e^{3 \\sin{\\left(x \\right)}}\\, dx + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + 4 \\int x e^{3 \\sin{\\left(x \\right)}}\\, dx\\right) e^{- 3 \\sin{\\left(x \\right)}}"
+    },
+    {
+        "id": 40,
+        "family": "First-Order Linear",
+        "equation": "2 x^{2} y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = 2 \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = 2 x^{2}"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int 2 x^{2} dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{\\frac{2 x^{3}}{3}}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{\\frac{2 x^{3}}{3}}y) = 2 e^{\\frac{2 x^{3}}{3}} \\sin{\\left(x \\right)}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{\\frac{2 x^{3}}{3}}y = 2 \\int e^{\\frac{2 x^{3}}{3}} \\sin{\\left(x \\right)}\\, dx + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + 2 \\int e^{\\frac{2 x^{3}}{3}} \\sin{\\left(x \\right)}\\, dx\\right) e^{- \\frac{2 x^{3}}{3}}"
+    },
+    {
+        "id": 41,
+        "family": "Separable",
+        "equation": "\\frac{d}{d x} y{\\left(x \\right)} = \\left(5 x^{2} + \\log{\\left(\\left|{x}\\right| + 1 \\right)} + 2\\right) e^{y{\\left(x \\right)}}",
+        "steps": [
+            {
+                "step": "Classify",
+                "op": "Separate Variables",
+                "result": "\\frac{1}{e^{y}} dy = 5 x^{2} + \\log{\\left(\\left|{x}\\right| + 1 \\right)} + 2 dx"
+            },
+            {
+                "step": "Integrate LHS",
+                "op": "Integrate Left Side",
+                "result": "- e^{- y}"
+            },
+            {
+                "step": "Integrate RHS",
+                "op": "Integrate Right Side",
+                "result": "\\int \\left(5 x^{2} + \\log{\\left(\\left|{x}\\right| + 1 \\right)} + 2\\right)\\, dx + C_1"
+            },
+            {
+                "step": "Solve",
+                "op": "Isolate y",
+                "result": "\\log{\\left(- \\frac{1}{C_{1} + \\frac{5 x^{3}}{3} + 2 x + \\int \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx} \\right)}"
+            }
+        ],
+        "solution": "- e^{- y{\\left(x \\right)}} = C_{1} + \\int \\left(5 x^{2} + \\log{\\left(\\left|{x}\\right| + 1 \\right)} + 2\\right)\\, dx"
+    },
+    {
+        "id": 42,
+        "family": "First-Order Linear",
+        "equation": "5 x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = 5 \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = 5 x"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int 5 x dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{\\frac{5 x^{2}}{2}}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{\\frac{5 x^{2}}{2}}y) = 5 e^{\\frac{5 x^{2}}{2}} \\sin{\\left(x \\right)}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{\\frac{5 x^{2}}{2}}y = 5 \\int e^{\\frac{5 x^{2}}{2}} \\sin{\\left(x \\right)}\\, dx + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + 5 \\int e^{\\frac{5 x^{2}}{2}} \\sin{\\left(x \\right)}\\, dx\\right) e^{- \\frac{5 x^{2}}{2}}"
+    },
+    {
+        "id": 43,
+        "family": "Separable",
+        "equation": "\\frac{d}{d x} y{\\left(x \\right)} = 4 x \\left(x^{2} + 2\\right) y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step": "Classify",
+                "op": "Separate Variables",
+                "result": "\\frac{1}{y^{2}} dy = 4 x \\left(x^{2} + 2\\right) dx"
+            },
+            {
+                "step": "Integrate LHS",
+                "op": "Integrate Left Side",
+                "result": "- \\frac{1}{y}"
+            },
+            {
+                "step": "Integrate RHS",
+                "op": "Integrate Right Side",
+                "result": "x^{4} + 4 x^{2} + C_1"
+            },
+            {
+                "step": "Solve",
+                "op": "Isolate y",
+                "result": "- \\frac{1}{C_{1} + x^{4} + 4 x^{2}}"
+            }
+        ],
+        "solution": "- \\frac{1}{y{\\left(x \\right)}} = C_{1} + x^{4} + 4 x^{2}"
+    },
+    {
+        "id": 44,
+        "family": "First-Order Linear",
+        "equation": "y{\\left(x \\right)} \\cos{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = 2 \\log{\\left(\\left|{x}\\right| + 1 \\right)}",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = \\cos{\\left(x \\right)}"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int \\cos{\\left(x \\right)} dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{\\sin{\\left(x \\right)}}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{\\sin{\\left(x \\right)}}y) = 2 e^{\\sin{\\left(x \\right)}} \\log{\\left(\\left|{x}\\right| + 1 \\right)}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{\\sin{\\left(x \\right)}}y = 2 \\int e^{\\sin{\\left(x \\right)}} \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + 2 \\int e^{\\sin{\\left(x \\right)}} \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx\\right) e^{- \\sin{\\left(x \\right)}}"
+    },
+    {
+        "id": 45,
+        "family": "First-Order Linear",
+        "equation": "4 y{\\left(x \\right)} \\sin{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = 2 \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = 4 \\sin{\\left(x \\right)}"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int 4 \\sin{\\left(x \\right)} dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{- 4 \\cos{\\left(x \\right)}}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{- 4 \\cos{\\left(x \\right)}}y) = 2 e^{- 4 \\cos{\\left(x \\right)}} \\sin{\\left(x \\right)}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{- 4 \\cos{\\left(x \\right)}}y = \\frac{e^{- 4 \\cos{\\left(x \\right)}}}{2} + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + \\frac{e^{- 4 \\cos{\\left(x \\right)}}}{2}\\right) e^{4 \\cos{\\left(x \\right)}}"
+    },
+    {
+        "id": 46,
+        "family": "Separable",
+        "equation": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} \\left(\\log{\\left(\\left|{x}\\right| + 1 \\right)} + 3\\right) y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step": "Classify",
+                "op": "Separate Variables",
+                "result": "\\frac{1}{y} dy = x^{2} \\left(\\log{\\left(\\left|{x}\\right| + 1 \\right)} + 3\\right) dx"
+            },
+            {
+                "step": "Integrate LHS",
+                "op": "Integrate Left Side",
+                "result": "\\log{\\left(y \\right)}"
+            },
+            {
+                "step": "Integrate RHS",
+                "op": "Integrate Right Side",
+                "result": "\\int x^{2} \\left(\\log{\\left(\\left|{x}\\right| + 1 \\right)} + 3\\right)\\, dx + C_1"
+            },
+            {
+                "step": "Solve",
+                "op": "Isolate y",
+                "result": "C_{1} e^{x^{3} + \\int x^{2} \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx}"
+            }
+        ],
+        "solution": "\\log{\\left(y{\\left(x \\right)} \\right)} = C_{1} + \\int x^{2} \\left(\\log{\\left(\\left|{x}\\right| + 1 \\right)} + 3\\right)\\, dx"
+    },
+    {
+        "id": 47,
+        "family": "First-Order Linear",
+        "equation": "3 x^{2} y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = 3 x^{2}"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int 3 x^{2} dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{x^{3}}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{x^{3}}y) = e^{x^{3}} \\sin{\\left(x \\right)}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{x^{3}}y = \\int e^{x^{3}} \\sin{\\left(x \\right)}\\, dx + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + \\int e^{x^{3}} \\sin{\\left(x \\right)}\\, dx\\right) e^{- x^{3}}"
+    },
+    {
+        "id": 48,
+        "family": "First-Order Linear",
+        "equation": "3 y{\\left(x \\right)} e^{x} + \\frac{d}{d x} y{\\left(x \\right)} = 5 \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = 3 e^{x}"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int 3 e^{x} dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{3 e^{x}}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{3 e^{x}}y) = 5 e^{3 e^{x}} \\cos{\\left(x \\right)}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{3 e^{x}}y = 5 \\int e^{3 e^{x}} \\cos{\\left(x \\right)}\\, dx + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + 5 \\int e^{3 e^{x}} \\cos{\\left(x \\right)}\\, dx\\right) e^{- 3 e^{x}}"
+    },
+    {
+        "id": 49,
+        "family": "First-Order Linear",
+        "equation": "3 x^{2} y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = 5 \\log{\\left(\\left|{x}\\right| + 1 \\right)}",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find P(x)",
+                "result": "P(x) = 3 x^{2}"
+            },
+            {
+                "step": "Int_Factor_Setup",
+                "op": "Set mu = exp(int P dx)",
+                "result": "\\mu(x) = e^{\\int 3 x^{2} dx}"
+            },
+            {
+                "step": "Int_Factor_Calc",
+                "op": "Calculate mu",
+                "result": "\\mu(x) = e^{x^{3}}"
+            },
+            {
+                "step": "Multiply",
+                "op": "Apply mu to ODE",
+                "result": "\\frac{d}{dx}(e^{x^{3}}y) = 5 e^{x^{3}} \\log{\\left(\\left|{x}\\right| + 1 \\right)}"
+            },
+            {
+                "step": "Integrate",
+                "op": "Integrate both sides",
+                "result": "e^{x^{3}}y = 5 \\int e^{x^{3}} \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx + C_1"
+            }
+        ],
+        "solution": "y{\\left(x \\right)} = \\left(C_{1} + 5 \\int e^{x^{3}} \\log{\\left(\\left|{x}\\right| + 1 \\right)}\\, dx\\right) e^{- x^{3}}"
+    }
+]
