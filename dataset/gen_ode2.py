@@ -4,6 +4,7 @@ import argparse
 from multiprocessing import Pool, cpu_count
 import sympy as sp
 import constants as C
+from sympy import Piecewise
 
 # Global symbols
 x = sp.Symbol('x')
@@ -11,9 +12,14 @@ y = sp.Function('y')(x)
 Y = sp.Symbol('y')  # Dummy variable for separation integration
 C1 = sp.Symbol('C1')
 
+piecewise_log = Piecewise(
+    (sp.log(x), x>0),
+    (sp.log(-x), x<0)
+)
+
 def get_random_expr(var, complexity=2):
     """Generates unique math expressions to ensure diversity."""
-    basics = [var, var**2, sp.sin(var), sp.exp(var), sp.cos(var)]
+    basics = [var, var**2, sp.sin(var), sp.cos(var), sp.tan(var), sp.exp(var), sp.acos(var), sp.asin(var), sp.atan(var), piecewise_log]
     expr = random.choice(basics) * random.randint(1, 5)
     for _ in range(complexity - 1):
         other = random.choice(basics) + random.randint(1, 3)
