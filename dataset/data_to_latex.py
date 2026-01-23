@@ -5,7 +5,7 @@ from constants import *
 
 
 INITIALS = """ \\documentclass{article}
-\\usepackage{graphicx} % Required for inserting images
+\\usepackage{graphicx, amsmath} % Required for inserting images
 
 \\title{ML dataset check}
 \\author{MD. NAFIS HUSSAIN}

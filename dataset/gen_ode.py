@@ -18,7 +18,7 @@ piecewise_log = Piecewise(
 
 def get_complex_expr(var, complexity=2):
     """Generates varied mathematical expressions to avoid duplicates."""
-    basics = [var, var**2, sp.sin(var), sp.cos(var), sp.tan(var), sp.exp(var), sp.acos(var), sp.asin(var), sp.atan(var), piecewise_log]
+    basics = [var, var**2, sp.sin(var), sp.cos(var), sp.tan(var), sp.exp(var), sp.acos(var), sp.asin(var), sp.atan(var), sp.log(x)]
     expr = random.choice(basics) * random.randint(1, 5)
     for _ in range(complexity - 1):
         other = random.choice(basics) + random.randint(1, 3)
