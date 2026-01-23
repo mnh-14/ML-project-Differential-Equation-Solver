@@ -33,9 +33,12 @@ def generate_separable():
     ode = sp.Eq(y.diff(x), f_x * g_y_sym.subs(sp.Symbol('y'), y))
     lhs = sp.integrate(1/g_y_sym, sp.Symbol('y'))
     rhs = sp.integrate(f_x, x) + C1
+
+    if not lhs.has(sp.Integral) or not rhs.has(sp.Integral):
+        return None
     
     steps = [
-        {C.STEP: "Classify", C.OP: "Separate Variables", C.RESULT: f"\\frac{{1}}{{{sp.latex(g_y_sym)}}} dy = {sp.latex(f_x)} dx"},
+        {C.STEP: "Classify", C.OP: "Separate Variables", C.RESULT: f"\\frac{{1}}{{{sp.latex(g_y_sym)}}} dy = \\left{sp.latex(f_x)}\\right dx"},
         {C.STEP: "Integrate LHS", C.OP: "Integrate Left Side", C.RESULT: sp.latex(lhs)},
         {C.STEP: "Integrate RHS", C.OP: "Integrate Right Side", C.RESULT: f"{sp.latex(rhs)}"},
         {C.STEP: "Solve", C.OP: "Isolate y", C.RESULT: sp.latex(sp.Eq(lhs, rhs))}
@@ -58,7 +61,7 @@ def generate_linear():
     
     steps = [
         {C.STEP: "Identify", C.OP: "Find P(x)", C.RESULT: f"P(x) = {sp.latex(P_x)}"},
-        {C.STEP: "Int Factor_Setup", C.OP: "Set mu = exp(int P dx)", C.RESULT: f"\\mu(x) = e^{{\\int {sp.latex(P_x)} dx}}"},
+        {C.STEP: "Int Factor_Setup", C.OP: "Set mu = exp(int P dx)", C.RESULT: f"\\mu(x) = e^{{\\int \\left{sp.latex(P_x)} \\right dx}}"},
         {C.STEP: "Int Factor_Calc", C.OP: "Calculate mu", C.RESULT: f"\\mu(x) = {sp.latex(mu)}"},
         {C.STEP: "Multiply", C.OP: "Apply mu to ODE", C.RESULT: f"\\frac{{d}}{{dx}}({sp.latex(mu)}y) = {sp.latex(sp.simplify(mu*Q_x))}"},
         {C.STEP: "Integrate", C.OP: "Integrate both sides", C.RESULT: f"{sp.latex(mu)}y = {sp.latex(both_side_int)} + C_1"}
