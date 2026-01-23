@@ -31,12 +31,14 @@ def generate_separable():
     f_x = get_complex_expr(x, complexity=2)
     g_y_sym = random.choice([sp.Symbol('y'), sp.Symbol('y')**2, sp.exp(sp.Symbol('y'))])
     ode = sp.Eq(y.diff(x), f_x * g_y_sym.subs(sp.Symbol('y'), y))
+    lhs = sp.integrate(1/g_y_sym, sp.Symbol('y'))
+    rhs = sp.integrate(f_x, x) + C1
     
     steps = [
         {C.STEP: "Classify", C.OP: "Separate Variables", C.RESULT: f"\\frac{{1}}{{{sp.latex(g_y_sym)}}} dy = {sp.latex(f_x)} dx"},
-        {C.STEP: "Integrate LHS", C.OP: "Integrate Left Side", C.RESULT: sp.latex(sp.integrate(1/g_y_sym, sp.Symbol('y')))},
-        {C.STEP: "Integrate RHS", C.OP: "Integrate Right Side", C.RESULT: f"{sp.latex(sp.integrate(f_x, x))} + C_1"},
-        {C.STEP: "Solve", C.OP: "Isolate y", C.RESULT: sp.latex(sp.dsolve(ode, y).rhs)}
+        {C.STEP: "Integrate LHS", C.OP: "Integrate Left Side", C.RESULT: sp.latex(lhs)},
+        {C.STEP: "Integrate RHS", C.OP: "Integrate Right Side", C.RESULT: f"{sp.latex(rhs)}"},
+        {C.STEP: "Solve", C.OP: "Isolate y", C.RESULT: sp.latex(sp.Eq(lhs, rhs))}
     ]
     return "Separable", ode, steps
 
