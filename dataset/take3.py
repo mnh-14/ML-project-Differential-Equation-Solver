@@ -1,6 +1,7 @@
 import json
 import random
 from multiprocessing import Pool, cpu_count
+import re
 import sympy as sp
 from gen_ode import *
 import argparse
@@ -20,7 +21,8 @@ def generate_single_sample(index):
         # Optimize dsolve: disable expensive simplification if needed
         # and provide a hint to skip classification overhead
         hint = '1st_linear' if family == "First-Order Linear" else 'separable'
-        solution = sp.dsolve(ode, y, hint=hint, simplify=False)
+        print("Solving ODE:", index)
+        solution = sp.dsolve(ode, y, hint=hint, simplify=True)
         
         return {
             "id": index,
@@ -33,16 +35,22 @@ def generate_single_sample(index):
         # Silently skip equations that are too complex to solve
         return None
 
-def main_parallel(num_samples=1000, output_file="fast_dataset.json"):
+def main_parallel(num_samples=1000, output_file="fast_dataset.json", timeout=15):
     print(f"Starting parallel generation for {num_samples} samples...")
     
     # Using Pool as a context manager ensures proper cleanup
+    dataset = []
     with Pool(processes=cpu_count()) as pool:
         # map() handles the distribution across your CPU cores
-        results = pool.map(generate_single_sample, range(num_samples))
+        async_result = [pool.apply_async(generate_single_sample, args=(i,)) for i in range(num_samples)]
+        for res in async_result:
+            try:
+                val = res.get(timeout=timeout)
+                if val is not None:
+                    dataset.append(val)
+            except Exception as e:
+                print(f"Timeout or error occurred: {e}")
     
-    # Clean up results by removing failed (None) attempts
-    dataset = [r for r in results if r is not None]
     
     with open(output_file, 'w') as f:
         json.dump(dataset, f, indent=4)
@@ -55,5 +63,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", default="manual_dataset.json")
     parser.add_argument("--samples", type=int, default=50)
+    parser.add_argument("--timeout", type=int, default=15)
     args = parser.parse_args()
     main_parallel(num_samples=args.samples, output_file=args.output)
