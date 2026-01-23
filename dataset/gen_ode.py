@@ -18,7 +18,7 @@ piecewise_log = Piecewise(
 
 def get_complex_expr(var, complexity=2):
     """Generates varied mathematical expressions to avoid duplicates."""
-    basics = [var, var**2, sp.sin(var), sp.cos(var), sp.tan(var), sp.exp(var), sp.acos(var), sp.asin(var), sp.atan(var), sp.log(x)]
+    basics = [var, var**2, sp.sin(var), sp.cos(var), sp.tan(var), sp.exp(var), sp.acos(var), sp.asin(var), sp.atan(var), sp.log(var)]
     expr = random.choice(basics) * random.randint(1, 5)
     for _ in range(complexity - 1):
         other = random.choice(basics) + random.randint(1, 3)
@@ -32,15 +32,15 @@ def generate_separable():
     g_y_sym = random.choice([sp.Symbol('y'), sp.Symbol('y')**2, sp.exp(sp.Symbol('y'))])
     ode = sp.Eq(y.diff(x), f_x * g_y_sym.subs(sp.Symbol('y'), y))
     lhs = sp.integrate(1/g_y_sym, sp.Symbol('y'))
-    rhs = sp.integrate(f_x, x) + C1
+    rhs = sp.integrate(f_x, x)
 
-    if not lhs.has(sp.Integral) or not rhs.has(sp.Integral):
-        return None
+    if isinstance(lhs, sp.Integral) or isinstance(rhs, sp.Integral):
+        return None, None, None
     
     steps = [
         {C.STEP: "Classify", C.OP: "Separate Variables", C.RESULT: f"\\frac{{1}}{{{sp.latex(g_y_sym)}}} dy = \\left{sp.latex(f_x)}\\right dx"},
         {C.STEP: "Integrate LHS", C.OP: "Integrate Left Side", C.RESULT: sp.latex(lhs)},
-        {C.STEP: "Integrate RHS", C.OP: "Integrate Right Side", C.RESULT: f"{sp.latex(rhs)}"},
+        {C.STEP: "Integrate RHS", C.OP: "Integrate Right Side", C.RESULT: f"{sp.latex(rhs)} + C_1"},
         {C.STEP: "Solve", C.OP: "Isolate y", C.RESULT: sp.latex(sp.Eq(lhs, rhs))}
     ]
     return "Separable", ode, steps
@@ -56,8 +56,8 @@ def generate_linear():
 
     both_side_int = sp.integrate(mu*Q_x, x)
 
-    if (not both_side_int.has(sp.Integral) or not mu_int.has(sp.Integral)):
-        return None
+    if isinstance(mu_int, sp.Integral) or isinstance(both_side_int, sp.Integral):
+        return None, None, None
     
     steps = [
         {C.STEP: "Identify", C.OP: "Find P(x)", C.RESULT: f"P(x) = {sp.latex(P_x)}"},

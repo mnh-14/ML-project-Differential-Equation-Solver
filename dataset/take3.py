@@ -22,6 +22,8 @@ def generate_single_sample(index):
         # and provide a hint to skip classification overhead
         hint = '1st_linear' if family == "First-Order Linear" else 'separable'
         print("Solving ODE:", index)
+        if ode is None:
+            return None
         solution = sp.dsolve(ode, y, hint=hint, simplify=True)
         
         return {
