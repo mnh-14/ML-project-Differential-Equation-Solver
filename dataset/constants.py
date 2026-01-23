@@ -1,0 +1,8 @@
+FAMILY = 'family'
+STEP = 'step'
+RESULT = 'result'
+Q_STEPS = 'steps'
+QUESTION = 'question'
+FINAL_RESULT = 'final_result'
+EQUATION = 'equation'
+SOLUTION = 'solution'

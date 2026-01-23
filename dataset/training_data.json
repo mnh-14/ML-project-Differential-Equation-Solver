@@ -1,0 +1,3752 @@
+[
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + \\sin{\\left(x \\right)} + \\frac{\\cos{\\left(x \\right)}}{x}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y^{2}{\\left(x \\right)} e^{x}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = e^{x} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int e^{x} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{1}{C_{1} + e^{x}}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = x e^{\\frac{x^{2}}{2}}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- \\frac{x^{2}}{2}} + 1"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = x e^{x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + x - 1"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{3}}{3}}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = x e^{x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + x - 1"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{3}{C_{1} + x^{3}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{3}{C_{1} + x^{3}}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + \\sin{\\left(x \\right)} + \\frac{\\cos{\\left(x \\right)}}{x}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y{\\left(x \\right)} e^{x}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = e^{x} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int e^{x} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{e^{x}}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x^{2}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1} + \\frac{x^{3}}{3}}{x}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{2}{C_{1} + x^{2}}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x e^{x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + e^{x} - \\frac{e^{x}}{x}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{2}}{2}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y^{2}{\\left(x \\right)} \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = \\sin{\\left(x \\right)} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int \\sin{\\left(x \\right)} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{1}{C_{1} - \\cos{\\left(x \\right)}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y^{2}{\\left(x \\right)} \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = \\sin{\\left(x \\right)} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int \\sin{\\left(x \\right)} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{1}{C_{1} - \\cos{\\left(x \\right)}}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{x} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{\\sin{\\left(x \\right)}}{2} + \\frac{\\cos{\\left(x \\right)}}{2}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y^{2}{\\left(x \\right)} \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = \\sin{\\left(x \\right)} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int \\sin{\\left(x \\right)} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{1}{C_{1} - \\cos{\\left(x \\right)}}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{2 x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{e^{x}}{2}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + \\sin{\\left(x \\right)} + \\frac{\\cos{\\left(x \\right)}}{x}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y{\\left(x \\right)} e^{x}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = e^{x} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int e^{x} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{e^{x}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{2}{C_{1} + x^{2}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y^{2}{\\left(x \\right)} \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = \\sin{\\left(x \\right)} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int \\sin{\\left(x \\right)} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{1}{C_{1} - \\cos{\\left(x \\right)}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{2}{C_{1} + x^{2}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y{\\left(x \\right)} \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = \\sin{\\left(x \\right)} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int \\sin{\\left(x \\right)} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- \\cos{\\left(x \\right)}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{3}{C_{1} + x^{3}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{2}{C_{1} + x^{2}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{2}{C_{1} + x^{2}}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = e^{\\frac{x^{2}}{2}} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "\\int \\left(x y{\\left(x \\right)} - \\cos{\\left(x \\right)}\\right) e^{\\frac{x^{2}}{2}}\\, dx = C_{1}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y{\\left(x \\right)} \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = \\sin{\\left(x \\right)} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int \\sin{\\left(x \\right)} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- \\cos{\\left(x \\right)}}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{2 x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{e^{x}}{2}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{3}{C_{1} + x^{3}}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = e^{x} e^{\\frac{x^{2}}{2}}"
+            }
+        ],
+        "final_result": "\\int \\left(x y{\\left(x \\right)} - e^{x}\\right) e^{\\frac{x^{2}}{2}}\\, dx = C_{1}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = x e^{x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + x - 1"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{2}{C_{1} + x^{2}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{3}}{3}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y{\\left(x \\right)} e^{x}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = e^{x} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int e^{x} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{e^{x}}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{x} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{\\sin{\\left(x \\right)}}{2} + \\frac{\\cos{\\left(x \\right)}}{2}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = x e^{\\frac{x^{2}}{2}}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- \\frac{x^{2}}{2}} + 1"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{3}}{3}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{2}{C_{1} + x^{2}}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{x} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{\\sin{\\left(x \\right)}}{2} + \\frac{\\cos{\\left(x \\right)}}{2}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x e^{x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + e^{x} - \\frac{e^{x}}{x}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x^{2}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1} + \\frac{x^{3}}{3}}{x}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{3}}{3}}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = x e^{x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + x - 1"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{x} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{\\sin{\\left(x \\right)}}{2} + \\frac{\\cos{\\left(x \\right)}}{2}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{2 x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{e^{x}}{2}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{3}}{3}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{3}{C_{1} + x^{3}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{2}{C_{1} + x^{2}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{2}{C_{1} + x^{2}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{3}}{3}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y^{2}{\\left(x \\right)} e^{x}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = e^{x} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int e^{x} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{1}{C_{1} + e^{x}}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = x e^{\\frac{x^{2}}{2}}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- \\frac{x^{2}}{2}} + 1"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y^{2}{\\left(x \\right)} e^{x}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = e^{x} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int e^{x} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{1}{C_{1} + e^{x}}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = x e^{x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + x - 1"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x^{2}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1} + \\frac{x^{3}}{3}}{x}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y^{2}{\\left(x \\right)} e^{x}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = e^{x} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int e^{x} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{1}{C_{1} + e^{x}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y{\\left(x \\right)} e^{x}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = e^{x} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int e^{x} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{e^{x}}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = e^{\\frac{x^{2}}{2}} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "\\int \\left(x y{\\left(x \\right)} - \\cos{\\left(x \\right)}\\right) e^{\\frac{x^{2}}{2}}\\, dx = C_{1}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{x} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{\\sin{\\left(x \\right)}}{2} + \\frac{\\cos{\\left(x \\right)}}{2}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y^{2}{\\left(x \\right)} e^{x}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = e^{x} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int e^{x} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{1}{C_{1} + e^{x}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{3}{C_{1} + x^{3}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{3}}{3}}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x^{2}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1} + \\frac{x^{3}}{3}}{x}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{3}}{3}}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = x e^{\\frac{x^{2}}{2}}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- \\frac{x^{2}}{2}} + 1"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{2}}{2}}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = x e^{x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + x - 1"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = e^{\\frac{x^{2}}{2}} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "\\int \\left(x y{\\left(x \\right)} - \\cos{\\left(x \\right)}\\right) e^{\\frac{x^{2}}{2}}\\, dx = C_{1}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = x e^{x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + x - 1"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{x} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{\\sin{\\left(x \\right)}}{2} + \\frac{\\cos{\\left(x \\right)}}{2}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{x} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{\\sin{\\left(x \\right)}}{2} + \\frac{\\cos{\\left(x \\right)}}{2}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{3}{C_{1} + x^{3}}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x e^{x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + e^{x} - \\frac{e^{x}}{x}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{3}}{3}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y^{2}{\\left(x \\right)} \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = \\sin{\\left(x \\right)} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int \\sin{\\left(x \\right)} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{1}{C_{1} - \\cos{\\left(x \\right)}}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x^{2}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1} + \\frac{x^{3}}{3}}{x}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{2}}{2}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y^{2}{\\left(x \\right)} e^{x}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = e^{x} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int e^{x} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{1}{C_{1} + e^{x}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y{\\left(x \\right)} \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = \\sin{\\left(x \\right)} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int \\sin{\\left(x \\right)} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- \\cos{\\left(x \\right)}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{3}}{3}}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x^{2}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1} + \\frac{x^{3}}{3}}{x}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{3}}{3}}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = x e^{x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + x - 1"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = e^{\\frac{x^{2}}{2}} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "\\int \\left(x y{\\left(x \\right)} - \\cos{\\left(x \\right)}\\right) e^{\\frac{x^{2}}{2}}\\, dx = C_{1}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{3}}{3}}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = x e^{\\frac{x^{2}}{2}}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- \\frac{x^{2}}{2}} + 1"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{2}{C_{1} + x^{2}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{2}{C_{1} + x^{2}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{2}{C_{1} + x^{2}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y^{2}{\\left(x \\right)} \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = \\sin{\\left(x \\right)} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int \\sin{\\left(x \\right)} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{1}{C_{1} - \\cos{\\left(x \\right)}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{2}{C_{1} + x^{2}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{2}}{2}}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = e^{x} e^{\\frac{x^{2}}{2}}"
+            }
+        ],
+        "final_result": "\\int \\left(x y{\\left(x \\right)} - e^{x}\\right) e^{\\frac{x^{2}}{2}}\\, dx = C_{1}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x^{2}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1} + \\frac{x^{3}}{3}}{x}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{x} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{\\sin{\\left(x \\right)}}{2} + \\frac{\\cos{\\left(x \\right)}}{2}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y^{2}{\\left(x \\right)} e^{x}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = e^{x} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int e^{x} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{1}{C_{1} + e^{x}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{2}{C_{1} + x^{2}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{3}}{3}}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + \\sin{\\left(x \\right)} + \\frac{\\cos{\\left(x \\right)}}{x}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y^{2}{\\left(x \\right)} \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = \\sin{\\left(x \\right)} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int \\sin{\\left(x \\right)} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{1}{C_{1} - \\cos{\\left(x \\right)}}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = e^{x} e^{\\frac{x^{2}}{2}}"
+            }
+        ],
+        "final_result": "\\int \\left(x y{\\left(x \\right)} - e^{x}\\right) e^{\\frac{x^{2}}{2}}\\, dx = C_{1}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y{\\left(x \\right)} e^{x}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = e^{x} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int e^{x} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{e^{x}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y{\\left(x \\right)} e^{x}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = e^{x} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int e^{x} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{e^{x}}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{2 x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{e^{x}}{2}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{3}{C_{1} + x^{3}}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{x} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{\\sin{\\left(x \\right)}}{2} + \\frac{\\cos{\\left(x \\right)}}{2}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{3}}{3}}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{2 x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{e^{x}}{2}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = e^{\\frac{x^{2}}{2}} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "\\int \\left(x y{\\left(x \\right)} - \\cos{\\left(x \\right)}\\right) e^{\\frac{x^{2}}{2}}\\, dx = C_{1}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x^{2}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1} + \\frac{x^{3}}{3}}{x}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{x} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{\\sin{\\left(x \\right)}}{2} + \\frac{\\cos{\\left(x \\right)}}{2}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{3}}{3}}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{x} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{\\sin{\\left(x \\right)}}{2} + \\frac{\\cos{\\left(x \\right)}}{2}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y{\\left(x \\right)} e^{x}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = e^{x} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int e^{x} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{e^{x}}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x^{2}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1} + \\frac{x^{3}}{3}}{x}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = x e^{x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + x - 1"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y^{2}{\\left(x \\right)} e^{x}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = e^{x} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int e^{x} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{1}{C_{1} + e^{x}}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x^{2}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1} + \\frac{x^{3}}{3}}{x}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{2}{C_{1} + x^{2}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{3}}{3}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{3}{C_{1} + x^{3}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{3}}{3}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{2}}{2}}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x e^{x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + e^{x} - \\frac{e^{x}}{x}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y{\\left(x \\right)} \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = \\sin{\\left(x \\right)} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int \\sin{\\left(x \\right)} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- \\cos{\\left(x \\right)}}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + \\sin{\\left(x \\right)} + \\frac{\\cos{\\left(x \\right)}}{x}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{x} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{\\sin{\\left(x \\right)}}{2} + \\frac{\\cos{\\left(x \\right)}}{2}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y^{2}{\\left(x \\right)} e^{x}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = e^{x} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int e^{x} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{1}{C_{1} + e^{x}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{2}{C_{1} + x^{2}}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{x} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{\\sin{\\left(x \\right)}}{2} + \\frac{\\cos{\\left(x \\right)}}{2}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = e^{x} e^{\\frac{x^{2}}{2}}"
+            }
+        ],
+        "final_result": "\\int \\left(x y{\\left(x \\right)} - e^{x}\\right) e^{\\frac{x^{2}}{2}}\\, dx = C_{1}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = x e^{\\frac{x^{2}}{2}}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- \\frac{x^{2}}{2}} + 1"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{2}}{2}}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x e^{x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + e^{x} - \\frac{e^{x}}{x}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = x e^{\\frac{x^{2}}{2}}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- \\frac{x^{2}}{2}} + 1"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{2 x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{e^{x}}{2}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = x e^{x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + x - 1"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{2}}{2}}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + \\sin{\\left(x \\right)} + \\frac{\\cos{\\left(x \\right)}}{x}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = e^{x} e^{\\frac{x^{2}}{2}}"
+            }
+        ],
+        "final_result": "\\int \\left(x y{\\left(x \\right)} - e^{x}\\right) e^{\\frac{x^{2}}{2}}\\, dx = C_{1}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y^{2}{\\left(x \\right)} e^{x}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = e^{x} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int e^{x} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{1}{C_{1} + e^{x}}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x^{2}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1} + \\frac{x^{3}}{3}}{x}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + \\sin{\\left(x \\right)} + \\frac{\\cos{\\left(x \\right)}}{x}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{3}{C_{1} + x^{3}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y{\\left(x \\right)} e^{x}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = e^{x} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int e^{x} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{e^{x}}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{2 x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{e^{x}}{2}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = e^{x} e^{\\frac{x^{2}}{2}}"
+            }
+        ],
+        "final_result": "\\int \\left(x y{\\left(x \\right)} - e^{x}\\right) e^{\\frac{x^{2}}{2}}\\, dx = C_{1}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{3}}{3}}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = e^{\\frac{x^{2}}{2}} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "\\int \\left(x y{\\left(x \\right)} - \\cos{\\left(x \\right)}\\right) e^{\\frac{x^{2}}{2}}\\, dx = C_{1}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = e^{\\frac{x^{2}}{2}} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "\\int \\left(x y{\\left(x \\right)} - \\cos{\\left(x \\right)}\\right) e^{\\frac{x^{2}}{2}}\\, dx = C_{1}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + \\sin{\\left(x \\right)} + \\frac{\\cos{\\left(x \\right)}}{x}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{2 x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{e^{x}}{2}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = x e^{\\frac{x^{2}}{2}}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- \\frac{x^{2}}{2}} + 1"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{3}{C_{1} + x^{3}}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + \\sin{\\left(x \\right)} + \\frac{\\cos{\\left(x \\right)}}{x}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x^{2}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1} + \\frac{x^{3}}{3}}{x}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = e^{\\frac{x^{2}}{2}} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "\\int \\left(x y{\\left(x \\right)} - \\cos{\\left(x \\right)}\\right) e^{\\frac{x^{2}}{2}}\\, dx = C_{1}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{x} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{\\sin{\\left(x \\right)}}{2} + \\frac{\\cos{\\left(x \\right)}}{2}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{x} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{\\sin{\\left(x \\right)}}{2} + \\frac{\\cos{\\left(x \\right)}}{2}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = x e^{\\frac{x^{2}}{2}}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- \\frac{x^{2}}{2}} + 1"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{x} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{\\sin{\\left(x \\right)}}{2} + \\frac{\\cos{\\left(x \\right)}}{2}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y^{2}{\\left(x \\right)} e^{x}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = e^{x} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int e^{x} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{1}{C_{1} + e^{x}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y^{2}{\\left(x \\right)} e^{x}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = e^{x} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int e^{x} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{1}{C_{1} + e^{x}}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{x} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{\\sin{\\left(x \\right)}}{2} + \\frac{\\cos{\\left(x \\right)}}{2}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = x e^{x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + x - 1"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x e^{x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + e^{x} - \\frac{e^{x}}{x}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{2 x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{e^{x}}{2}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = x e^{\\frac{x^{2}}{2}}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- \\frac{x^{2}}{2}} + 1"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + \\sin{\\left(x \\right)} + \\frac{\\cos{\\left(x \\right)}}{x}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = e^{x} e^{\\frac{x^{2}}{2}}"
+            }
+        ],
+        "final_result": "\\int \\left(x y{\\left(x \\right)} - e^{x}\\right) e^{\\frac{x^{2}}{2}}\\, dx = C_{1}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x e^{x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + e^{x} - \\frac{e^{x}}{x}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = x e^{\\frac{x^{2}}{2}}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- \\frac{x^{2}}{2}} + 1"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y{\\left(x \\right)} \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = \\sin{\\left(x \\right)} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int \\sin{\\left(x \\right)} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- \\cos{\\left(x \\right)}}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x e^{x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + e^{x} - \\frac{e^{x}}{x}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{2}{C_{1} + x^{2}}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{2 x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{e^{x}}{2}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + \\sin{\\left(x \\right)} + \\frac{\\cos{\\left(x \\right)}}{x}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y^{2}{\\left(x \\right)} e^{x}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = e^{x} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int e^{x} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{1}{C_{1} + e^{x}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y{\\left(x \\right)} \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = \\sin{\\left(x \\right)} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int \\sin{\\left(x \\right)} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- \\cos{\\left(x \\right)}}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x e^{x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + e^{x} - \\frac{e^{x}}{x}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + \\sin{\\left(x \\right)} + \\frac{\\cos{\\left(x \\right)}}{x}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{3}{C_{1} + x^{3}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{2}{C_{1} + x^{2}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y^{2}{\\left(x \\right)} \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = \\sin{\\left(x \\right)} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int \\sin{\\left(x \\right)} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{1}{C_{1} - \\cos{\\left(x \\right)}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{3}}{3}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{3}{C_{1} + x^{3}}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{x} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{\\sin{\\left(x \\right)}}{2} + \\frac{\\cos{\\left(x \\right)}}{2}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y{\\left(x \\right)} \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = \\sin{\\left(x \\right)} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int \\sin{\\left(x \\right)} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- \\cos{\\left(x \\right)}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{3}{C_{1} + x^{3}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y^{2}{\\left(x \\right)} \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = \\sin{\\left(x \\right)} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int \\sin{\\left(x \\right)} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{1}{C_{1} - \\cos{\\left(x \\right)}}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = x e^{\\frac{x^{2}}{2}}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- \\frac{x^{2}}{2}} + 1"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{3}{C_{1} + x^{3}}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{x} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{\\sin{\\left(x \\right)}}{2} + \\frac{\\cos{\\left(x \\right)}}{2}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y{\\left(x \\right)} \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = \\sin{\\left(x \\right)} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int \\sin{\\left(x \\right)} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- \\cos{\\left(x \\right)}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y^{2}{\\left(x \\right)} \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = \\sin{\\left(x \\right)} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int \\sin{\\left(x \\right)} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{1}{C_{1} - \\cos{\\left(x \\right)}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{3}}{3}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y^{2}{\\left(x \\right)} \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = \\sin{\\left(x \\right)} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int \\sin{\\left(x \\right)} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{1}{C_{1} - \\cos{\\left(x \\right)}}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{x} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{\\sin{\\left(x \\right)}}{2} + \\frac{\\cos{\\left(x \\right)}}{2}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x e^{x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + e^{x} - \\frac{e^{x}}{x}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = x e^{\\frac{x^{2}}{2}}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- \\frac{x^{2}}{2}} + 1"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = e^{\\frac{x^{2}}{2}} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "\\int \\left(x y{\\left(x \\right)} - \\cos{\\left(x \\right)}\\right) e^{\\frac{x^{2}}{2}}\\, dx = C_{1}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y{\\left(x \\right)} \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = \\sin{\\left(x \\right)} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int \\sin{\\left(x \\right)} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- \\cos{\\left(x \\right)}}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + \\sin{\\left(x \\right)} + \\frac{\\cos{\\left(x \\right)}}{x}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{2}{C_{1} + x^{2}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{2}}{2}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{3}{C_{1} + x^{3}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y^{2}{\\left(x \\right)} \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = \\sin{\\left(x \\right)} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int \\sin{\\left(x \\right)} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{1}{C_{1} - \\cos{\\left(x \\right)}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{3}{C_{1} + x^{3}}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = x e^{\\frac{x^{2}}{2}}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- \\frac{x^{2}}{2}} + 1"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{3}{C_{1} + x^{3}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{3}{C_{1} + x^{3}}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = e^{x} e^{\\frac{x^{2}}{2}}"
+            }
+        ],
+        "final_result": "\\int \\left(x y{\\left(x \\right)} - e^{x}\\right) e^{\\frac{x^{2}}{2}}\\, dx = C_{1}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = x e^{\\frac{x^{2}}{2}}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- \\frac{x^{2}}{2}} + 1"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{3}{C_{1} + x^{3}}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + \\sin{\\left(x \\right)} + \\frac{\\cos{\\left(x \\right)}}{x}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{3}{C_{1} + x^{3}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{2}}{2}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y^{2}{\\left(x \\right)} \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = \\sin{\\left(x \\right)} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int \\sin{\\left(x \\right)} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{1}{C_{1} - \\cos{\\left(x \\right)}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{2}}{2}}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = e^{x} e^{\\frac{x^{2}}{2}}"
+            }
+        ],
+        "final_result": "\\int \\left(x y{\\left(x \\right)} - e^{x}\\right) e^{\\frac{x^{2}}{2}}\\, dx = C_{1}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{x} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{\\sin{\\left(x \\right)}}{2} + \\frac{\\cos{\\left(x \\right)}}{2}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = e^{\\frac{x^{2}}{2}} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "\\int \\left(x y{\\left(x \\right)} - \\cos{\\left(x \\right)}\\right) e^{\\frac{x^{2}}{2}}\\, dx = C_{1}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = x e^{x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + x - 1"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y^{2}{\\left(x \\right)} e^{x}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = e^{x} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int e^{x} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{1}{C_{1} + e^{x}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{2}}{2}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{2}}{2}}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x^{2}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1} + \\frac{x^{3}}{3}}{x}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{3}{C_{1} + x^{3}}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = x",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x^{2}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1} + \\frac{x^{3}}{3}}{x}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = e^{\\frac{x^{2}}{2}} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "\\int \\left(x y{\\left(x \\right)} - \\cos{\\left(x \\right)}\\right) e^{\\frac{x^{2}}{2}}\\, dx = C_{1}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = e^{\\frac{x^{2}}{2}} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "\\int \\left(x y{\\left(x \\right)} - \\cos{\\left(x \\right)}\\right) e^{\\frac{x^{2}}{2}}\\, dx = C_{1}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{2}}{2}}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = e^{\\frac{x^{2}}{2}} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "\\int \\left(x y{\\left(x \\right)} - \\cos{\\left(x \\right)}\\right) e^{\\frac{x^{2}}{2}}\\, dx = C_{1}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x e^{x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + e^{x} - \\frac{e^{x}}{x}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{3}}{3}}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x e^{x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + e^{x} - \\frac{e^{x}}{x}"
+    },
+    {
+        "family": "Linear",
+        "question": "y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int 1 dx} = e^{x}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{x}(y' + 1y) = e^{2 x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- x} + \\frac{e^{x}}{2}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y{\\left(x \\right)} e^{x}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = e^{x} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int e^{x} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{e^{x}}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = y{\\left(x \\right)} \\sin{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = \\sin{\\left(x \\right)} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int \\sin{\\left(x \\right)} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{- \\cos{\\left(x \\right)}}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = e^{\\frac{x^{2}}{2}} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "\\int \\left(x y{\\left(x \\right)} - \\cos{\\left(x \\right)}\\right) e^{\\frac{x^{2}}{2}}\\, dx = C_{1}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x y^{2}{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y^{2}{\\left(x \\right)}} dy = x dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y^{2}{\\left(x \\right)}} dy = \\int x dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = - \\frac{2}{C_{1} + x^{2}}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = e^{\\frac{x^{2}}{2}} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "\\int \\left(x y{\\left(x \\right)} - \\cos{\\left(x \\right)}\\right) e^{\\frac{x^{2}}{2}}\\, dx = C_{1}"
+    },
+    {
+        "family": "Separable",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} = x^{2} y{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Separate Variables",
+                "result": "\\frac{1}{y{\\left(x \\right)}} dy = x^{2} dx"
+            },
+            {
+                "step_name": "Integrate",
+                "result": "\\int \\frac{1}{y{\\left(x \\right)}} dy = \\int x^{2} dx"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = C_{1} e^{\\frac{x^{3}}{3}}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x e^{x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + e^{x} - \\frac{e^{x}}{x}"
+    },
+    {
+        "family": "Linear",
+        "question": "\\frac{d}{d x} y{\\left(x \\right)} + \\frac{y{\\left(x \\right)}}{x} = e^{x}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int \\frac{1}{x} dx} = x"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "x(y' + \\frac{1}{x}y) = x e^{x}"
+            }
+        ],
+        "final_result": "y{\\left(x \\right)} = \\frac{C_{1}}{x} + e^{x} - \\frac{e^{x}}{x}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = e^{\\frac{x^{2}}{2}} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "\\int \\left(x y{\\left(x \\right)} - \\cos{\\left(x \\right)}\\right) e^{\\frac{x^{2}}{2}}\\, dx = C_{1}"
+    },
+    {
+        "family": "Linear",
+        "question": "x y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\cos{\\left(x \\right)}",
+        "steps": [
+            {
+                "step_name": "Find Integrating Factor",
+                "result": "\\mu(x) = e^{\\int x dx} = e^{\\frac{x^{2}}{2}}"
+            },
+            {
+                "step_name": "Multiply ODE by \\mu(x)",
+                "result": "e^{\\frac{x^{2}}{2}}(y' + xy) = e^{\\frac{x^{2}}{2}} \\cos{\\left(x \\right)}"
+            }
+        ],
+        "final_result": "\\int \\left(x y{\\left(x \\right)} - \\cos{\\left(x \\right)}\\right) e^{\\frac{x^{2}}{2}}\\, dx = C_{1}"
+    }
+]

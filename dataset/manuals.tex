@@ -1,0 +1,611 @@
+ \documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{ML dataset check}
+\author{MD. NAFIS HUSSAIN}
+\date{January 2026}
+
+\begin{document}
+
+\maketitle
+\section*{Family: Linear}
+\textbf{Question:} $5 y{\left(x \right)} \cos{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 3 \sin{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=5 \cos{\left(x \right)}, Q(x)=3 \sin{\left(x \right)}$
+\item calc_mu :  $\mu(x) = e^{\int 5 \cos{\left(x \right)} dx} = e^{5 \sin{\left(x \right)}}$
+\item integrate_product :  $\mu y = \int 3 e^{5 \sin{\left(x \right)}} \sin{\left(x \right)} dx$
+\end{enumerate}
+\textbf{Final Result:} $\left(C_{1} + 3 \int e^{5 \sin{\left(x \right)}} \sin{\left(x \right)}\, dx\right) e^{- 5 \sin{\left(x \right)}}$
+
+\section*{Family: Linear}
+\textbf{Question:} $2 x^{2} y{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 5 x^{2}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=2 x^{2}, Q(x)=5 x^{2}$
+\item calc_mu :  $\mu(x) = e^{\int 2 x^{2} dx} = e^{\frac{2 x^{3}}{3}}$
+\item integrate_product :  $\mu y = \int 5 x^{2} e^{\frac{2 x^{3}}{3}} dx$
+\end{enumerate}
+\textbf{Final Result:} $C_{1} e^{- \frac{2 x^{3}}{3}} + \frac{5}{2}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = \left(6 \sin{\left(x \right)} + 2\right) y^{2}{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $Separable$
+\item separate :  $dy / (y^{2}) = (6 \sin{\left(x \right)} + 2) dx$
+\item integrate_lhs :  $- \frac{1}{y}$
+\item integrate_rhs :  $2 x - 6 \cos{\left(x \right)} + C_1$
+\end{enumerate}
+\textbf{Final Result:} $- \frac{1}{C_{1} + 2 x - 6 \cos{\left(x \right)}}$
+
+\section*{Family: Linear}
+\textbf{Question:} $2 x^{2} y{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 4 \cos{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=2 x^{2}, Q(x)=4 \cos{\left(x \right)}$
+\item calc_mu :  $\mu(x) = e^{\int 2 x^{2} dx} = e^{\frac{2 x^{3}}{3}}$
+\item integrate_product :  $\mu y = \int 4 e^{\frac{2 x^{3}}{3}} \cos{\left(x \right)} dx$
+\end{enumerate}
+\textbf{Final Result:} $\left(C_{1} + 4 \int e^{\frac{2 x^{3}}{3}} \cos{\left(x \right)}\, dx\right) e^{- \frac{2 x^{3}}{3}}$
+
+\section*{Family: Linear}
+\textbf{Question:} $5 y{\left(x \right)} \cos{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 5 \sin{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=5 \cos{\left(x \right)}, Q(x)=5 \sin{\left(x \right)}$
+\item calc_mu :  $\mu(x) = e^{\int 5 \cos{\left(x \right)} dx} = e^{5 \sin{\left(x \right)}}$
+\item integrate_product :  $\mu y = \int 5 e^{5 \sin{\left(x \right)}} \sin{\left(x \right)} dx$
+\end{enumerate}
+\textbf{Final Result:} $\left(C_{1} + 5 \int e^{5 \sin{\left(x \right)}} \sin{\left(x \right)}\, dx\right) e^{- 5 \sin{\left(x \right)}}$
+
+\section*{Family: Linear}
+\textbf{Question:} $3 y{\left(x \right)} \cos{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 3 \sin{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=3 \cos{\left(x \right)}, Q(x)=3 \sin{\left(x \right)}$
+\item calc_mu :  $\mu(x) = e^{\int 3 \cos{\left(x \right)} dx} = e^{3 \sin{\left(x \right)}}$
+\item integrate_product :  $\mu y = \int 3 e^{3 \sin{\left(x \right)}} \sin{\left(x \right)} dx$
+\end{enumerate}
+\textbf{Final Result:} $\left(C_{1} + 3 \int e^{3 \sin{\left(x \right)}} \sin{\left(x \right)}\, dx\right) e^{- 3 \sin{\left(x \right)}}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = 4 x^{2} \left(x^{2} + 2\right) y{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $Separable$
+\item separate :  $dy / (y) = (4 x^{2} \left(x^{2} + 2\right)) dx$
+\item integrate_lhs :  $\log{\left(y \right)}$
+\item integrate_rhs :  $\frac{4 x^{5}}{5} + \frac{8 x^{3}}{3} + C_1$
+\end{enumerate}
+\textbf{Final Result:} $e^{C_{1} + \frac{4 x^{5}}{5} + \frac{8 x^{3}}{3}}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = \left(5 e^{x} + \sin{\left(x \right)} + 1\right) e^{y{\left(x \right)}}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $Separable$
+\item separate :  $dy / (e^{y}) = (5 e^{x} + \sin{\left(x \right)} + 1) dx$
+\item integrate_lhs :  $- e^{- y}$
+\item integrate_rhs :  $x + 5 e^{x} - \cos{\left(x \right)} + C_1$
+\end{enumerate}
+\textbf{Final Result:} $\log{\left(- \frac{1}{C_{1} + x + 5 e^{x} - \cos{\left(x \right)}} \right)}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = 4 \left(\sin{\left(x \right)} + 1\right) e^{y{\left(x \right)}} \cos{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $Separable$
+\item separate :  $dy / (e^{y}) = (4 \left(\sin{\left(x \right)} + 1\right) \cos{\left(x \right)}) dx$
+\item integrate_lhs :  $- e^{- y}$
+\item integrate_rhs :  $4 \sin{\left(x \right)} - 2 \cos^{2}{\left(x \right)} + C_1$
+\end{enumerate}
+\textbf{Final Result:} $\log{\left(- \frac{1}{C_{1} + 4 \sin{\left(x \right)} - 2 \cos^{2}{\left(x \right)}} \right)}$
+
+\section*{Family: Linear}
+\textbf{Question:} $5 y{\left(x \right)} e^{x} + \frac{d}{d x} y{\left(x \right)} = 5 e^{x}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=5 e^{x}, Q(x)=5 e^{x}$
+\item calc_mu :  $\mu(x) = e^{\int 5 e^{x} dx} = e^{5 e^{x}}$
+\item integrate_product :  $\mu y = \int 5 e^{x + 5 e^{x}} dx$
+\end{enumerate}
+\textbf{Final Result:} $C_{1} e^{- 5 e^{x}} + 1$
+
+\section*{Family: Linear}
+\textbf{Question:} $5 x^{2} y{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 2 e^{x}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=5 x^{2}, Q(x)=2 e^{x}$
+\item calc_mu :  $\mu(x) = e^{\int 5 x^{2} dx} = e^{\frac{5 x^{3}}{3}}$
+\item integrate_product :  $\mu y = \int 2 e^{\frac{x \left(5 x^{2} + 3\right)}{3}} dx$
+\end{enumerate}
+\textbf{Final Result:} $\left(C_{1} + 2 \int e^{x} e^{\frac{5 x^{3}}{3}}\, dx\right) e^{- \frac{5 x^{3}}{3}}$
+
+\section*{Family: Linear}
+\textbf{Question:} $4 y{\left(x \right)} e^{x} + \frac{d}{d x} y{\left(x \right)} = 5 \sin{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=4 e^{x}, Q(x)=5 \sin{\left(x \right)}$
+\item calc_mu :  $\mu(x) = e^{\int 4 e^{x} dx} = e^{4 e^{x}}$
+\item integrate_product :  $\mu y = \int 5 e^{4 e^{x}} \sin{\left(x \right)} dx$
+\end{enumerate}
+\textbf{Final Result:} $\left(C_{1} + 5 \int e^{4 e^{x}} \sin{\left(x \right)}\, dx\right) e^{- 4 e^{x}}$
+
+\section*{Family: Linear}
+\textbf{Question:} $2 x^{2} y{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 5 \cos{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=2 x^{2}, Q(x)=5 \cos{\left(x \right)}$
+\item calc_mu :  $\mu(x) = e^{\int 2 x^{2} dx} = e^{\frac{2 x^{3}}{3}}$
+\item integrate_product :  $\mu y = \int 5 e^{\frac{2 x^{3}}{3}} \cos{\left(x \right)} dx$
+\end{enumerate}
+\textbf{Final Result:} $\left(C_{1} + 5 \int e^{\frac{2 x^{3}}{3}} \cos{\left(x \right)}\, dx\right) e^{- \frac{2 x^{3}}{3}}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = \left(x^{2} + 3 \cos{\left(x \right)} + 3\right) e^{y{\left(x \right)}}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $Separable$
+\item separate :  $dy / (e^{y}) = (x^{2} + 3 \cos{\left(x \right)} + 3) dx$
+\item integrate_lhs :  $- e^{- y}$
+\item integrate_rhs :  $\frac{x^{3}}{3} + 3 x + 3 \sin{\left(x \right)} + C_1$
+\end{enumerate}
+\textbf{Final Result:} $\log{\left(- \frac{3}{3 C_{1} + x^{3} + 9 x + 9 \sin{\left(x \right)}} \right)}$
+
+\section*{Family: Linear}
+\textbf{Question:} $4 x y{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = x^{2}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=4 x, Q(x)=x^{2}$
+\item calc_mu :  $\mu(x) = e^{\int 4 x dx} = e^{2 x^{2}}$
+\item integrate_product :  $\mu y = \int x^{2} e^{2 x^{2}} dx$
+\end{enumerate}
+\textbf{Final Result:} $\left(C_{1} + \frac{x e^{2 x^{2}}}{4} - \frac{\sqrt{2} \sqrt{\pi} \operatorname{erfi}{\left(\sqrt{2} x \right)}}{16}\right) e^{- 2 x^{2}}$
+
+\section*{Family: Linear}
+\textbf{Question:} $y{\left(x \right)} \sin{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 2 x^{2}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=\sin{\left(x \right)}, Q(x)=2 x^{2}$
+\item calc_mu :  $\mu(x) = e^{\int \sin{\left(x \right)} dx} = e^{- \cos{\left(x \right)}}$
+\item integrate_product :  $\mu y = \int 2 x^{2} e^{- \cos{\left(x \right)}} dx$
+\end{enumerate}
+\textbf{Final Result:} $\left(C_{1} + 2 \int x^{2} e^{- \cos{\left(x \right)}}\, dx\right) e^{\cos{\left(x \right)}}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = \left(e^{x} + 3 \sin{\left(x \right)} + 2\right) y^{2}{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $Separable$
+\item separate :  $dy / (y^{2}) = (e^{x} + 3 \sin{\left(x \right)} + 2) dx$
+\item integrate_lhs :  $- \frac{1}{y}$
+\item integrate_rhs :  $2 x + e^{x} - 3 \cos{\left(x \right)} + C_1$
+\end{enumerate}
+\textbf{Final Result:} $- \frac{1}{C_{1} + 2 x + e^{x} - 3 \cos{\left(x \right)}}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = \left(x + 4 \sin{\left(x \right)} + 2\right) e^{y{\left(x \right)}}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $Separable$
+\item separate :  $dy / (e^{y}) = (x + 4 \sin{\left(x \right)} + 2) dx$
+\item integrate_lhs :  $- e^{- y}$
+\item integrate_rhs :  $\frac{x^{2}}{2} + 2 x - 4 \cos{\left(x \right)} + C_1$
+\end{enumerate}
+\textbf{Final Result:} $\log{\left(- \frac{2}{2 C_{1} + x^{2} + 4 x - 8 \cos{\left(x \right)}} \right)}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = 5 x \left(\sin{\left(x \right)} + 3\right) e^{y{\left(x \right)}}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $Separable$
+\item separate :  $dy / (e^{y}) = (5 x \left(\sin{\left(x \right)} + 3\right)) dx$
+\item integrate_lhs :  $- e^{- y}$
+\item integrate_rhs :  $\frac{15 x^{2}}{2} - 5 x \cos{\left(x \right)} + 5 \sin{\left(x \right)} + C_1$
+\end{enumerate}
+\textbf{Final Result:} $\log{\left(- \frac{2}{2 C_{1} + 15 x^{2} - 10 x \cos{\left(x \right)} + 10 \sin{\left(x \right)}} \right)}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = 5 x^{2} \left(x^{2} + 1\right) y^{2}{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $Separable$
+\item separate :  $dy / (y^{2}) = (5 x^{2} \left(x^{2} + 1\right)) dx$
+\item integrate_lhs :  $- \frac{1}{y}$
+\item integrate_rhs :  $x^{5} + \frac{5 x^{3}}{3} + C_1$
+\end{enumerate}
+\textbf{Final Result:} $- \frac{3}{3 C_{1} + 3 x^{5} + 5 x^{3}}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = \left(\sin{\left(x \right)} + \cos{\left(x \right)} + 1\right) e^{y{\left(x \right)}}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $Separable$
+\item separate :  $dy / (e^{y}) = (\sin{\left(x \right)} + \cos{\left(x \right)} + 1) dx$
+\item integrate_lhs :  $- e^{- y}$
+\item integrate_rhs :  $x + \sin{\left(x \right)} - \cos{\left(x \right)} + C_1$
+\end{enumerate}
+\textbf{Final Result:} $\log{\left(- \frac{1}{C_{1} + x + \sin{\left(x \right)} - \cos{\left(x \right)}} \right)}$
+
+\section*{Family: Linear}
+\textbf{Question:} $2 x^{2} y{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 5 x^{2}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=2 x^{2}, Q(x)=5 x^{2}$
+\item calc_mu :  $\mu(x) = e^{\int 2 x^{2} dx} = e^{\frac{2 x^{3}}{3}}$
+\item integrate_product :  $\mu y = \int 5 x^{2} e^{\frac{2 x^{3}}{3}} dx$
+\end{enumerate}
+\textbf{Final Result:} $C_{1} e^{- \frac{2 x^{3}}{3}} + \frac{5}{2}$
+
+\section*{Family: Linear}
+\textbf{Question:} $4 y{\left(x \right)} e^{x} + \frac{d}{d x} y{\left(x \right)} = 5 \cos{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=4 e^{x}, Q(x)=5 \cos{\left(x \right)}$
+\item calc_mu :  $\mu(x) = e^{\int 4 e^{x} dx} = e^{4 e^{x}}$
+\item integrate_product :  $\mu y = \int 5 e^{4 e^{x}} \cos{\left(x \right)} dx$
+\end{enumerate}
+\textbf{Final Result:} $\left(C_{1} + 5 \int e^{4 e^{x}} \cos{\left(x \right)}\, dx\right) e^{- 4 e^{x}}$
+
+\section*{Family: Linear}
+\textbf{Question:} $3 y{\left(x \right)} e^{x} + \frac{d}{d x} y{\left(x \right)} = 2 e^{x}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=3 e^{x}, Q(x)=2 e^{x}$
+\item calc_mu :  $\mu(x) = e^{\int 3 e^{x} dx} = e^{3 e^{x}}$
+\item integrate_product :  $\mu y = \int 2 e^{x + 3 e^{x}} dx$
+\end{enumerate}
+\textbf{Final Result:} $C_{1} e^{- 3 e^{x}} + \frac{2}{3}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = \left(3 \sin{\left(x \right)} + \cos{\left(x \right)} + 2\right) y{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $Separable$
+\item separate :  $dy / (y) = (3 \sin{\left(x \right)} + \cos{\left(x \right)} + 2) dx$
+\item integrate_lhs :  $\log{\left(y \right)}$
+\item integrate_rhs :  $2 x + \sin{\left(x \right)} - 3 \cos{\left(x \right)} + C_1$
+\end{enumerate}
+\textbf{Final Result:} $e^{C_{1} + 2 x + \sin{\left(x \right)} - 3 \cos{\left(x \right)}}$
+
+\section*{Family: Linear}
+\textbf{Question:} $2 y{\left(x \right)} \cos{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 2 e^{x}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=2 \cos{\left(x \right)}, Q(x)=2 e^{x}$
+\item calc_mu :  $\mu(x) = e^{\int 2 \cos{\left(x \right)} dx} = e^{2 \sin{\left(x \right)}}$
+\item integrate_product :  $\mu y = \int 2 e^{x + 2 \sin{\left(x \right)}} dx$
+\end{enumerate}
+\textbf{Final Result:} $\left(C_{1} + 2 \int e^{x} e^{2 \sin{\left(x \right)}}\, dx\right) e^{- 2 \sin{\left(x \right)}}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = 2 \left(e^{x} + 1\right) y^{2}{\left(x \right)} \sin{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $Separable$
+\item separate :  $dy / (y^{2}) = (2 \left(e^{x} + 1\right) \sin{\left(x \right)}) dx$
+\item integrate_lhs :  $- \frac{1}{y}$
+\item integrate_rhs :  $e^{x} \sin{\left(x \right)} - e^{x} \cos{\left(x \right)} - 2 \cos{\left(x \right)} + C_1$
+\end{enumerate}
+\textbf{Final Result:} $\frac{1}{- C_{1} + \sqrt{2} e^{x} \cos{\left(x + \frac{\pi}{4} \right)} + 2 \cos{\left(x \right)}}$
+
+\section*{Family: Linear}
+\textbf{Question:} $y{\left(x \right)} \sin{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 2 x^{2}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=\sin{\left(x \right)}, Q(x)=2 x^{2}$
+\item calc_mu :  $\mu(x) = e^{\int \sin{\left(x \right)} dx} = e^{- \cos{\left(x \right)}}$
+\item integrate_product :  $\mu y = \int 2 x^{2} e^{- \cos{\left(x \right)}} dx$
+\end{enumerate}
+\textbf{Final Result:} $\left(C_{1} + 2 \int x^{2} e^{- \cos{\left(x \right)}}\, dx\right) e^{\cos{\left(x \right)}}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = \left(4 x + \sin{\left(x \right)} + 3\right) y{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $Separable$
+\item separate :  $dy / (y) = (4 x + \sin{\left(x \right)} + 3) dx$
+\item integrate_lhs :  $\log{\left(y \right)}$
+\item integrate_rhs :  $2 x^{2} + 3 x - \cos{\left(x \right)} + C_1$
+\end{enumerate}
+\textbf{Final Result:} $e^{C_{1} + 2 x^{2} + 3 x - \cos{\left(x \right)}}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = 3 \left(x^{2} + 1\right) y^{2}{\left(x \right)} e^{x}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $Separable$
+\item separate :  $dy / (y^{2}) = (3 \left(x^{2} + 1\right) e^{x}) dx$
+\item integrate_lhs :  $- \frac{1}{y}$
+\item integrate_rhs :  $\left(3 x^{2} - 6 x + 9\right) e^{x} + C_1$
+\end{enumerate}
+\textbf{Final Result:} $- \frac{1}{C_{1} + 3 x^{2} e^{x} - 6 x e^{x} + 9 e^{x}}$
+
+\section*{Family: Linear}
+\textbf{Question:} $2 y{\left(x \right)} \cos{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 2 x$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=2 \cos{\left(x \right)}, Q(x)=2 x$
+\item calc_mu :  $\mu(x) = e^{\int 2 \cos{\left(x \right)} dx} = e^{2 \sin{\left(x \right)}}$
+\item integrate_product :  $\mu y = \int 2 x e^{2 \sin{\left(x \right)}} dx$
+\end{enumerate}
+\textbf{Final Result:} $\left(C_{1} + 2 \int x e^{2 \sin{\left(x \right)}}\, dx\right) e^{- 2 \sin{\left(x \right)}}$
+
+\section*{Family: Linear}
+\textbf{Question:} $3 y{\left(x \right)} e^{x} + \frac{d}{d x} y{\left(x \right)} = 5 x$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=3 e^{x}, Q(x)=5 x$
+\item calc_mu :  $\mu(x) = e^{\int 3 e^{x} dx} = e^{3 e^{x}}$
+\item integrate_product :  $\mu y = \int 5 x e^{3 e^{x}} dx$
+\end{enumerate}
+\textbf{Final Result:} $\left(C_{1} + 5 \int x e^{3 e^{x}}\, dx\right) e^{- 3 e^{x}}$
+
+\section*{Family: Linear}
+\textbf{Question:} $5 y{\left(x \right)} e^{x} + \frac{d}{d x} y{\left(x \right)} = x^{2}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=5 e^{x}, Q(x)=x^{2}$
+\item calc_mu :  $\mu(x) = e^{\int 5 e^{x} dx} = e^{5 e^{x}}$
+\item integrate_product :  $\mu y = \int x^{2} e^{5 e^{x}} dx$
+\end{enumerate}
+\textbf{Final Result:} $\left(C_{1} + \int x^{2} e^{5 e^{x}}\, dx\right) e^{- 5 e^{x}}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = \left(2 x + 4\right) y{\left(x \right)} \sin{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $Separable$
+\item separate :  $dy / (y) = (\left(2 x + 4\right) \sin{\left(x \right)}) dx$
+\item integrate_lhs :  $\log{\left(y \right)}$
+\item integrate_rhs :  $- 2 x \cos{\left(x \right)} + 2 \sin{\left(x \right)} - 4 \cos{\left(x \right)} + C_1$
+\end{enumerate}
+\textbf{Final Result:} $e^{C_{1} - 2 x \cos{\left(x \right)} + 2 \sin{\left(x \right)} - 4 \cos{\left(x \right)}}$
+
+\section*{Family: Linear}
+\textbf{Question:} $2 y{\left(x \right)} \cos{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 5 e^{x}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=2 \cos{\left(x \right)}, Q(x)=5 e^{x}$
+\item calc_mu :  $\mu(x) = e^{\int 2 \cos{\left(x \right)} dx} = e^{2 \sin{\left(x \right)}}$
+\item integrate_product :  $\mu y = \int 5 e^{x + 2 \sin{\left(x \right)}} dx$
+\end{enumerate}
+\textbf{Final Result:} $\left(C_{1} + 5 \int e^{x} e^{2 \sin{\left(x \right)}}\, dx\right) e^{- 2 \sin{\left(x \right)}}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = \left(5 e^{x} + 1\right) y{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $Separable$
+\item separate :  $dy / (y) = (5 e^{x} + 1) dx$
+\item integrate_lhs :  $\log{\left(y \right)}$
+\item integrate_rhs :  $x + 5 e^{x} + C_1$
+\end{enumerate}
+\textbf{Final Result:} $e^{C_{1} + x + 5 e^{x}}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = \left(\sin{\left(x \right)} + 5 \cos{\left(x \right)} + 2\right) e^{y{\left(x \right)}}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $Separable$
+\item separate :  $dy / (e^{y}) = (\sin{\left(x \right)} + 5 \cos{\left(x \right)} + 2) dx$
+\item integrate_lhs :  $- e^{- y}$
+\item integrate_rhs :  $2 x + 5 \sin{\left(x \right)} - \cos{\left(x \right)} + C_1$
+\end{enumerate}
+\textbf{Final Result:} $\log{\left(- \frac{1}{C_{1} + 2 x + 5 \sin{\left(x \right)} - \cos{\left(x \right)}} \right)}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = 2 x^{2} \left(x^{2} + 2\right) y{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $Separable$
+\item separate :  $dy / (y) = (2 x^{2} \left(x^{2} + 2\right)) dx$
+\item integrate_lhs :  $\log{\left(y \right)}$
+\item integrate_rhs :  $\frac{2 x^{5}}{5} + \frac{4 x^{3}}{3} + C_1$
+\end{enumerate}
+\textbf{Final Result:} $e^{C_{1} + \frac{2 x^{5}}{5} + \frac{4 x^{3}}{3}}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = \left(3 x^{2} + 9\right) e^{y{\left(x \right)}} \cos{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $Separable$
+\item separate :  $dy / (e^{y}) = (\left(3 x^{2} + 9\right) \cos{\left(x \right)}) dx$
+\item integrate_lhs :  $- e^{- y}$
+\item integrate_rhs :  $3 x^{2} \sin{\left(x \right)} + 6 x \cos{\left(x \right)} + 3 \sin{\left(x \right)} + C_1$
+\end{enumerate}
+\textbf{Final Result:} $\log{\left(- \frac{1}{C_{1} + 3 x^{2} \sin{\left(x \right)} + 6 x \cos{\left(x \right)} + 3 \sin{\left(x \right)}} \right)}$
+
+\section*{Family: Linear}
+\textbf{Question:} $2 y{\left(x \right)} e^{x} + \frac{d}{d x} y{\left(x \right)} = 2 \sin{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=2 e^{x}, Q(x)=2 \sin{\left(x \right)}$
+\item calc_mu :  $\mu(x) = e^{\int 2 e^{x} dx} = e^{2 e^{x}}$
+\item integrate_product :  $\mu y = \int 2 e^{2 e^{x}} \sin{\left(x \right)} dx$
+\end{enumerate}
+\textbf{Final Result:} $\left(C_{1} + 2 \int e^{2 e^{x}} \sin{\left(x \right)}\, dx\right) e^{- 2 e^{x}}$
+
+\section*{Family: Linear}
+\textbf{Question:} $4 y{\left(x \right)} e^{x} + \frac{d}{d x} y{\left(x \right)} = 3 \cos{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=4 e^{x}, Q(x)=3 \cos{\left(x \right)}$
+\item calc_mu :  $\mu(x) = e^{\int 4 e^{x} dx} = e^{4 e^{x}}$
+\item integrate_product :  $\mu y = \int 3 e^{4 e^{x}} \cos{\left(x \right)} dx$
+\end{enumerate}
+\textbf{Final Result:} $\left(C_{1} + 3 \int e^{4 e^{x}} \cos{\left(x \right)}\, dx\right) e^{- 4 e^{x}}$
+
+\section*{Family: Linear}
+\textbf{Question:} $3 y{\left(x \right)} \cos{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 5 e^{x}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=3 \cos{\left(x \right)}, Q(x)=5 e^{x}$
+\item calc_mu :  $\mu(x) = e^{\int 3 \cos{\left(x \right)} dx} = e^{3 \sin{\left(x \right)}}$
+\item integrate_product :  $\mu y = \int 5 e^{x + 3 \sin{\left(x \right)}} dx$
+\end{enumerate}
+\textbf{Final Result:} $\left(C_{1} + 5 \int e^{x} e^{3 \sin{\left(x \right)}}\, dx\right) e^{- 3 \sin{\left(x \right)}}$
+
+\section*{Family: Linear}
+\textbf{Question:} $2 y{\left(x \right)} \sin{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 3 \sin{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=2 \sin{\left(x \right)}, Q(x)=3 \sin{\left(x \right)}$
+\item calc_mu :  $\mu(x) = e^{\int 2 \sin{\left(x \right)} dx} = e^{- 2 \cos{\left(x \right)}}$
+\item integrate_product :  $\mu y = \int 3 e^{- 2 \cos{\left(x \right)}} \sin{\left(x \right)} dx$
+\end{enumerate}
+\textbf{Final Result:} $C_{1} e^{2 \cos{\left(x \right)}} + \frac{3}{2}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = \left(x + e^{x} + 2\right) y^{2}{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $Separable$
+\item separate :  $dy / (y^{2}) = (x + e^{x} + 2) dx$
+\item integrate_lhs :  $- \frac{1}{y}$
+\item integrate_rhs :  $\frac{x^{2}}{2} + 2 x + e^{x} + C_1$
+\end{enumerate}
+\textbf{Final Result:} $- \frac{2}{2 C_{1} + x^{2} + 4 x + 2 e^{x}}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = \left(e^{x} + 3 \cos{\left(x \right)} + 2\right) e^{y{\left(x \right)}}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $Separable$
+\item separate :  $dy / (e^{y}) = (e^{x} + 3 \cos{\left(x \right)} + 2) dx$
+\item integrate_lhs :  $- e^{- y}$
+\item integrate_rhs :  $2 x + e^{x} + 3 \sin{\left(x \right)} + C_1$
+\end{enumerate}
+\textbf{Final Result:} $\log{\left(- \frac{1}{C_{1} + 2 x + e^{x} + 3 \sin{\left(x \right)}} \right)}$
+
+\section*{Family: Linear}
+\textbf{Question:} $4 x^{2} y{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 3 e^{x}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=4 x^{2}, Q(x)=3 e^{x}$
+\item calc_mu :  $\mu(x) = e^{\int 4 x^{2} dx} = e^{\frac{4 x^{3}}{3}}$
+\item integrate_product :  $\mu y = \int 3 e^{\frac{x \left(4 x^{2} + 3\right)}{3}} dx$
+\end{enumerate}
+\textbf{Final Result:} $\left(C_{1} + 3 \int e^{x} e^{\frac{4 x^{3}}{3}}\, dx\right) e^{- \frac{4 x^{3}}{3}}$
+
+\section*{Family: Linear}
+\textbf{Question:} $4 y{\left(x \right)} \cos{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 5 x^{2}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=4 \cos{\left(x \right)}, Q(x)=5 x^{2}$
+\item calc_mu :  $\mu(x) = e^{\int 4 \cos{\left(x \right)} dx} = e^{4 \sin{\left(x \right)}}$
+\item integrate_product :  $\mu y = \int 5 x^{2} e^{4 \sin{\left(x \right)}} dx$
+\end{enumerate}
+\textbf{Final Result:} $\left(C_{1} + 5 \int x^{2} e^{4 \sin{\left(x \right)}}\, dx\right) e^{- 4 \sin{\left(x \right)}}$
+
+\section*{Family: Linear}
+\textbf{Question:} $5 x y{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 3 \cos{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=5 x, Q(x)=3 \cos{\left(x \right)}$
+\item calc_mu :  $\mu(x) = e^{\int 5 x dx} = e^{\frac{5 x^{2}}{2}}$
+\item integrate_product :  $\mu y = \int 3 e^{\frac{5 x^{2}}{2}} \cos{\left(x \right)} dx$
+\end{enumerate}
+\textbf{Final Result:} $\left(C_{1} + 3 \int e^{\frac{5 x^{2}}{2}} \cos{\left(x \right)}\, dx\right) e^{- \frac{5 x^{2}}{2}}$
+
+\section*{Family: Linear}
+\textbf{Question:} $y{\left(x \right)} e^{x} + \frac{d}{d x} y{\left(x \right)} = 5 e^{x}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=e^{x}, Q(x)=5 e^{x}$
+\item calc_mu :  $\mu(x) = e^{\int e^{x} dx} = e^{e^{x}}$
+\item integrate_product :  $\mu y = \int 5 e^{x + e^{x}} dx$
+\end{enumerate}
+\textbf{Final Result:} $C_{1} e^{- e^{x}} + 5$
+
+\section*{Family: Linear}
+\textbf{Question:} $4 y{\left(x \right)} e^{x} + \frac{d}{d x} y{\left(x \right)} = \cos{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item identify_family :  $First-Order Linear$
+\item find_P_Q :  $P(x)=4 e^{x}, Q(x)=\cos{\left(x \right)}$
+\item calc_mu :  $\mu(x) = e^{\int 4 e^{x} dx} = e^{4 e^{x}}$
+\item integrate_product :  $\mu y = \int e^{4 e^{x}} \cos{\left(x \right)} dx$
+\end{enumerate}
+\textbf{Final Result:} $\left(C_{1} + \int e^{4 e^{x}} \cos{\left(x \right)}\, dx\right) e^{- 4 e^{x}}$
+
+\end{document}

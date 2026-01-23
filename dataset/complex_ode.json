@@ -1,0 +1,112 @@
+[
+    {
+        "family": "Separable",
+        "question": "$\\frac{d}{d x} y{\\left(x \\right)} = e^{y{\\left(x \\right)}} e^{\\sin{\\left(\\sin{\\left(x \\right)} \\right)}}$",
+        "steps": [
+            {
+                "step": "Classify",
+                "op": "Identify as Separable",
+                "res": "$\\frac{dy}{e^{y}} = e^{\\sin{\\left(\\sin{\\left(x \\right)} \\right)}} dx$"
+            },
+            {
+                "step": "Integrate_LHS",
+                "op": "Integrate w.r.t y",
+                "res": "$- e^{- y}$"
+            },
+            {
+                "step": "Integrate_RHS",
+                "op": "Integrate w.r.t x",
+                "res": "$\\int e^{\\sin{\\left(\\sin{\\left(x \\right)} \\right)}}\\, dx + C$"
+            }
+        ],
+        "final_result": "$y{\\left(x \\right)} = \\log{\\left(- \\frac{1}{C_{1} + \\int e^{\\sin{\\left(\\sin{\\left(x \\right)} \\right)}}\\, dx} \\right)}$"
+    },
+    {
+        "family": "First-Order Linear",
+        "question": "$y{\\left(x \\right)} \\log{\\left(x + 2 \\right)} \\sin{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = x e^{x}$",
+        "steps": [
+            {
+                "step": "Standard_Form",
+                "op": "Identify P(x) and Q(x)",
+                "res": "$P(x)=\\log{\\left(x + 2 \\right)} \\sin{\\left(x \\right)}, Q(x)=x e^{x}$"
+            },
+            {
+                "step": "Calc_Integrating_Factor",
+                "op": "exp(Integral(P(x)dx))",
+                "res": "$\\mu(x) = e^{\\int \\log{\\left(x + 2 \\right)} \\sin{\\left(x \\right)}\\, dx}$"
+            },
+            {
+                "step": "Multiply_and_Integrate",
+                "op": "d/dx(mu*y) = mu*Q",
+                "res": "$\\frac{d}{dx}(e^{\\int \\log{\\left(x + 2 \\right)} \\sin{\\left(x \\right)}\\, dx}y) = x e^{x + \\int \\log{\\left(x + 2 \\right)} \\sin{\\left(x \\right)}\\, dx}$"
+            }
+        ],
+        "final_result": "$- \\int x e^{x} e^{\\int \\log{\\left(x + 2 \\right)} \\sin{\\left(x \\right)}\\, dx}\\, dx + \\int y{\\left(x \\right)} \\left(e^{\\int \\log{\\left(x + 2 \\right)} \\sin{\\left(x \\right)}\\, dx}\\right) \\log{\\left(x + 2 \\right)} \\sin{\\left(x \\right)}\\, dx = C_{1}$"
+    },
+    {
+        "family": "Separable",
+        "question": "$\\frac{d}{d x} y{\\left(x \\right)} = e^{2 x} e^{y{\\left(x \\right)}}$",
+        "steps": [
+            {
+                "step": "Classify",
+                "op": "Identify as Separable",
+                "res": "$\\frac{dy}{e^{y}} = e^{2 x} dx$"
+            },
+            {
+                "step": "Integrate_LHS",
+                "op": "Integrate w.r.t y",
+                "res": "$- e^{- y}$"
+            },
+            {
+                "step": "Integrate_RHS",
+                "op": "Integrate w.r.t x",
+                "res": "$\\frac{e^{2 x}}{2} + C$"
+            }
+        ],
+        "final_result": "$y{\\left(x \\right)} = \\log{\\left(- \\frac{1}{C_{1} + e^{2 x}} \\right)} + \\log{\\left(2 \\right)}$"
+    },
+    {
+        "family": "Separable",
+        "question": "$\\frac{d}{d x} y{\\left(x \\right)} = \\left(x + \\frac{\\sin{\\left(2 x \\right)}}{2}\\right) e^{y{\\left(x \\right)}}$",
+        "steps": [
+            {
+                "step": "Classify",
+                "op": "Identify as Separable",
+                "res": "$\\frac{dy}{e^{y}} = x + \\frac{\\sin{\\left(2 x \\right)}}{2} dx$"
+            },
+            {
+                "step": "Integrate_LHS",
+                "op": "Integrate w.r.t y",
+                "res": "$- e^{- y}$"
+            },
+            {
+                "step": "Integrate_RHS",
+                "op": "Integrate w.r.t x",
+                "res": "$\\frac{x^{2}}{2} - \\frac{\\cos{\\left(2 x \\right)}}{4} + C$"
+            }
+        ],
+        "final_result": "$y{\\left(x \\right)} = \\log{\\left(- \\frac{1}{C_{1} + 2 x^{2} - \\cos{\\left(2 x \\right)}} \\right)} + 2 \\log{\\left(2 \\right)}$"
+    },
+    {
+        "family": "First-Order Linear",
+        "question": "$y{\\left(x \\right)} e^{x} \\sin{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = \\sqrt{x^{2} + 1}$",
+        "steps": [
+            {
+                "step": "Standard_Form",
+                "op": "Identify P(x) and Q(x)",
+                "res": "$P(x)=e^{x} \\sin{\\left(x \\right)}, Q(x)=\\sqrt{x^{2} + 1}$"
+            },
+            {
+                "step": "Calc_Integrating_Factor",
+                "op": "exp(Integral(P(x)dx))",
+                "res": "$\\mu(x) = e^{\\frac{e^{x} \\sin{\\left(x \\right)}}{2} - \\frac{e^{x} \\cos{\\left(x \\right)}}{2}}$"
+            },
+            {
+                "step": "Multiply_and_Integrate",
+                "op": "d/dx(mu*y) = mu*Q",
+                "res": "$\\frac{d}{dx}(e^{\\frac{e^{x} \\sin{\\left(x \\right)}}{2} - \\frac{e^{x} \\cos{\\left(x \\right)}}{2}}y) = \\sqrt{x^{2} + 1} e^{- \\frac{\\sqrt{2} e^{x} \\cos{\\left(x + \\frac{\\pi}{4} \\right)}}{2}}$"
+            }
+        ],
+        "final_result": "$\\int \\left(- \\sqrt{x^{2} + 1} + y{\\left(x \\right)} e^{x} \\sin{\\left(x \\right)}\\right) e^{\\frac{e^{x} \\sin{\\left(x \\right)}}{2}} e^{- \\frac{e^{x} \\cos{\\left(x \\right)}}{2}}\\, dx = C_{1}$"
+    }
+]
