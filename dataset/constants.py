@@ -1,3 +1,4 @@
+
 FAMILY = 'family'
 STEP = 'step'
 RESULT = 'result'
@@ -6,3 +7,4 @@ QUESTION = 'question'
 FINAL_RESULT = 'final_result'
 EQUATION = 'equation'
 SOLUTION = 'solution'
+OP = 'op'
