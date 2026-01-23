@@ -4,7 +4,7 @@ from tokenize import endpats
 from constants import *
 
 
-INITIALS = """ \\documentclass{article}
+INITIALS = """\\documentclass{article}
 \\usepackage{graphicx, amsmath} % Required for inserting images
 
 \\title{ML dataset check}
@@ -18,7 +18,7 @@ ENDS = "\\end{document}"
 
 def make_latex_file(filename: str, savefilename: str = None):
     strings = []
-    with open(filename, 'r') as f:
+    with open(DATA_LOC + filename, 'r') as f:
         data = json.load(f)
         for item in data:
             strings.append("\\section*{Family: " + item[FAMILY] + "}\n")
@@ -30,7 +30,7 @@ def make_latex_file(filename: str, savefilename: str = None):
             strings.append("\\textbf{Final Result:} $" + item[SOLUTION] + "$\n\n")
 
     savefilename = savefilename or filename.replace('.json', '.tex')
-    with open(savefilename, 'w') as f:
+    with open(LATEX_LOC + savefilename, 'w') as f:
         f.write(INITIALS)
         f.writelines(strings)
         f.write(ENDS)
