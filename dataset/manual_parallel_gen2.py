@@ -26,7 +26,7 @@ def print_status():
     eta = (elapsed / count) * (total_sample-count) if count > 0 else 999999
     print("Generated samples: ", count, "/", total_sample,
           ", elapsed time (s): ", datetime.timedelta(seconds=round(elapsed)), 
-          " ETA : ", datetime.timedelta(seconds=round(eta)))
+          " ETA : ", datetime.timedelta(seconds=round(eta)), end="\r")
 
 # def print_batch_status(gen_count, batch_no, batch_size, batch_start_time):
 #     elapsed = time.time() - batch_start_time
