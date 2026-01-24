@@ -133,7 +133,7 @@ def main():
                     C.FAMILY: family,
                     C.EQUATION: latex_ode,
                     C.Q_STEPS: steps,
-                    C.SOLUTION: latex_soln,
+                    C.SOLUTION: sp.latex(sp.solve(ode, y)),
                 })
         except Exception as e: print(f"Exception : {e}")
 
