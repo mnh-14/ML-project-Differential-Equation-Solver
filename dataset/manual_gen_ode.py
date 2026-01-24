@@ -14,11 +14,8 @@ dx = sp.Symbol('dx')
 dy = sp.Symbol('dy')
 C1 = sp.Symbol('C1')
 
-piecewise_log = Piecewise(
-    (sp.log(x), x>0),
-    (sp.log(-x), x<0)
-)
 
+# Generate expressions :
 def get_complex_expr(var, complexity=2):
     """Generates varied mathematical expressions to avoid duplicates."""
     basics = [var, var**2, sp.sin(var), sp.cos(var), sp.tan(var), sp.exp(var), sp.acos(var), sp.asin(var), sp.atan(var), sp.log(var)]
@@ -31,8 +28,10 @@ def get_complex_expr(var, complexity=2):
 
 def get_complex_expr_doubled(var1, var2, complexity=2):
     """Generates varied mathematical expressions to avoid duplicates."""
-    basics_1 = [var1, var1**2, var2, var2**2, var1*var2]
-    basics = [random.choice(basics_1), sp.sin(random.choice(basics_1)), sp.cos(random.choice(basics_1))]
+    vars_basic= [var1, var2]
+    vars_extended = vars_basic + [var1**2, var2**2, var1*var2]
+    basics_1 = [sp.sin(random.choice(vars_basic)), sp.cos(random.choice(vars_basic)), sp.exp(random.choice(vars_basic))]
+    basics = basics_1 + [random.choice(vars_extended)]
     expr = random.choice(basics) * random.randint(1, 10)
     for _ in range(complexity - 1):
         other = random.choice(basics) + random.randint(1, 6)
@@ -40,6 +39,8 @@ def get_complex_expr_doubled(var1, var2, complexity=2):
         expr = expr + other if op == 'add' else expr * other
     return sp.simplify(expr)
 
+
+# Generate ODE of different families : 
 def generate_separable():
     """Expert for Separable ODEs: dy/dx = f(x)g(y)"""
     f_x = get_complex_expr(x, complexity=2)
@@ -59,7 +60,7 @@ def generate_separable():
         {C.STEP: "Solve", C.OP: "Isolate y", C.RESULT: sp.latex(eqn)}
     ]
     soln = sp.solve(eqn, y)
-    return "Separable", sp.latex(ode), steps, [sp.latex(s) for s in soln]
+    return "Separable", ode, steps, [sp.latex(s) for s in soln]
 
 def generate_linear():
     """Expert for First-Order Linear: y' + P(x)y = Q(x)"""
@@ -85,24 +86,20 @@ def generate_linear():
     ]
     
     soln = sp.solve(eqn, y)
-    return "First-Order Linear", sp.latex(ode), steps, [sp.latex(s) for s in soln]
+    return "First-Order Linear", ode, steps, [sp.latex(s) for s in soln]
 
 def generate_exact():
     """Expert for exact ODEs : M(x, y)dx + N(x, y)dy = 0"""
     M = get_complex_expr_doubled(x, y)
-    N = get_complex_expr_doubled(x, y)
+    int_M_dx = sp.integrate(M, x) 
+    N = sp.diff(int_M_dx, y)
 
-    print(f"Functions found : M = {M}, N = {N}\n")
     ode = sp.Eq(M * dx + N * dy, 0)
 
-    #================= Skipping this thing for now =================
-    # if sp.diff(M, y) != sp.diff(N, x):
-    #     return None
+    if int_M_dx.has(sp.Integral):
+        return None, None, None, None
 
-    int_M_dx = sp.integrate(M, x) 
-    print(f"Integrated M : {int_M_dx}")
     eqn = sp.Eq(int_M_dx, C1)
-    print(f"The equation : {eqn}")
 
     steps = [
         {C.STEP: "Identify", C.OP: "Find M : ", C.RESULT: f"M(x, y) = {sp.latex(M)}"},
@@ -110,30 +107,35 @@ def generate_exact():
     ]
 
     soln = sp.solve(eqn, y)
-    return "Exact", sp.latex(ode), steps, [sp.latex(s) for s in soln]
+    return "Exact", ode, steps, [sp.latex(s) for s in soln]
 
 
 def main():
     parser = argparse.ArgumentParser(description="Generate ODE Step-by-Step Dataset")
     parser.add_argument("--output", default="ode_dataset.json", help="Output JSON filename")
-    parser.add_argument("--samples", type=int, default=100, help="Number of samples to generate")
+    parser.add_argument("--samples", type=int, default=20, help="Number of samples to generate")
     args = parser.parse_args()
 
     dataset = []
-    generators = [generate_exact]
+    generators = [generate_exact, generate_linear, generate_separable]
 
-    for _ in range(args.samples):
+    for i in range(args.samples):
         try:
+            print(f"case {i+1} : ")
             gen_func = random.choice(generators)
             family, ode, steps, soln = gen_func()
+            latex_ode = sp.latex(ode)
+            latex_soln = sp.latex(soln)
+            print(f"Function generated from: {family}\n")
             
-            dataset.append({
-                C.FAMILY: family,
-                C.EQUATION: sp.latex(ode),
-                C.Q_STEPS: steps,
-                C.SOLUTION: sp.latex(sp.dsolve(ode, y))
-            })
-        except Exception as e: print(e)
+            if family is not None:
+                dataset.append({
+                    C.FAMILY: family,
+                    C.EQUATION: latex_ode,
+                    C.Q_STEPS: steps,
+                    C.SOLUTION: latex_soln,
+                })
+        except Exception as e: print(f"Exception : {e}")
 
     with open(args.output, 'w') as f:
         json.dump(dataset, f, indent=4)

@@ -16,6 +16,7 @@ INITIALS = """ \\documentclass{article}
 \\maketitle\n"""
 ENDS = "\\end{document}"
 
+
 def make_latex_file(filename: str, savefilename: str = None):
     strings = []
     with open(filename, 'r') as f:
