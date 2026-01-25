@@ -1,0 +1,742 @@
+[
+    {
+        "family": "Exact",
+        "equation": "\\left(- x \\sin{\\left(y \\right)} + 3 y^{2}\\right) dy + \\left(2 \\sin{\\left(x \\right)} + \\cos{\\left(y \\right)} + 6\\right) dx = 0",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find M : ",
+                "result": "M(x, y) = 2 \\sin{\\left(x \\right)} + \\cos{\\left(y \\right)} + 6"
+            },
+            {
+                "step": "Identify",
+                "op": "Find N : ",
+                "result": "N(x, y) = - x \\sin{\\left(y \\right)} + 3 y^{2}"
+            },
+            {
+                "step": "Integrate M(x, y) wrt x, [F(x, y)]:",
+                "op": "Integrate",
+                "result": "x \\cos{\\left(y \\right)} + 6 x - 2 \\cos{\\left(x \\right)} + g(y)"
+            },
+            {
+                "step": "Differentiate F(x, y) wrt y : ",
+                "op": "Differentiate",
+                "result": "- x \\sin{\\left(y \\right)} + g'(y)"
+            },
+            {
+                "step": "Solve N = diff(F) for g'(y)",
+                "op": "Solve",
+                "result": "3 y^{2}"
+            },
+            {
+                "step": "Integrate g'(y) wrt y : ",
+                "op": "Integrate g'(y) wrt y : ",
+                "result": "y^{3} + C"
+            }
+        ],
+        "solution": "x \\cos{\\left(y \\right)} + 6 x + y^{3} - 2 \\cos{\\left(x \\right)} = C_{1}"
+    },
+    {
+        "family": "Exact",
+        "equation": "\\left(4 x^{2} - x \\sin{\\left(y \\right)} + 2 y\\right) dy + \\left(8 x y + \\cos{\\left(y \\right)} + 6\\right) dx = 0",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find M : ",
+                "result": "M(x, y) = 8 x y + \\cos{\\left(y \\right)} + 6"
+            },
+            {
+                "step": "Identify",
+                "op": "Find N : ",
+                "result": "N(x, y) = 4 x^{2} - x \\sin{\\left(y \\right)} + 2 y"
+            },
+            {
+                "step": "Integrate M(x, y) wrt x, [F(x, y)]:",
+                "op": "Integrate",
+                "result": "4 x^{2} y + x \\left(\\cos{\\left(y \\right)} + 6\\right) + g(y)"
+            },
+            {
+                "step": "Differentiate F(x, y) wrt y : ",
+                "op": "Differentiate",
+                "result": "4 x^{2} - x \\sin{\\left(y \\right)} + g'(y)"
+            },
+            {
+                "step": "Solve N = diff(F) for g'(y)",
+                "op": "Solve",
+                "result": "2 y"
+            },
+            {
+                "step": "Integrate g'(y) wrt y : ",
+                "op": "Integrate g'(y) wrt y : ",
+                "result": "y^{2} + C"
+            }
+        ],
+        "solution": "4 x^{2} y + x \\left(\\cos{\\left(y \\right)} + 6\\right) + y^{2} = C_{1}"
+    },
+    {
+        "family": "Exact",
+        "equation": "9 \\left(\\cos{\\left(y \\right)} + 5\\right) \\cos{\\left(y \\right)} dx + \\left(- 9 x \\left(\\cos{\\left(y \\right)} + 5\\right) \\sin{\\left(y \\right)} - 9 x \\sin{\\left(y \\right)} \\cos{\\left(y \\right)} + 2 y\\right) dy = 0",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find M : ",
+                "result": "M(x, y) = 9 \\left(\\cos{\\left(y \\right)} + 5\\right) \\cos{\\left(y \\right)}"
+            },
+            {
+                "step": "Identify",
+                "op": "Find N : ",
+                "result": "N(x, y) = - 9 x \\left(\\cos{\\left(y \\right)} + 5\\right) \\sin{\\left(y \\right)} - 9 x \\sin{\\left(y \\right)} \\cos{\\left(y \\right)} + 2 y"
+            },
+            {
+                "step": "Integrate M(x, y) wrt x, [F(x, y)]:",
+                "op": "Integrate",
+                "result": "9 x \\left(\\cos{\\left(y \\right)} + 5\\right) \\cos{\\left(y \\right)} + g(y)"
+            },
+            {
+                "step": "Differentiate F(x, y) wrt y : ",
+                "op": "Differentiate",
+                "result": "- 9 x \\left(\\cos{\\left(y \\right)} + 5\\right) \\sin{\\left(y \\right)} - 9 x \\sin{\\left(y \\right)} \\cos{\\left(y \\right)} + g'(y)"
+            },
+            {
+                "step": "Solve N = diff(F) for g'(y)",
+                "op": "Solve",
+                "result": "2 y"
+            },
+            {
+                "step": "Integrate g'(y) wrt y : ",
+                "op": "Integrate g'(y) wrt y : ",
+                "result": "y^{2} + C"
+            }
+        ],
+        "solution": "9 x \\left(\\cos{\\left(y \\right)} + 5\\right) \\cos{\\left(y \\right)} + y^{2} = C_{1}"
+    },
+    {
+        "family": "Exact",
+        "equation": "\\left(\\frac{x^{2}}{2} + 3 y^{2}\\right) dy + \\left(x y + e^{x} + 2\\right) dx = 0",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find M : ",
+                "result": "M(x, y) = x y + e^{x} + 2"
+            },
+            {
+                "step": "Identify",
+                "op": "Find N : ",
+                "result": "N(x, y) = \\frac{x^{2}}{2} + 3 y^{2}"
+            },
+            {
+                "step": "Integrate M(x, y) wrt x, [F(x, y)]:",
+                "op": "Integrate",
+                "result": "\\frac{x^{2} y}{2} + 2 x + e^{x} + g(y)"
+            },
+            {
+                "step": "Differentiate F(x, y) wrt y : ",
+                "op": "Differentiate",
+                "result": "\\frac{x^{2}}{2} + g'(y)"
+            },
+            {
+                "step": "Solve N = diff(F) for g'(y)",
+                "op": "Solve",
+                "result": "3 y^{2}"
+            },
+            {
+                "step": "Integrate g'(y) wrt y : ",
+                "op": "Integrate g'(y) wrt y : ",
+                "result": "y^{3} + C"
+            }
+        ],
+        "solution": "\\frac{x^{2} y}{2} + 2 x + y^{3} + e^{x} = C_{1}"
+    },
+    {
+        "family": "Exact",
+        "equation": "3 y^{2} dy + \\left(e^{x} + 3 \\cos{\\left(x \\right)} + 6\\right) dx = 0",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find M : ",
+                "result": "M(x, y) = e^{x} + 3 \\cos{\\left(x \\right)} + 6"
+            },
+            {
+                "step": "Identify",
+                "op": "Find N : ",
+                "result": "N(x, y) = 3 y^{2}"
+            },
+            {
+                "step": "Integrate M(x, y) wrt x, [F(x, y)]:",
+                "op": "Integrate",
+                "result": "6 x + e^{x} + 3 \\sin{\\left(x \\right)} + g(y)"
+            },
+            {
+                "step": "Differentiate F(x, y) wrt y : ",
+                "op": "Differentiate",
+                "result": "0 + g'(y)"
+            },
+            {
+                "step": "Solve N = diff(F) for g'(y)",
+                "op": "Solve",
+                "result": "3 y^{2}"
+            },
+            {
+                "step": "Integrate g'(y) wrt y : ",
+                "op": "Integrate g'(y) wrt y : ",
+                "result": "y^{3} + C"
+            }
+        ],
+        "solution": "6 x + y^{3} + e^{x} + 3 \\sin{\\left(x \\right)} = C_{1}"
+    },
+    {
+        "family": "Exact",
+        "equation": "\\left(- x \\sin{\\left(y \\right)} + e^{y}\\right) dy + \\left(10 e^{x} + \\cos{\\left(y \\right)} + 6\\right) dx = 0",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find M : ",
+                "result": "M(x, y) = 10 e^{x} + \\cos{\\left(y \\right)} + 6"
+            },
+            {
+                "step": "Identify",
+                "op": "Find N : ",
+                "result": "N(x, y) = - x \\sin{\\left(y \\right)} + e^{y}"
+            },
+            {
+                "step": "Integrate M(x, y) wrt x, [F(x, y)]:",
+                "op": "Integrate",
+                "result": "x \\left(\\cos{\\left(y \\right)} + 6\\right) + 10 e^{x} + g(y)"
+            },
+            {
+                "step": "Differentiate F(x, y) wrt y : ",
+                "op": "Differentiate",
+                "result": "- x \\sin{\\left(y \\right)} + g'(y)"
+            },
+            {
+                "step": "Solve N = diff(F) for g'(y)",
+                "op": "Solve",
+                "result": "e^{y}"
+            },
+            {
+                "step": "Integrate g'(y) wrt y : ",
+                "op": "Integrate g'(y) wrt y : ",
+                "result": "e^{y} + C"
+            }
+        ],
+        "solution": "x \\left(\\cos{\\left(y \\right)} + 6\\right) + 10 e^{x} + e^{y} = C_{1}"
+    },
+    {
+        "family": "Exact",
+        "equation": "\\left(2 x \\cos{\\left(y \\right)} + e^{y}\\right) dy + \\left(2 \\sin{\\left(y \\right)} + 1\\right) dx = 0",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find M : ",
+                "result": "M(x, y) = 2 \\sin{\\left(y \\right)} + 1"
+            },
+            {
+                "step": "Identify",
+                "op": "Find N : ",
+                "result": "N(x, y) = 2 x \\cos{\\left(y \\right)} + e^{y}"
+            },
+            {
+                "step": "Integrate M(x, y) wrt x, [F(x, y)]:",
+                "op": "Integrate",
+                "result": "x \\left(2 \\sin{\\left(y \\right)} + 1\\right) + g(y)"
+            },
+            {
+                "step": "Differentiate F(x, y) wrt y : ",
+                "op": "Differentiate",
+                "result": "2 x \\cos{\\left(y \\right)} + g'(y)"
+            },
+            {
+                "step": "Solve N = diff(F) for g'(y)",
+                "op": "Solve",
+                "result": "e^{y}"
+            },
+            {
+                "step": "Integrate g'(y) wrt y : ",
+                "op": "Integrate g'(y) wrt y : ",
+                "result": "e^{y} + C"
+            }
+        ],
+        "solution": "x \\left(2 \\sin{\\left(y \\right)} + 1\\right) + e^{y} = C_{1}"
+    },
+    {
+        "family": "Exact",
+        "equation": "\\left(8 x \\cos{\\left(y \\right)} + 2 y\\right) dy + \\left(e^{x} + 8 \\sin{\\left(y \\right)} + 2\\right) dx = 0",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find M : ",
+                "result": "M(x, y) = e^{x} + 8 \\sin{\\left(y \\right)} + 2"
+            },
+            {
+                "step": "Identify",
+                "op": "Find N : ",
+                "result": "N(x, y) = 8 x \\cos{\\left(y \\right)} + 2 y"
+            },
+            {
+                "step": "Integrate M(x, y) wrt x, [F(x, y)]:",
+                "op": "Integrate",
+                "result": "x \\left(8 \\sin{\\left(y \\right)} + 2\\right) + e^{x} + g(y)"
+            },
+            {
+                "step": "Differentiate F(x, y) wrt y : ",
+                "op": "Differentiate",
+                "result": "8 x \\cos{\\left(y \\right)} + g'(y)"
+            },
+            {
+                "step": "Solve N = diff(F) for g'(y)",
+                "op": "Solve",
+                "result": "2 y"
+            },
+            {
+                "step": "Integrate g'(y) wrt y : ",
+                "op": "Integrate g'(y) wrt y : ",
+                "result": "y^{2} + C"
+            }
+        ],
+        "solution": "x \\left(8 \\sin{\\left(y \\right)} + 2\\right) + y^{2} + e^{x} = C_{1}"
+    },
+    {
+        "family": "Exact",
+        "equation": "\\left(- x \\sin{\\left(y \\right)} + 3 y^{2}\\right) dy + \\left(2 x^{2} + \\cos{\\left(y \\right)} + 3\\right) dx = 0",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find M : ",
+                "result": "M(x, y) = 2 x^{2} + \\cos{\\left(y \\right)} + 3"
+            },
+            {
+                "step": "Identify",
+                "op": "Find N : ",
+                "result": "N(x, y) = - x \\sin{\\left(y \\right)} + 3 y^{2}"
+            },
+            {
+                "step": "Integrate M(x, y) wrt x, [F(x, y)]:",
+                "op": "Integrate",
+                "result": "\\frac{2 x^{3}}{3} + x \\left(\\cos{\\left(y \\right)} + 3\\right) + g(y)"
+            },
+            {
+                "step": "Differentiate F(x, y) wrt y : ",
+                "op": "Differentiate",
+                "result": "- x \\sin{\\left(y \\right)} + g'(y)"
+            },
+            {
+                "step": "Solve N = diff(F) for g'(y)",
+                "op": "Solve",
+                "result": "3 y^{2}"
+            },
+            {
+                "step": "Integrate g'(y) wrt y : ",
+                "op": "Integrate g'(y) wrt y : ",
+                "result": "y^{3} + C"
+            }
+        ],
+        "solution": "\\frac{2 x^{3}}{3} + x \\left(\\cos{\\left(y \\right)} + 3\\right) + y^{3} = C_{1}"
+    },
+    {
+        "family": "Exact",
+        "equation": "\\left(\\frac{x^{2}}{2} + 2 y\\right) dy + \\left(x y + \\sin{\\left(x \\right)} + 6\\right) dx = 0",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find M : ",
+                "result": "M(x, y) = x y + \\sin{\\left(x \\right)} + 6"
+            },
+            {
+                "step": "Identify",
+                "op": "Find N : ",
+                "result": "N(x, y) = \\frac{x^{2}}{2} + 2 y"
+            },
+            {
+                "step": "Integrate M(x, y) wrt x, [F(x, y)]:",
+                "op": "Integrate",
+                "result": "\\frac{x^{2} y}{2} + 6 x - \\cos{\\left(x \\right)} + g(y)"
+            },
+            {
+                "step": "Differentiate F(x, y) wrt y : ",
+                "op": "Differentiate",
+                "result": "\\frac{x^{2}}{2} + g'(y)"
+            },
+            {
+                "step": "Solve N = diff(F) for g'(y)",
+                "op": "Solve",
+                "result": "2 y"
+            },
+            {
+                "step": "Integrate g'(y) wrt y : ",
+                "op": "Integrate g'(y) wrt y : ",
+                "result": "y^{2} + C"
+            }
+        ],
+        "solution": "\\frac{x^{2} y}{2} + 6 x + y^{2} - \\cos{\\left(x \\right)} = C_{1}"
+    },
+    {
+        "family": "Exact",
+        "equation": "3 y^{2} dy + 7 \\left(\\cos{\\left(x \\right)} + 5\\right) \\cos{\\left(x \\right)} dx = 0",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find M : ",
+                "result": "M(x, y) = 7 \\left(\\cos{\\left(x \\right)} + 5\\right) \\cos{\\left(x \\right)}"
+            },
+            {
+                "step": "Identify",
+                "op": "Find N : ",
+                "result": "N(x, y) = 3 y^{2}"
+            },
+            {
+                "step": "Integrate M(x, y) wrt x, [F(x, y)]:",
+                "op": "Integrate",
+                "result": "\\frac{7 x \\sin^{2}{\\left(x \\right)}}{2} + \\frac{7 x \\cos^{2}{\\left(x \\right)}}{2} + \\frac{7 \\sin{\\left(x \\right)} \\cos{\\left(x \\right)}}{2} + 35 \\sin{\\left(x \\right)} + g(y)"
+            },
+            {
+                "step": "Differentiate F(x, y) wrt y : ",
+                "op": "Differentiate",
+                "result": "0 + g'(y)"
+            },
+            {
+                "step": "Solve N = diff(F) for g'(y)",
+                "op": "Solve",
+                "result": "3 y^{2}"
+            },
+            {
+                "step": "Integrate g'(y) wrt y : ",
+                "op": "Integrate g'(y) wrt y : ",
+                "result": "y^{3} + C"
+            }
+        ],
+        "solution": "\\frac{7 x \\sin^{2}{\\left(x \\right)}}{2} + \\frac{7 x \\cos^{2}{\\left(x \\right)}}{2} + y^{3} + \\frac{7 \\sin{\\left(x \\right)} \\cos{\\left(x \\right)}}{2} + 35 \\sin{\\left(x \\right)} = C_{1}"
+    },
+    {
+        "family": "Exact",
+        "equation": "\\left(e^{y} + 9 \\sin{\\left(x \\right)} \\cos{\\left(y \\right)}\\right) dy + 9 \\left(\\sin{\\left(y \\right)} + 3\\right) \\cos{\\left(x \\right)} dx = 0",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find M : ",
+                "result": "M(x, y) = 9 \\left(\\sin{\\left(y \\right)} + 3\\right) \\cos{\\left(x \\right)}"
+            },
+            {
+                "step": "Identify",
+                "op": "Find N : ",
+                "result": "N(x, y) = e^{y} + 9 \\sin{\\left(x \\right)} \\cos{\\left(y \\right)}"
+            },
+            {
+                "step": "Integrate M(x, y) wrt x, [F(x, y)]:",
+                "op": "Integrate",
+                "result": "\\left(9 \\sin{\\left(y \\right)} + 27\\right) \\sin{\\left(x \\right)} + g(y)"
+            },
+            {
+                "step": "Differentiate F(x, y) wrt y : ",
+                "op": "Differentiate",
+                "result": "9 \\sin{\\left(x \\right)} \\cos{\\left(y \\right)} + g'(y)"
+            },
+            {
+                "step": "Solve N = diff(F) for g'(y)",
+                "op": "Solve",
+                "result": "e^{y}"
+            },
+            {
+                "step": "Integrate g'(y) wrt y : ",
+                "op": "Integrate g'(y) wrt y : ",
+                "result": "e^{y} + C"
+            }
+        ],
+        "solution": "\\left(9 \\sin{\\left(y \\right)} + 27\\right) \\sin{\\left(x \\right)} + e^{y} = C_{1}"
+    },
+    {
+        "family": "Exact",
+        "equation": "\\left(7 x e^{y} + e^{y}\\right) dy + \\left(7 e^{y} + \\sin{\\left(x \\right)} + 1\\right) dx = 0",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find M : ",
+                "result": "M(x, y) = 7 e^{y} + \\sin{\\left(x \\right)} + 1"
+            },
+            {
+                "step": "Identify",
+                "op": "Find N : ",
+                "result": "N(x, y) = 7 x e^{y} + e^{y}"
+            },
+            {
+                "step": "Integrate M(x, y) wrt x, [F(x, y)]:",
+                "op": "Integrate",
+                "result": "7 x e^{y} + x - \\cos{\\left(x \\right)} + g(y)"
+            },
+            {
+                "step": "Differentiate F(x, y) wrt y : ",
+                "op": "Differentiate",
+                "result": "7 x e^{y} + g'(y)"
+            },
+            {
+                "step": "Solve N = diff(F) for g'(y)",
+                "op": "Solve",
+                "result": "e^{y}"
+            },
+            {
+                "step": "Integrate g'(y) wrt y : ",
+                "op": "Integrate g'(y) wrt y : ",
+                "result": "e^{y} + C"
+            }
+        ],
+        "solution": "7 x e^{y} + x + e^{y} - \\cos{\\left(x \\right)} = C_{1}"
+    },
+    {
+        "family": "Exact",
+        "equation": "\\left(- x \\sin{\\left(y \\right)} + 2 y\\right) dy + \\left(6 \\sin{\\left(x \\right)} + \\cos{\\left(y \\right)} + 3\\right) dx = 0",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find M : ",
+                "result": "M(x, y) = 6 \\sin{\\left(x \\right)} + \\cos{\\left(y \\right)} + 3"
+            },
+            {
+                "step": "Identify",
+                "op": "Find N : ",
+                "result": "N(x, y) = - x \\sin{\\left(y \\right)} + 2 y"
+            },
+            {
+                "step": "Integrate M(x, y) wrt x, [F(x, y)]:",
+                "op": "Integrate",
+                "result": "x \\cos{\\left(y \\right)} + 3 x - 6 \\cos{\\left(x \\right)} + g(y)"
+            },
+            {
+                "step": "Differentiate F(x, y) wrt y : ",
+                "op": "Differentiate",
+                "result": "- x \\sin{\\left(y \\right)} + g'(y)"
+            },
+            {
+                "step": "Solve N = diff(F) for g'(y)",
+                "op": "Solve",
+                "result": "2 y"
+            },
+            {
+                "step": "Integrate g'(y) wrt y : ",
+                "op": "Integrate g'(y) wrt y : ",
+                "result": "y^{2} + C"
+            }
+        ],
+        "solution": "x \\cos{\\left(y \\right)} + 3 x + y^{2} - 6 \\cos{\\left(x \\right)} = C_{1}"
+    },
+    {
+        "family": "Exact",
+        "equation": "2 y dy + 10 \\left(x^{2} + 3\\right) e^{x} dx = 0",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find M : ",
+                "result": "M(x, y) = 10 \\left(x^{2} + 3\\right) e^{x}"
+            },
+            {
+                "step": "Identify",
+                "op": "Find N : ",
+                "result": "N(x, y) = 2 y"
+            },
+            {
+                "step": "Integrate M(x, y) wrt x, [F(x, y)]:",
+                "op": "Integrate",
+                "result": "\\left(10 x^{2} - 20 x + 50\\right) e^{x} + g(y)"
+            },
+            {
+                "step": "Differentiate F(x, y) wrt y : ",
+                "op": "Differentiate",
+                "result": "0 + g'(y)"
+            },
+            {
+                "step": "Solve N = diff(F) for g'(y)",
+                "op": "Solve",
+                "result": "2 y"
+            },
+            {
+                "step": "Integrate g'(y) wrt y : ",
+                "op": "Integrate g'(y) wrt y : ",
+                "result": "y^{2} + C"
+            }
+        ],
+        "solution": "y^{2} + \\left(10 x^{2} - 20 x + 50\\right) e^{x} = C_{1}"
+    },
+    {
+        "family": "Exact",
+        "equation": "9 y^{2} \\left(\\sin{\\left(y \\right)} + 3\\right) dx + \\left(9 x y^{2} \\cos{\\left(y \\right)} + 18 x y \\left(\\sin{\\left(y \\right)} + 3\\right) + 2 y\\right) dy = 0",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find M : ",
+                "result": "M(x, y) = 9 y^{2} \\left(\\sin{\\left(y \\right)} + 3\\right)"
+            },
+            {
+                "step": "Identify",
+                "op": "Find N : ",
+                "result": "N(x, y) = 9 x y^{2} \\cos{\\left(y \\right)} + 18 x y \\left(\\sin{\\left(y \\right)} + 3\\right) + 2 y"
+            },
+            {
+                "step": "Integrate M(x, y) wrt x, [F(x, y)]:",
+                "op": "Integrate",
+                "result": "9 x y^{2} \\left(\\sin{\\left(y \\right)} + 3\\right) + g(y)"
+            },
+            {
+                "step": "Differentiate F(x, y) wrt y : ",
+                "op": "Differentiate",
+                "result": "9 x y^{2} \\cos{\\left(y \\right)} + 18 x y \\left(\\sin{\\left(y \\right)} + 3\\right) + g'(y)"
+            },
+            {
+                "step": "Solve N = diff(F) for g'(y)",
+                "op": "Solve",
+                "result": "2 y"
+            },
+            {
+                "step": "Integrate g'(y) wrt y : ",
+                "op": "Integrate g'(y) wrt y : ",
+                "result": "y^{2} + C"
+            }
+        ],
+        "solution": "9 x y^{2} \\left(\\sin{\\left(y \\right)} + 3\\right) + y^{2} = C_{1}"
+    },
+    {
+        "family": "Exact",
+        "equation": "\\left(2 y - 8 e^{x} \\sin{\\left(y \\right)}\\right) dy + 8 \\left(\\cos{\\left(y \\right)} + 2\\right) e^{x} dx = 0",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find M : ",
+                "result": "M(x, y) = 8 \\left(\\cos{\\left(y \\right)} + 2\\right) e^{x}"
+            },
+            {
+                "step": "Identify",
+                "op": "Find N : ",
+                "result": "N(x, y) = 2 y - 8 e^{x} \\sin{\\left(y \\right)}"
+            },
+            {
+                "step": "Integrate M(x, y) wrt x, [F(x, y)]:",
+                "op": "Integrate",
+                "result": "\\left(8 \\cos{\\left(y \\right)} + 16\\right) e^{x} + g(y)"
+            },
+            {
+                "step": "Differentiate F(x, y) wrt y : ",
+                "op": "Differentiate",
+                "result": "- 8 e^{x} \\sin{\\left(y \\right)} + g'(y)"
+            },
+            {
+                "step": "Solve N = diff(F) for g'(y)",
+                "op": "Solve",
+                "result": "2 y"
+            },
+            {
+                "step": "Integrate g'(y) wrt y : ",
+                "op": "Integrate g'(y) wrt y : ",
+                "result": "y^{2} + C"
+            }
+        ],
+        "solution": "y^{2} + \\left(8 \\cos{\\left(y \\right)} + 16\\right) e^{x} = C_{1}"
+    },
+    {
+        "family": "Exact",
+        "equation": "5 y^{2} \\left(y^{2} + 3\\right) dx + \\left(10 x y^{3} + 10 x y \\left(y^{2} + 3\\right) + e^{y}\\right) dy = 0",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find M : ",
+                "result": "M(x, y) = 5 y^{2} \\left(y^{2} + 3\\right)"
+            },
+            {
+                "step": "Identify",
+                "op": "Find N : ",
+                "result": "N(x, y) = 10 x y^{3} + 10 x y \\left(y^{2} + 3\\right) + e^{y}"
+            },
+            {
+                "step": "Integrate M(x, y) wrt x, [F(x, y)]:",
+                "op": "Integrate",
+                "result": "5 x y^{2} \\left(y^{2} + 3\\right) + g(y)"
+            },
+            {
+                "step": "Differentiate F(x, y) wrt y : ",
+                "op": "Differentiate",
+                "result": "10 x y^{3} + 10 x y \\left(y^{2} + 3\\right) + g'(y)"
+            },
+            {
+                "step": "Solve N = diff(F) for g'(y)",
+                "op": "Solve",
+                "result": "e^{y}"
+            },
+            {
+                "step": "Integrate g'(y) wrt y : ",
+                "op": "Integrate g'(y) wrt y : ",
+                "result": "e^{y} + C"
+            }
+        ],
+        "solution": "5 x y^{2} \\left(y^{2} + 3\\right) + e^{y} = C_{1}"
+    },
+    {
+        "family": "Exact",
+        "equation": "2 y dy + \\left(4 \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)} + 6\\right) dx = 0",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find M : ",
+                "result": "M(x, y) = 4 \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)} + 6"
+            },
+            {
+                "step": "Identify",
+                "op": "Find N : ",
+                "result": "N(x, y) = 2 y"
+            },
+            {
+                "step": "Integrate M(x, y) wrt x, [F(x, y)]:",
+                "op": "Integrate",
+                "result": "6 x + \\sin{\\left(x \\right)} - 4 \\cos{\\left(x \\right)} + g(y)"
+            },
+            {
+                "step": "Differentiate F(x, y) wrt y : ",
+                "op": "Differentiate",
+                "result": "0 + g'(y)"
+            },
+            {
+                "step": "Solve N = diff(F) for g'(y)",
+                "op": "Solve",
+                "result": "2 y"
+            },
+            {
+                "step": "Integrate g'(y) wrt y : ",
+                "op": "Integrate g'(y) wrt y : ",
+                "result": "y^{2} + C"
+            }
+        ],
+        "solution": "6 x + y^{2} + \\sin{\\left(x \\right)} - 4 \\cos{\\left(x \\right)} = C_{1}"
+    },
+    {
+        "family": "Exact",
+        "equation": "\\left(x + 2 y\\right) dy + \\left(y + \\cos{\\left(x \\right)} + 1\\right) dx = 0",
+        "steps": [
+            {
+                "step": "Identify",
+                "op": "Find M : ",
+                "result": "M(x, y) = y + \\cos{\\left(x \\right)} + 1"
+            },
+            {
+                "step": "Identify",
+                "op": "Find N : ",
+                "result": "N(x, y) = x + 2 y"
+            },
+            {
+                "step": "Integrate M(x, y) wrt x, [F(x, y)]:",
+                "op": "Integrate",
+                "result": "x y + x + \\sin{\\left(x \\right)} + g(y)"
+            },
+            {
+                "step": "Differentiate F(x, y) wrt y : ",
+                "op": "Differentiate",
+                "result": "x + g'(y)"
+            },
+            {
+                "step": "Solve N = diff(F) for g'(y)",
+                "op": "Solve",
+                "result": "2 y"
+            },
+            {
+                "step": "Integrate g'(y) wrt y : ",
+                "op": "Integrate g'(y) wrt y : ",
+                "result": "y^{2} + C"
+            }
+        ],
+        "solution": "x y + x + y^{2} + \\sin{\\left(x \\right)} = C_{1}"
+    }
+]
