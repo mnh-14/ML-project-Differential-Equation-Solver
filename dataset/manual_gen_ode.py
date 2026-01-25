@@ -5,13 +5,16 @@ import argparse
 import sys
 import constants as C
 from sympy import Piecewise
+from sympy.diffgeom import Differential
 
 # Define symbols
 x = sp.Symbol('x')
 # y = sp.Function('y')(x)
 y = sp.Symbol('y')
-dx = sp.Symbol('dx')
-dy = sp.Symbol('dy')
+dx = sp.Symbol('dx', commutative=False)
+dy = sp.Symbol('dy', commutative=False)
+# dx = Differential(x)
+# dy = Differential(y)
 C1 = sp.Symbol('C1')
 
 
@@ -91,23 +94,30 @@ def generate_linear():
 def generate_exact():
     """Expert for exact ODEs : M(x, y)dx + N(x, y)dy = 0"""
     M = get_complex_expr_doubled(x, y)
+    g_y = random.choice([y**3, y**2, sp.exp(y)])
     int_M_dx = sp.integrate(M, x) 
-    N = sp.diff(int_M_dx, y)
+    diffed_int_M = sp.diff(int_M_dx, y) 
+    g__y = sp.diff(g_y, y)
+    N = diffed_int_M + g__y
 
     ode = sp.Eq(M * dx + N * dy, 0)
 
     if int_M_dx.has(sp.Integral):
         return None, None, None, None
 
-    eqn = sp.Eq(int_M_dx, C1)
+    # eqn = sp.Eq(N, diffed_int_M)
 
     steps = [
-        {C.STEP: "Identify", C.OP: "Find M : ", C.RESULT: f"M(x, y) = {sp.latex(M)}"},
-        {C.STEP: "Integrate", C.OP: "Integrate M with respect to x : ", C.RESULT: sp.latex(int_M_dx)},
+        {C.STEP: "Identify", C.OP: "Find M(x, y) : ", C.RESULT: f"M(x, y) = {sp.latex(M)}"},
+        {C.STEP: "Identify", C.OP: "Find N(x, y) : ", C.RESULT: f"N(x, y) = {sp.latex(N)}"},
+        {C.STEP: "Integrate M(x, y) wrt x, [F(x, y)]:", C.OP: "Integrate", C.RESULT: sp.latex(int_M_dx) + " + g(y)"},
+        {C.STEP: "Differentiate F(x, y) wrt y : ", C.OP: "Differentiate", C.RESULT: f"{sp.latex(diffed_int_M)} + g'(y)"},
+        {C.STEP: "Solve N = diff(F) for g'(y)", C.OP: "Solve", C.RESULT: sp.latex(g__y)},
+        {C.STEP: "Integrate g'(y) wrt y : ", C.OP: "Integrate", C.RESULT: sp.latex(g_y) + " + C"},
     ]
 
-    soln = sp.solve(eqn, y)
-    return "Exact", ode, steps, [sp.latex(s) for s in soln]
+    soln = sp.Eq(int_M_dx + g_y, C1)
+    return "Exact", ode, steps, [sp.latex(soln),]
 
 
 def main():
@@ -125,7 +135,7 @@ def main():
             gen_func = random.choice(generators)
             family, ode, steps, soln = gen_func()
             latex_ode = sp.latex(ode)
-            latex_soln = sp.latex(soln)
+            # latex_soln = sp.latex(soln)
             print(f"Function generated from: {family}\n")
             
             if family is not None:
@@ -133,7 +143,7 @@ def main():
                     C.FAMILY: family,
                     C.EQUATION: latex_ode,
                     C.Q_STEPS: steps,
-                    C.SOLUTION: sp.latex(sp.solve(ode, y)),
+                    C.SOLUTION: ", ".join(soln),
                 })
         except Exception as e: print(f"Exception : {e}")
 

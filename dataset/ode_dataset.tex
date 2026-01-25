@@ -9,130 +9,283 @@
 
 \maketitle
 \section*{Family: Exact}
-\textbf{Question:} $dx \left(x^{2} + e^{y} + 1\right) + dy x e^{y} = 0$
+\textbf{Question:} $\left(- x \sin{\left(y \right)} + 3 y^{2}\right) dy + \left(2 \sin{\left(x \right)} + \cos{\left(y \right)} + 6\right) dx = 0$
 
 \textbf{Steps:}
 \begin{enumerate}
-\item Identify :  $M(x, y) = x^{2} + e^{y} + 1$
-\item Integrate :  $\frac{x^{3}}{3} + x \left(e^{y} + 1\right)$
+\item Identify :  $M(x, y) = 2 \sin{\left(x \right)} + \cos{\left(y \right)} + 6$
+\item Identify :  $N(x, y) = - x \sin{\left(y \right)} + 3 y^{2}$
+\item Integrate M(x, y) wrt x, [F(x, y)]: :  $x \cos{\left(y \right)} + 6 x - 2 \cos{\left(x \right)} + g(y)$
+\item Differentiate F(x, y) wrt y :  :  $- x \sin{\left(y \right)} + g'(y)$
+\item Solve N = diff(F) for g'(y) :  $3 y^{2}$
+\item Integrate g'(y) wrt y :  :  $y^{3} + C$
 \end{enumerate}
-\textbf{Final Result:} $\left[ \mathtt{\text{\textbackslashlog\{\textbackslashleft(\textbackslashfrac\{C\_\{1\} - \textbackslashfrac\{x\textasciicircum\{3\}\}\{3\} - x\}\{x\} \textbackslashright)\}}}\right]$
+\textbf{Final Result:} $x \cos{\left(y \right)} + 6 x + y^{3} - 2 \cos{\left(x \right)} = C_{1}$
 
 \section*{Family: Exact}
-\textbf{Question:} $7 dx \left(\cos{\left(y \right)} + 6\right) \cos{\left(y \right)} + dy \left(- 7 x \left(\cos{\left(y \right)} + 6\right) \sin{\left(y \right)} - 7 x \sin{\left(y \right)} \cos{\left(y \right)}\right) = 0$
+\textbf{Question:} $\left(4 x^{2} - x \sin{\left(y \right)} + 2 y\right) dy + \left(8 x y + \cos{\left(y \right)} + 6\right) dx = 0$
 
 \textbf{Steps:}
 \begin{enumerate}
-\item Identify :  $M(x, y) = 7 \left(\cos{\left(y \right)} + 6\right) \cos{\left(y \right)}$
-\item Integrate :  $7 x \left(\cos{\left(y \right)} + 6\right) \cos{\left(y \right)}$
+\item Identify :  $M(x, y) = 8 x y + \cos{\left(y \right)} + 6$
+\item Identify :  $N(x, y) = 4 x^{2} - x \sin{\left(y \right)} + 2 y$
+\item Integrate M(x, y) wrt x, [F(x, y)]: :  $4 x^{2} y + x \left(\cos{\left(y \right)} + 6\right) + g(y)$
+\item Differentiate F(x, y) wrt y :  :  $4 x^{2} - x \sin{\left(y \right)} + g'(y)$
+\item Solve N = diff(F) for g'(y) :  $2 y$
+\item Integrate g'(y) wrt y :  :  $y^{2} + C$
 \end{enumerate}
-\textbf{Final Result:} $\left[ \mathtt{\text{- \textbackslashoperatorname\{acos\}\{\textbackslashleft(-3 - \textbackslashfrac\{\textbackslashsqrt\{7\} \textbackslashsqrt\{x \textbackslashleft(C\_\{1\} + 63 x\textbackslashright)\}\}\{7 x\} \textbackslashright)\} + 2 \textbackslashpi}}, \  \mathtt{\text{- \textbackslashoperatorname\{acos\}\{\textbackslashleft(-3 + \textbackslashfrac\{\textbackslashsqrt\{7\} \textbackslashsqrt\{x \textbackslashleft(C\_\{1\} + 63 x\textbackslashright)\}\}\{7 x\} \textbackslashright)\} + 2 \textbackslashpi}}, \  \mathtt{\text{\textbackslashoperatorname\{acos\}\{\textbackslashleft(-3 - \textbackslashfrac\{\textbackslashsqrt\{7\} \textbackslashsqrt\{x \textbackslashleft(C\_\{1\} + 63 x\textbackslashright)\}\}\{7 x\} \textbackslashright)\}}}, \  \mathtt{\text{\textbackslashoperatorname\{acos\}\{\textbackslashleft(-3 + \textbackslashfrac\{\textbackslashsqrt\{7\} \textbackslashsqrt\{x \textbackslashleft(C\_\{1\} + 63 x\textbackslashright)\}\}\{7 x\} \textbackslashright)\}}}\right]$
-
-\section*{Family: Separable}
-\textbf{Question:} $\frac{dy}{dx} = y \left(\tan{\left(x \right)} + 8 \operatorname{acos}{\left(x \right)} + 3\right)$
-
-\textbf{Steps:}
-\begin{enumerate}
-\item Classify :  $\frac{1}{y} dy = \left(\tan{\left(x \right)} + 8 \operatorname{acos}{\left(x \right)} + 3\right) dx$
-\item Integrate LHS :  $\log{\left(y \right)}$
-\item Integrate RHS :  $8 x \operatorname{acos}{\left(x \right)} + 3 x - 8 \sqrt{1 - x^{2}} - \log{\left(\cos{\left(x \right)} \right)} + C_1$
-\item Solve :  $\log{\left(y \right)} = C_{1} + 8 x \operatorname{acos}{\left(x \right)} + 3 x - 8 \sqrt{1 - x^{2}} - \log{\left(\cos{\left(x \right)} \right)}$
-\end{enumerate}
-\textbf{Final Result:} $\left[ \mathtt{\text{\textbackslashfrac\{e\textasciicircum\{C\_\{1\} + 8 x \textbackslashoperatorname\{acos\}\{\textbackslashleft(x \textbackslashright)\} + 3 x - 8 \textbackslashsqrt\{1 - x\textasciicircum\{2\}\}\}\}\{\textbackslashcos\{\textbackslashleft(x \textbackslashright)\}\}}}\right]$
-
-\section*{Family: Separable}
-\textbf{Question:} $\frac{dy}{dx} = 10 x^{2} y \left(\cos{\left(x \right)} + 1\right)$
-
-\textbf{Steps:}
-\begin{enumerate}
-\item Classify :  $\frac{1}{y} dy = \left(10 x^{2} \left(\cos{\left(x \right)} + 1\right)\right) dx$
-\item Integrate LHS :  $\log{\left(y \right)}$
-\item Integrate RHS :  $\frac{10 x^{3}}{3} + 10 x^{2} \sin{\left(x \right)} + 20 x \cos{\left(x \right)} - 20 \sin{\left(x \right)} + C_1$
-\item Solve :  $\log{\left(y \right)} = C_{1} + \frac{10 x^{3}}{3} + 10 x^{2} \sin{\left(x \right)} + 20 x \cos{\left(x \right)} - 20 \sin{\left(x \right)}$
-\end{enumerate}
-\textbf{Final Result:} $\left[ \mathtt{\text{e\textasciicircum\{C\_\{1\} + \textbackslashfrac\{10 x\textasciicircum\{3\}\}\{3\} + 10 x\textasciicircum\{2\} \textbackslashsin\{\textbackslashleft(x \textbackslashright)\} + 20 x \textbackslashcos\{\textbackslashleft(x \textbackslashright)\} - 20 \textbackslashsin\{\textbackslashleft(x \textbackslashright)\}\}}}\right]$
+\textbf{Final Result:} $4 x^{2} y + x \left(\cos{\left(y \right)} + 6\right) + y^{2} = C_{1}$
 
 \section*{Family: Exact}
-\textbf{Question:} $dx \left(3 x + e^{x} + 1\right) = 0$
+\textbf{Question:} $9 \left(\cos{\left(y \right)} + 5\right) \cos{\left(y \right)} dx + \left(- 9 x \left(\cos{\left(y \right)} + 5\right) \sin{\left(y \right)} - 9 x \sin{\left(y \right)} \cos{\left(y \right)} + 2 y\right) dy = 0$
 
 \textbf{Steps:}
 \begin{enumerate}
-\item Identify :  $M(x, y) = 3 x + e^{x} + 1$
-\item Integrate :  $\frac{3 x^{2}}{2} + x + e^{x}$
+\item Identify :  $M(x, y) = 9 \left(\cos{\left(y \right)} + 5\right) \cos{\left(y \right)}$
+\item Identify :  $N(x, y) = - 9 x \left(\cos{\left(y \right)} + 5\right) \sin{\left(y \right)} - 9 x \sin{\left(y \right)} \cos{\left(y \right)} + 2 y$
+\item Integrate M(x, y) wrt x, [F(x, y)]: :  $9 x \left(\cos{\left(y \right)} + 5\right) \cos{\left(y \right)} + g(y)$
+\item Differentiate F(x, y) wrt y :  :  $- 9 x \left(\cos{\left(y \right)} + 5\right) \sin{\left(y \right)} - 9 x \sin{\left(y \right)} \cos{\left(y \right)} + g'(y)$
+\item Solve N = diff(F) for g'(y) :  $2 y$
+\item Integrate g'(y) wrt y :  :  $y^{2} + C$
 \end{enumerate}
-\textbf{Final Result:} $\left[ \right]$
-
-\section*{Family: First-Order Linear}
-\textbf{Question:} $5 y \tan{\left(x \right)} + \frac{dy}{dx} = 9 \cos{\left(x \right)}$
-
-\textbf{Steps:}
-\begin{enumerate}
-\item Identify :  $P(x) = 5 \tan{\left(x \right)}$
-\item Int Factor Setup :  $\mu(x) = e^{\int \left(5 \tan{\left(x \right)} \right) dx}$
-\item Int Factor Calc :  $\mu(x) = \frac{1}{\cos^{5}{\left(x \right)}}$
-\item Multiply :  $\frac{d}{dx}(\frac{1}{\cos^{5}{\left(x \right)}}y) = \frac{9}{\cos^{4}{\left(x \right)}}$
-\item Integrate :  $\frac{y}{\cos^{5}{\left(x \right)}} = C_{1} + \frac{6 \sin{\left(x \right)}}{\cos{\left(x \right)}} + \frac{3 \sin{\left(x \right)}}{\cos^{3}{\left(x \right)}}$
-\end{enumerate}
-\textbf{Final Result:} $\left[ \mathtt{\text{C\_\{1\} \textbackslashcos\textasciicircum\{5\}\{\textbackslashleft(x \textbackslashright)\} + 6 \textbackslashsin\{\textbackslashleft(x \textbackslashright)\} \textbackslashcos\textasciicircum\{4\}\{\textbackslashleft(x \textbackslashright)\} + 3 \textbackslashsin\{\textbackslashleft(x \textbackslashright)\} \textbackslashcos\textasciicircum\{2\}\{\textbackslashleft(x \textbackslashright)\}}}\right]$
+\textbf{Final Result:} $9 x \left(\cos{\left(y \right)} + 5\right) \cos{\left(y \right)} + y^{2} = C_{1}$
 
 \section*{Family: Exact}
-\textbf{Question:} $10 dx y^{2} \left(y^{2} + 2\right) + dy \left(20 x y^{3} + 20 x y \left(y^{2} + 2\right)\right) = 0$
+\textbf{Question:} $\left(\frac{x^{2}}{2} + 3 y^{2}\right) dy + \left(x y + e^{x} + 2\right) dx = 0$
 
 \textbf{Steps:}
 \begin{enumerate}
-\item Identify :  $M(x, y) = 10 y^{2} \left(y^{2} + 2\right)$
-\item Integrate :  $10 x y^{2} \left(y^{2} + 2\right)$
+\item Identify :  $M(x, y) = x y + e^{x} + 2$
+\item Identify :  $N(x, y) = \frac{x^{2}}{2} + 3 y^{2}$
+\item Integrate M(x, y) wrt x, [F(x, y)]: :  $\frac{x^{2} y}{2} + 2 x + e^{x} + g(y)$
+\item Differentiate F(x, y) wrt y :  :  $\frac{x^{2}}{2} + g'(y)$
+\item Solve N = diff(F) for g'(y) :  $3 y^{2}$
+\item Integrate g'(y) wrt y :  :  $y^{3} + C$
 \end{enumerate}
-\textbf{Final Result:} $\left[ \mathtt{\text{- \textbackslashfrac\{\textbackslashsqrt\{10\} \textbackslashsqrt\{-10 - \textbackslashfrac\{\textbackslashsqrt\{10\} \textbackslashsqrt\{C\_\{1\} x + 10 x\textasciicircum\{2\}\}\}\{x\}\}\}\{10\}}}, \  \mathtt{\text{\textbackslashfrac\{\textbackslashsqrt\{10\} \textbackslashsqrt\{-10 - \textbackslashfrac\{\textbackslashsqrt\{10\} \textbackslashsqrt\{C\_\{1\} x + 10 x\textasciicircum\{2\}\}\}\{x\}\}\}\{10\}}}, \  \mathtt{\text{- \textbackslashfrac\{\textbackslashsqrt\{10\} \textbackslashsqrt\{-10 + \textbackslashfrac\{\textbackslashsqrt\{10\} \textbackslashsqrt\{C\_\{1\} x + 10 x\textasciicircum\{2\}\}\}\{x\}\}\}\{10\}}}, \  \mathtt{\text{\textbackslashfrac\{\textbackslashsqrt\{10\} \textbackslashsqrt\{-10 + \textbackslashfrac\{\textbackslashsqrt\{10\} \textbackslashsqrt\{C\_\{1\} x + 10 x\textasciicircum\{2\}\}\}\{x\}\}\}\{10\}}}\right]$
+\textbf{Final Result:} $\frac{x^{2} y}{2} + 2 x + y^{3} + e^{x} = C_{1}$
 
 \section*{Family: Exact}
-\textbf{Question:} $dx \left(6 \sin{\left(y \right)} + 5\right) + 6 dy x \cos{\left(y \right)} = 0$
+\textbf{Question:} $3 y^{2} dy + \left(e^{x} + 3 \cos{\left(x \right)} + 6\right) dx = 0$
 
 \textbf{Steps:}
 \begin{enumerate}
-\item Identify :  $M(x, y) = 6 \sin{\left(y \right)} + 5$
-\item Integrate :  $x \left(6 \sin{\left(y \right)} + 5\right)$
+\item Identify :  $M(x, y) = e^{x} + 3 \cos{\left(x \right)} + 6$
+\item Identify :  $N(x, y) = 3 y^{2}$
+\item Integrate M(x, y) wrt x, [F(x, y)]: :  $6 x + e^{x} + 3 \sin{\left(x \right)} + g(y)$
+\item Differentiate F(x, y) wrt y :  :  $0 + g'(y)$
+\item Solve N = diff(F) for g'(y) :  $3 y^{2}$
+\item Integrate g'(y) wrt y :  :  $y^{3} + C$
 \end{enumerate}
-\textbf{Final Result:} $\left[ \mathtt{\text{\textbackslashpi - \textbackslashoperatorname\{asin\}\{\textbackslashleft(\textbackslashfrac\{C\_\{1\} - 5 x\}\{6 x\} \textbackslashright)\}}}, \  \mathtt{\text{\textbackslashoperatorname\{asin\}\{\textbackslashleft(\textbackslashfrac\{C\_\{1\} - 5 x\}\{6 x\} \textbackslashright)\}}}\right]$
+\textbf{Final Result:} $6 x + y^{3} + e^{x} + 3 \sin{\left(x \right)} = C_{1}$
 
 \section*{Family: Exact}
-\textbf{Question:} $4 dx \left(\cos{\left(x \right)} + 3\right) \sin{\left(x \right)} = 0$
+\textbf{Question:} $\left(- x \sin{\left(y \right)} + e^{y}\right) dy + \left(10 e^{x} + \cos{\left(y \right)} + 6\right) dx = 0$
 
 \textbf{Steps:}
 \begin{enumerate}
-\item Identify :  $M(x, y) = 4 \left(\cos{\left(x \right)} + 3\right) \sin{\left(x \right)}$
-\item Integrate :  $- 2 \cos^{2}{\left(x \right)} - 12 \cos{\left(x \right)}$
+\item Identify :  $M(x, y) = 10 e^{x} + \cos{\left(y \right)} + 6$
+\item Identify :  $N(x, y) = - x \sin{\left(y \right)} + e^{y}$
+\item Integrate M(x, y) wrt x, [F(x, y)]: :  $x \left(\cos{\left(y \right)} + 6\right) + 10 e^{x} + g(y)$
+\item Differentiate F(x, y) wrt y :  :  $- x \sin{\left(y \right)} + g'(y)$
+\item Solve N = diff(F) for g'(y) :  $e^{y}$
+\item Integrate g'(y) wrt y :  :  $e^{y} + C$
 \end{enumerate}
-\textbf{Final Result:} $\left[ \right]$
+\textbf{Final Result:} $x \left(\cos{\left(y \right)} + 6\right) + 10 e^{x} + e^{y} = C_{1}$
 
 \section*{Family: Exact}
-\textbf{Question:} $dx \left(4 x^{2} + \sin{\left(x \right)} + 6\right) = 0$
+\textbf{Question:} $\left(2 x \cos{\left(y \right)} + e^{y}\right) dy + \left(2 \sin{\left(y \right)} + 1\right) dx = 0$
 
 \textbf{Steps:}
 \begin{enumerate}
-\item Identify :  $M(x, y) = 4 x^{2} + \sin{\left(x \right)} + 6$
-\item Integrate :  $\frac{4 x^{3}}{3} + 6 x - \cos{\left(x \right)}$
+\item Identify :  $M(x, y) = 2 \sin{\left(y \right)} + 1$
+\item Identify :  $N(x, y) = 2 x \cos{\left(y \right)} + e^{y}$
+\item Integrate M(x, y) wrt x, [F(x, y)]: :  $x \left(2 \sin{\left(y \right)} + 1\right) + g(y)$
+\item Differentiate F(x, y) wrt y :  :  $2 x \cos{\left(y \right)} + g'(y)$
+\item Solve N = diff(F) for g'(y) :  $e^{y}$
+\item Integrate g'(y) wrt y :  :  $e^{y} + C$
 \end{enumerate}
-\textbf{Final Result:} $\left[ \right]$
+\textbf{Final Result:} $x \left(2 \sin{\left(y \right)} + 1\right) + e^{y} = C_{1}$
 
 \section*{Family: Exact}
-\textbf{Question:} $dx \left(y^{2} + \sin{\left(x \right)} + 3\right) + 2 dy x y = 0$
+\textbf{Question:} $\left(8 x \cos{\left(y \right)} + 2 y\right) dy + \left(e^{x} + 8 \sin{\left(y \right)} + 2\right) dx = 0$
 
 \textbf{Steps:}
 \begin{enumerate}
-\item Identify :  $M(x, y) = y^{2} + \sin{\left(x \right)} + 3$
-\item Integrate :  $x y^{2} + 3 x - \cos{\left(x \right)}$
+\item Identify :  $M(x, y) = e^{x} + 8 \sin{\left(y \right)} + 2$
+\item Identify :  $N(x, y) = 8 x \cos{\left(y \right)} + 2 y$
+\item Integrate M(x, y) wrt x, [F(x, y)]: :  $x \left(8 \sin{\left(y \right)} + 2\right) + e^{x} + g(y)$
+\item Differentiate F(x, y) wrt y :  :  $8 x \cos{\left(y \right)} + g'(y)$
+\item Solve N = diff(F) for g'(y) :  $2 y$
+\item Integrate g'(y) wrt y :  :  $y^{2} + C$
 \end{enumerate}
-\textbf{Final Result:} $\left[ \mathtt{\text{- \textbackslashsqrt\{\textbackslashfrac\{C\_\{1\} - 3 x + \textbackslashcos\{\textbackslashleft(x \textbackslashright)\}\}\{x\}\}}}, \  \mathtt{\text{\textbackslashsqrt\{\textbackslashfrac\{C\_\{1\} - 3 x + \textbackslashcos\{\textbackslashleft(x \textbackslashright)\}\}\{x\}\}}}\right]$
+\textbf{Final Result:} $x \left(8 \sin{\left(y \right)} + 2\right) + y^{2} + e^{x} = C_{1}$
 
 \section*{Family: Exact}
-\textbf{Question:} $dx \left(7 x + \sin{\left(x \right)} + 6\right) = 0$
+\textbf{Question:} $\left(- x \sin{\left(y \right)} + 3 y^{2}\right) dy + \left(2 x^{2} + \cos{\left(y \right)} + 3\right) dx = 0$
 
 \textbf{Steps:}
 \begin{enumerate}
-\item Identify :  $M(x, y) = 7 x + \sin{\left(x \right)} + 6$
-\item Integrate :  $\frac{7 x^{2}}{2} + 6 x - \cos{\left(x \right)}$
+\item Identify :  $M(x, y) = 2 x^{2} + \cos{\left(y \right)} + 3$
+\item Identify :  $N(x, y) = - x \sin{\left(y \right)} + 3 y^{2}$
+\item Integrate M(x, y) wrt x, [F(x, y)]: :  $\frac{2 x^{3}}{3} + x \left(\cos{\left(y \right)} + 3\right) + g(y)$
+\item Differentiate F(x, y) wrt y :  :  $- x \sin{\left(y \right)} + g'(y)$
+\item Solve N = diff(F) for g'(y) :  $3 y^{2}$
+\item Integrate g'(y) wrt y :  :  $y^{3} + C$
 \end{enumerate}
-\textbf{Final Result:} $\left[ \right]$
+\textbf{Final Result:} $\frac{2 x^{3}}{3} + x \left(\cos{\left(y \right)} + 3\right) + y^{3} = C_{1}$
+
+\section*{Family: Exact}
+\textbf{Question:} $\left(\frac{x^{2}}{2} + 2 y\right) dy + \left(x y + \sin{\left(x \right)} + 6\right) dx = 0$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Identify :  $M(x, y) = x y + \sin{\left(x \right)} + 6$
+\item Identify :  $N(x, y) = \frac{x^{2}}{2} + 2 y$
+\item Integrate M(x, y) wrt x, [F(x, y)]: :  $\frac{x^{2} y}{2} + 6 x - \cos{\left(x \right)} + g(y)$
+\item Differentiate F(x, y) wrt y :  :  $\frac{x^{2}}{2} + g'(y)$
+\item Solve N = diff(F) for g'(y) :  $2 y$
+\item Integrate g'(y) wrt y :  :  $y^{2} + C$
+\end{enumerate}
+\textbf{Final Result:} $\frac{x^{2} y}{2} + 6 x + y^{2} - \cos{\left(x \right)} = C_{1}$
+
+\section*{Family: Exact}
+\textbf{Question:} $3 y^{2} dy + 7 \left(\cos{\left(x \right)} + 5\right) \cos{\left(x \right)} dx = 0$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Identify :  $M(x, y) = 7 \left(\cos{\left(x \right)} + 5\right) \cos{\left(x \right)}$
+\item Identify :  $N(x, y) = 3 y^{2}$
+\item Integrate M(x, y) wrt x, [F(x, y)]: :  $\frac{7 x \sin^{2}{\left(x \right)}}{2} + \frac{7 x \cos^{2}{\left(x \right)}}{2} + \frac{7 \sin{\left(x \right)} \cos{\left(x \right)}}{2} + 35 \sin{\left(x \right)} + g(y)$
+\item Differentiate F(x, y) wrt y :  :  $0 + g'(y)$
+\item Solve N = diff(F) for g'(y) :  $3 y^{2}$
+\item Integrate g'(y) wrt y :  :  $y^{3} + C$
+\end{enumerate}
+\textbf{Final Result:} $\frac{7 x \sin^{2}{\left(x \right)}}{2} + \frac{7 x \cos^{2}{\left(x \right)}}{2} + y^{3} + \frac{7 \sin{\left(x \right)} \cos{\left(x \right)}}{2} + 35 \sin{\left(x \right)} = C_{1}$
+
+\section*{Family: Exact}
+\textbf{Question:} $\left(e^{y} + 9 \sin{\left(x \right)} \cos{\left(y \right)}\right) dy + 9 \left(\sin{\left(y \right)} + 3\right) \cos{\left(x \right)} dx = 0$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Identify :  $M(x, y) = 9 \left(\sin{\left(y \right)} + 3\right) \cos{\left(x \right)}$
+\item Identify :  $N(x, y) = e^{y} + 9 \sin{\left(x \right)} \cos{\left(y \right)}$
+\item Integrate M(x, y) wrt x, [F(x, y)]: :  $\left(9 \sin{\left(y \right)} + 27\right) \sin{\left(x \right)} + g(y)$
+\item Differentiate F(x, y) wrt y :  :  $9 \sin{\left(x \right)} \cos{\left(y \right)} + g'(y)$
+\item Solve N = diff(F) for g'(y) :  $e^{y}$
+\item Integrate g'(y) wrt y :  :  $e^{y} + C$
+\end{enumerate}
+\textbf{Final Result:} $\left(9 \sin{\left(y \right)} + 27\right) \sin{\left(x \right)} + e^{y} = C_{1}$
+
+\section*{Family: Exact}
+\textbf{Question:} $\left(7 x e^{y} + e^{y}\right) dy + \left(7 e^{y} + \sin{\left(x \right)} + 1\right) dx = 0$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Identify :  $M(x, y) = 7 e^{y} + \sin{\left(x \right)} + 1$
+\item Identify :  $N(x, y) = 7 x e^{y} + e^{y}$
+\item Integrate M(x, y) wrt x, [F(x, y)]: :  $7 x e^{y} + x - \cos{\left(x \right)} + g(y)$
+\item Differentiate F(x, y) wrt y :  :  $7 x e^{y} + g'(y)$
+\item Solve N = diff(F) for g'(y) :  $e^{y}$
+\item Integrate g'(y) wrt y :  :  $e^{y} + C$
+\end{enumerate}
+\textbf{Final Result:} $7 x e^{y} + x + e^{y} - \cos{\left(x \right)} = C_{1}$
+
+\section*{Family: Exact}
+\textbf{Question:} $\left(- x \sin{\left(y \right)} + 2 y\right) dy + \left(6 \sin{\left(x \right)} + \cos{\left(y \right)} + 3\right) dx = 0$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Identify :  $M(x, y) = 6 \sin{\left(x \right)} + \cos{\left(y \right)} + 3$
+\item Identify :  $N(x, y) = - x \sin{\left(y \right)} + 2 y$
+\item Integrate M(x, y) wrt x, [F(x, y)]: :  $x \cos{\left(y \right)} + 3 x - 6 \cos{\left(x \right)} + g(y)$
+\item Differentiate F(x, y) wrt y :  :  $- x \sin{\left(y \right)} + g'(y)$
+\item Solve N = diff(F) for g'(y) :  $2 y$
+\item Integrate g'(y) wrt y :  :  $y^{2} + C$
+\end{enumerate}
+\textbf{Final Result:} $x \cos{\left(y \right)} + 3 x + y^{2} - 6 \cos{\left(x \right)} = C_{1}$
+
+\section*{Family: Exact}
+\textbf{Question:} $2 y dy + 10 \left(x^{2} + 3\right) e^{x} dx = 0$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Identify :  $M(x, y) = 10 \left(x^{2} + 3\right) e^{x}$
+\item Identify :  $N(x, y) = 2 y$
+\item Integrate M(x, y) wrt x, [F(x, y)]: :  $\left(10 x^{2} - 20 x + 50\right) e^{x} + g(y)$
+\item Differentiate F(x, y) wrt y :  :  $0 + g'(y)$
+\item Solve N = diff(F) for g'(y) :  $2 y$
+\item Integrate g'(y) wrt y :  :  $y^{2} + C$
+\end{enumerate}
+\textbf{Final Result:} $y^{2} + \left(10 x^{2} - 20 x + 50\right) e^{x} = C_{1}$
+
+\section*{Family: Exact}
+\textbf{Question:} $9 y^{2} \left(\sin{\left(y \right)} + 3\right) dx + \left(9 x y^{2} \cos{\left(y \right)} + 18 x y \left(\sin{\left(y \right)} + 3\right) + 2 y\right) dy = 0$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Identify :  $M(x, y) = 9 y^{2} \left(\sin{\left(y \right)} + 3\right)$
+\item Identify :  $N(x, y) = 9 x y^{2} \cos{\left(y \right)} + 18 x y \left(\sin{\left(y \right)} + 3\right) + 2 y$
+\item Integrate M(x, y) wrt x, [F(x, y)]: :  $9 x y^{2} \left(\sin{\left(y \right)} + 3\right) + g(y)$
+\item Differentiate F(x, y) wrt y :  :  $9 x y^{2} \cos{\left(y \right)} + 18 x y \left(\sin{\left(y \right)} + 3\right) + g'(y)$
+\item Solve N = diff(F) for g'(y) :  $2 y$
+\item Integrate g'(y) wrt y :  :  $y^{2} + C$
+\end{enumerate}
+\textbf{Final Result:} $9 x y^{2} \left(\sin{\left(y \right)} + 3\right) + y^{2} = C_{1}$
+
+\section*{Family: Exact}
+\textbf{Question:} $\left(2 y - 8 e^{x} \sin{\left(y \right)}\right) dy + 8 \left(\cos{\left(y \right)} + 2\right) e^{x} dx = 0$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Identify :  $M(x, y) = 8 \left(\cos{\left(y \right)} + 2\right) e^{x}$
+\item Identify :  $N(x, y) = 2 y - 8 e^{x} \sin{\left(y \right)}$
+\item Integrate M(x, y) wrt x, [F(x, y)]: :  $\left(8 \cos{\left(y \right)} + 16\right) e^{x} + g(y)$
+\item Differentiate F(x, y) wrt y :  :  $- 8 e^{x} \sin{\left(y \right)} + g'(y)$
+\item Solve N = diff(F) for g'(y) :  $2 y$
+\item Integrate g'(y) wrt y :  :  $y^{2} + C$
+\end{enumerate}
+\textbf{Final Result:} $y^{2} + \left(8 \cos{\left(y \right)} + 16\right) e^{x} = C_{1}$
+
+\section*{Family: Exact}
+\textbf{Question:} $5 y^{2} \left(y^{2} + 3\right) dx + \left(10 x y^{3} + 10 x y \left(y^{2} + 3\right) + e^{y}\right) dy = 0$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Identify :  $M(x, y) = 5 y^{2} \left(y^{2} + 3\right)$
+\item Identify :  $N(x, y) = 10 x y^{3} + 10 x y \left(y^{2} + 3\right) + e^{y}$
+\item Integrate M(x, y) wrt x, [F(x, y)]: :  $5 x y^{2} \left(y^{2} + 3\right) + g(y)$
+\item Differentiate F(x, y) wrt y :  :  $10 x y^{3} + 10 x y \left(y^{2} + 3\right) + g'(y)$
+\item Solve N = diff(F) for g'(y) :  $e^{y}$
+\item Integrate g'(y) wrt y :  :  $e^{y} + C$
+\end{enumerate}
+\textbf{Final Result:} $5 x y^{2} \left(y^{2} + 3\right) + e^{y} = C_{1}$
+
+\section*{Family: Exact}
+\textbf{Question:} $2 y dy + \left(4 \sin{\left(x \right)} + \cos{\left(x \right)} + 6\right) dx = 0$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Identify :  $M(x, y) = 4 \sin{\left(x \right)} + \cos{\left(x \right)} + 6$
+\item Identify :  $N(x, y) = 2 y$
+\item Integrate M(x, y) wrt x, [F(x, y)]: :  $6 x + \sin{\left(x \right)} - 4 \cos{\left(x \right)} + g(y)$
+\item Differentiate F(x, y) wrt y :  :  $0 + g'(y)$
+\item Solve N = diff(F) for g'(y) :  $2 y$
+\item Integrate g'(y) wrt y :  :  $y^{2} + C$
+\end{enumerate}
+\textbf{Final Result:} $6 x + y^{2} + \sin{\left(x \right)} - 4 \cos{\left(x \right)} = C_{1}$
+
+\section*{Family: Exact}
+\textbf{Question:} $\left(x + 2 y\right) dy + \left(y + \cos{\left(x \right)} + 1\right) dx = 0$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Identify :  $M(x, y) = y + \cos{\left(x \right)} + 1$
+\item Identify :  $N(x, y) = x + 2 y$
+\item Integrate M(x, y) wrt x, [F(x, y)]: :  $x y + x + \sin{\left(x \right)} + g(y)$
+\item Differentiate F(x, y) wrt y :  :  $x + g'(y)$
+\item Solve N = diff(F) for g'(y) :  $2 y$
+\item Integrate g'(y) wrt y :  :  $y^{2} + C$
+\end{enumerate}
+\textbf{Final Result:} $x y + x + y^{2} + \sin{\left(x \right)} = C_{1}$
 
 \end{document}
