@@ -110,7 +110,7 @@ def generate_exact():
     steps = [
         {C.STEP: "Identify", C.OP: "Find M(x, y) : ", C.RESULT: f"M(x, y) = {sp.latex(M)}"},
         {C.STEP: "Identify", C.OP: "Find N(x, y) : ", C.RESULT: f"N(x, y) = {sp.latex(N)}"},
-        {C.STEP: "Integrate M(x, y) wrt x, [F(x, y)]:", C.OP: "Integrate", C.RESULT: sp.latex(int_M_dx) + " + g(y)"},
+        {C.STEP: "Integrate M(x, y) wrt x --> [F(x, y)]:", C.OP: "Integrate", C.RESULT: sp.latex(int_M_dx) + " + g(y)"},
         {C.STEP: "Differentiate F(x, y) wrt y : ", C.OP: "Differentiate", C.RESULT: f"{sp.latex(diffed_int_M)} + g'(y)"},
         {C.STEP: "Solve N = diff(F) for g'(y)", C.OP: "Solve", C.RESULT: sp.latex(g__y)},
         {C.STEP: "Integrate g'(y) wrt y : ", C.OP: "Integrate", C.RESULT: sp.latex(g_y) + " + C"},
