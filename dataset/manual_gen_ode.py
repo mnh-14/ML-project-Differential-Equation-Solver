@@ -63,7 +63,7 @@ def generate_separable():
         {C.STEP: "Solve", C.OP: "Isolate y", C.RESULT: sp.latex(eqn)}
     ]
     soln = sp.solve(eqn, y)
-    return "Separable", ode, steps, [sp.latex(s) for s in soln]
+    return "Separable", sp.latex(ode), steps, [sp.latex(s) for s in soln]
 
 def generate_linear():
     """Expert for First-Order Linear: y' + P(x)y = Q(x)"""

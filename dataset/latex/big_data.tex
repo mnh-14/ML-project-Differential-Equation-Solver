@@ -1,0 +1,385 @@
+\documentclass{article}
+\usepackage{graphicx, amsmath} % Required for inserting images
+
+\title{ML dataset check}
+\author{MD. NAFIS HUSSAIN}
+\date{January 2026}
+
+\begin{document}
+
+\maketitle
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = \left(x^{2} + 3 e^{x} + 1\right) e^{y{\left(x \right)}}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Classify :  $\frac{1}{e^{y}} dy = \leftx^{2} + 3 e^{x} + 1\right dx$
+\item Integrate LHS :  $- e^{- y}$
+\item Integrate RHS :  $\frac{x^{3}}{3} + x + 3 e^{x} + C_1$
+\item Solve :  $- e^{- y} = \frac{x^{3}}{3} + x + 3 e^{x}$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = \log{\left(- \frac{1}{C_{1} + x^{3} + 3 x + 9 e^{x}} \right)} + \log{\left(3 \right)}$
+
+\section*{Family: First-Order Linear}
+\textbf{Question:} $4 y{\left(x \right)} \operatorname{asin}{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 2 \operatorname{acos}{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Identify :  $P(x) = 4 \operatorname{asin}{\left(x \right)}$
+\item Int Factor_Setup :  $\mu(x) = e^{\int \left4 \operatorname{asin}{\left(x \right)} \right dx}$
+\item Int Factor_Calc :  $\mu(x) = e^{4 x \operatorname{asin}{\left(x \right)} + 4 \sqrt{1 - x^{2}}}$
+\item Multiply :  $\frac{d}{dx}(e^{4 x \operatorname{asin}{\left(x \right)} + 4 \sqrt{1 - x^{2}}}y) = 2 e^{4 x \operatorname{asin}{\left(x \right)} + 4 \sqrt{1 - x^{2}}} \operatorname{acos}{\left(x \right)}$
+\item Integrate :  $e^{4 x \operatorname{asin}{\left(x \right)} + 4 \sqrt{1 - x^{2}}}y = 2 \int e^{4 x \operatorname{asin}{\left(x \right)}} e^{4 \sqrt{1 - x^{2}}} \operatorname{acos}{\left(x \right)}\, dx + C_1$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = \left(C_{1} + 2 \int e^{4 x \operatorname{asin}{\left(x \right)}} e^{4 \sqrt{1 - x^{2}}} \operatorname{acos}{\left(x \right)}\, dx\right) e^{- 4 x \operatorname{asin}{\left(x \right)} - 4 \sqrt{1 - x^{2}}}$
+
+\section*{Family: First-Order Linear}
+\textbf{Question:} $2 y{\left(x \right)} \log{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 3 \tan{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Identify :  $P(x) = 2 \log{\left(x \right)}$
+\item Int Factor_Setup :  $\mu(x) = e^{\int \left2 \log{\left(x \right)} \right dx}$
+\item Int Factor_Calc :  $\mu(x) = e^{2 x \log{\left(x \right)} - 2 x}$
+\item Multiply :  $\frac{d}{dx}(e^{2 x \log{\left(x \right)} - 2 x}y) = 3 e^{2 x \left(\log{\left(x \right)} - 1\right)} \tan{\left(x \right)}$
+\item Integrate :  $e^{2 x \log{\left(x \right)} - 2 x}y = 3 \int e^{- 2 x} e^{2 x \log{\left(x \right)}} \tan{\left(x \right)}\, dx + C_1$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = \left(C_{1} + 3 \int e^{- 2 x} e^{2 x \log{\left(x \right)}} \tan{\left(x \right)}\, dx\right) e^{2 x \left(1 - \log{\left(x \right)}\right)}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = \left(\sin{\left(x \right)} + 5 \tan{\left(x \right)} + 3\right) y^{2}{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Classify :  $\frac{1}{y^{2}} dy = \left\sin{\left(x \right)} + 5 \tan{\left(x \right)} + 3\right dx$
+\item Integrate LHS :  $- \frac{1}{y}$
+\item Integrate RHS :  $3 x - 5 \log{\left(\cos{\left(x \right)} \right)} - \cos{\left(x \right)} + C_1$
+\item Solve :  $- \frac{1}{y} = 3 x - 5 \log{\left(\cos{\left(x \right)} \right)} - \cos{\left(x \right)}$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = - \frac{1}{C_{1} + 3 x - 5 \log{\left(\cos{\left(x \right)} \right)} - \cos{\left(x \right)}}$
+
+\section*{Family: First-Order Linear}
+\textbf{Question:} $4 y{\left(x \right)} \operatorname{acos}{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 5 \operatorname{acos}{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Identify :  $P(x) = 4 \operatorname{acos}{\left(x \right)}$
+\item Int Factor_Setup :  $\mu(x) = e^{\int \left4 \operatorname{acos}{\left(x \right)} \right dx}$
+\item Int Factor_Calc :  $\mu(x) = e^{4 x \operatorname{acos}{\left(x \right)} - 4 \sqrt{1 - x^{2}}}$
+\item Multiply :  $\frac{d}{dx}(e^{4 x \operatorname{acos}{\left(x \right)} - 4 \sqrt{1 - x^{2}}}y) = 5 e^{4 x \operatorname{acos}{\left(x \right)} - 4 \sqrt{1 - x^{2}}} \operatorname{acos}{\left(x \right)}$
+\item Integrate :  $e^{4 x \operatorname{acos}{\left(x \right)} - 4 \sqrt{1 - x^{2}}}y = \frac{5 e^{4 x \operatorname{acos}{\left(x \right)}} e^{- 4 \sqrt{1 - x^{2}}}}{4} + C_1$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = \left(C_{1} + \frac{5 e^{4 x \operatorname{acos}{\left(x \right)}} e^{- 4 \sqrt{1 - x^{2}}}}{4}\right) e^{- 4 x \operatorname{acos}{\left(x \right)} + 4 \sqrt{1 - x^{2}}}$
+
+\section*{Family: First-Order Linear}
+\textbf{Question:} $2 y{\left(x \right)} \operatorname{asin}{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 5 e^{x}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Identify :  $P(x) = 2 \operatorname{asin}{\left(x \right)}$
+\item Int Factor_Setup :  $\mu(x) = e^{\int \left2 \operatorname{asin}{\left(x \right)} \right dx}$
+\item Int Factor_Calc :  $\mu(x) = e^{2 x \operatorname{asin}{\left(x \right)} + 2 \sqrt{1 - x^{2}}}$
+\item Multiply :  $\frac{d}{dx}(e^{2 x \operatorname{asin}{\left(x \right)} + 2 \sqrt{1 - x^{2}}}y) = 5 e^{2 x \operatorname{asin}{\left(x \right)} + x + 2 \sqrt{1 - x^{2}}}$
+\item Integrate :  $e^{2 x \operatorname{asin}{\left(x \right)} + 2 \sqrt{1 - x^{2}}}y = 5 \int e^{x} e^{2 x \operatorname{asin}{\left(x \right)}} e^{2 \sqrt{1 - x^{2}}}\, dx + C_1$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = \left(C_{1} + 5 \int e^{x} e^{2 x \operatorname{asin}{\left(x \right)}} e^{2 \sqrt{1 - x^{2}}}\, dx\right) e^{- 2 x \operatorname{asin}{\left(x \right)} - 2 \sqrt{1 - x^{2}}}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = 5 \left(\operatorname{asin}{\left(x \right)} + 2\right) y^{2}{\left(x \right)} \log{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Classify :  $\frac{1}{y^{2}} dy = \left5 \left(\operatorname{asin}{\left(x \right)} + 2\right) \log{\left(x \right)}\right dx$
+\item Integrate LHS :  $- \frac{1}{y}$
+\item Integrate RHS :  $5 x \log{\left(x \right)} \operatorname{asin}{\left(x \right)} + 10 x \log{\left(x \right)} - 5 x \operatorname{asin}{\left(x \right)} - 10 x + 5 \sqrt{1 - x^{2}} \log{\left(x \right)} - 5 \sqrt{1 - x^{2}} - 5 \left(\begin{cases} - \frac{x}{\sqrt{-1 + \frac{1}{x^{2}}}} - \operatorname{acosh}{\left(\frac{1}{x} \right)} + \frac{1}{x \sqrt{-1 + \frac{1}{x^{2}}}} & \text{for}\: \frac{1}{\left|{x^{2}}\right|} > 1 \\\frac{i x}{\sqrt{1 - \frac{1}{x^{2}}}} + i \operatorname{asin}{\left(\frac{1}{x} \right)} - \frac{i}{x \sqrt{1 - \frac{1}{x^{2}}}} & \text{otherwise} \end{cases}\right) + C_1$
+\item Solve :  $- \frac{1}{y} = 5 x \log{\left(x \right)} \operatorname{asin}{\left(x \right)} + 10 x \log{\left(x \right)} - 5 x \operatorname{asin}{\left(x \right)} - 10 x + 5 \sqrt{1 - x^{2}} \log{\left(x \right)} - 5 \sqrt{1 - x^{2}} - 5 \left(\begin{cases} - \frac{x}{\sqrt{-1 + \frac{1}{x^{2}}}} - \operatorname{acosh}{\left(\frac{1}{x} \right)} + \frac{1}{x \sqrt{-1 + \frac{1}{x^{2}}}} & \text{for}\: \frac{1}{\left|{x^{2}}\right|} > 1 \\\frac{i x}{\sqrt{1 - \frac{1}{x^{2}}}} + i \operatorname{asin}{\left(\frac{1}{x} \right)} - \frac{i}{x \sqrt{1 - \frac{1}{x^{2}}}} & \text{otherwise} \end{cases}\right)$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = \begin{cases} - \frac{1}{C_{1} - 5 x \sqrt{-1 + \frac{1}{x^{2}}} + 5 x \log{\left(x \right)} \operatorname{asin}{\left(x \right)} + 10 x \log{\left(x \right)} - 5 x \operatorname{asin}{\left(x \right)} - 10 x + 5 \sqrt{1 - x^{2}} \log{\left(x \right)} - 5 \sqrt{1 - x^{2}} + 5 \operatorname{acosh}{\left(\frac{1}{x} \right)}} & \text{for}\: \left(x > -1 \vee x > 0\right) \wedge \left(x > -1 \vee x < 1\right) \wedge \left(x > 0 \vee x < 0\right) \wedge \left(x < 0 \vee x < 1\right) \\- \frac{1}{C_{1} - 5 i x \sqrt{1 - \frac{1}{x^{2}}} + 5 x \log{\left(x \right)} \operatorname{asin}{\left(x \right)} + 10 x \log{\left(x \right)} - 5 x \operatorname{asin}{\left(x \right)} - 10 x + 5 \sqrt{1 - x^{2}} \log{\left(x \right)} - 5 \sqrt{1 - x^{2}} - 5 i \operatorname{asin}{\left(\frac{1}{x} \right)}} & \text{otherwise} \end{cases}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = 3 x \left(\log{\left(x \right)} + 1\right) y{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Classify :  $\frac{1}{y} dy = \left3 x \left(\log{\left(x \right)} + 1\right)\right dx$
+\item Integrate LHS :  $\log{\left(y \right)}$
+\item Integrate RHS :  $\frac{3 x^{2} \log{\left(x \right)}}{2} + \frac{3 x^{2}}{4} + C_1$
+\item Solve :  $\log{\left(y \right)} = \frac{3 x^{2} \log{\left(x \right)}}{2} + \frac{3 x^{2}}{4}$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = C_{1} e^{\frac{3 x^{2} \left(2 \log{\left(x \right)} + 1\right)}{4}}$
+
+\section*{Family: First-Order Linear}
+\textbf{Question:} $4 x y{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = \log{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Identify :  $P(x) = 4 x$
+\item Int Factor_Setup :  $\mu(x) = e^{\int \left4 x \right dx}$
+\item Int Factor_Calc :  $\mu(x) = e^{2 x^{2}}$
+\item Multiply :  $\frac{d}{dx}(e^{2 x^{2}}y) = e^{2 x^{2}} \log{\left(x \right)}$
+\item Integrate :  $e^{2 x^{2}}y = - x {{}_{2}F_{2}\left(\begin{matrix} \frac{1}{2}, \frac{1}{2} \\ \frac{3}{2}, \frac{3}{2} \end{matrix}\middle| {2 x^{2}} \right)} + \frac{\sqrt{2} \sqrt{\pi} \log{\left(x \right)} \operatorname{erfi}{\left(\sqrt{2} x \right)}}{4} + C_1$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = \left(C_{1} - x {{}_{2}F_{2}\left(\begin{matrix} \frac{1}{2}, \frac{1}{2} \\ \frac{3}{2}, \frac{3}{2} \end{matrix}\middle| {2 x^{2}} \right)} + \frac{\sqrt{2} \sqrt{\pi} \log{\left(x \right)} \operatorname{erfi}{\left(\sqrt{2} x \right)}}{4}\right) e^{- 2 x^{2}}$
+
+\section*{Family: First-Order Linear}
+\textbf{Question:} $2 x y{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 4 \cos{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Identify :  $P(x) = 2 x$
+\item Int Factor_Setup :  $\mu(x) = e^{\int \left2 x \right dx}$
+\item Int Factor_Calc :  $\mu(x) = e^{x^{2}}$
+\item Multiply :  $\frac{d}{dx}(e^{x^{2}}y) = 4 e^{x^{2}} \cos{\left(x \right)}$
+\item Integrate :  $e^{x^{2}}y = 4 \int e^{x^{2}} \cos{\left(x \right)}\, dx + C_1$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = \left(C_{1} + 4 \int e^{x^{2}} \cos{\left(x \right)}\, dx\right) e^{- x^{2}}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = 4 \left(e^{x} + 3\right) y^{2}{\left(x \right)} \log{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Classify :  $\frac{1}{y^{2}} dy = \left4 \left(e^{x} + 3\right) \log{\left(x \right)}\right dx$
+\item Integrate LHS :  $- \frac{1}{y}$
+\item Integrate RHS :  $12 x \log{\left(x \right)} - 12 x + 4 e^{x} \log{\left(x \right)} - 4 \operatorname{Ei}{\left(x \right)} + C_1$
+\item Solve :  $- \frac{1}{y} = 12 x \log{\left(x \right)} - 12 x + 4 e^{x} \log{\left(x \right)} - 4 \operatorname{Ei}{\left(x \right)}$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = - \frac{1}{C_{1} + 12 x \log{\left(x \right)} - 12 x + 4 e^{x} \log{\left(x \right)} - 4 \operatorname{Ei}{\left(x \right)}}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = \left(x + \cos{\left(x \right)} + 1\right) y{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Classify :  $\frac{1}{y} dy = \leftx + \cos{\left(x \right)} + 1\right dx$
+\item Integrate LHS :  $\log{\left(y \right)}$
+\item Integrate RHS :  $\frac{x^{2}}{2} + x + \sin{\left(x \right)} + C_1$
+\item Solve :  $\log{\left(y \right)} = \frac{x^{2}}{2} + x + \sin{\left(x \right)}$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = C_{1} e^{\frac{x^{2}}{2} + x + \sin{\left(x \right)}}$
+
+\section*{Family: First-Order Linear}
+\textbf{Question:} $y{\left(x \right)} e^{x} + \frac{d}{d x} y{\left(x \right)} = 2 \cos{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Identify :  $P(x) = e^{x}$
+\item Int Factor_Setup :  $\mu(x) = e^{\int \lefte^{x} \right dx}$
+\item Int Factor_Calc :  $\mu(x) = e^{e^{x}}$
+\item Multiply :  $\frac{d}{dx}(e^{e^{x}}y) = 2 e^{e^{x}} \cos{\left(x \right)}$
+\item Integrate :  $e^{e^{x}}y = 2 \int e^{e^{x}} \cos{\left(x \right)}\, dx + C_1$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = \left(C_{1} + 2 \int e^{e^{x}} \cos{\left(x \right)}\, dx\right) e^{- e^{x}}$
+
+\section*{Family: First-Order Linear}
+\textbf{Question:} $2 y{\left(x \right)} \cos{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 3 \log{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Identify :  $P(x) = 2 \cos{\left(x \right)}$
+\item Int Factor_Setup :  $\mu(x) = e^{\int \left2 \cos{\left(x \right)} \right dx}$
+\item Int Factor_Calc :  $\mu(x) = e^{2 \sin{\left(x \right)}}$
+\item Multiply :  $\frac{d}{dx}(e^{2 \sin{\left(x \right)}}y) = 3 e^{2 \sin{\left(x \right)}} \log{\left(x \right)}$
+\item Integrate :  $e^{2 \sin{\left(x \right)}}y = 3 \int e^{2 \sin{\left(x \right)}} \log{\left(x \right)}\, dx + C_1$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = \left(C_{1} + 3 \int e^{2 \sin{\left(x \right)}} \log{\left(x \right)}\, dx\right) e^{- 2 \sin{\left(x \right)}}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = 4 \left(\operatorname{asin}{\left(x \right)} + 2\right) e^{y{\left(x \right)}} \operatorname{acos}{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Classify :  $\frac{1}{e^{y}} dy = \left4 \left(\operatorname{asin}{\left(x \right)} + 2\right) \operatorname{acos}{\left(x \right)}\right dx$
+\item Integrate LHS :  $- e^{- y}$
+\item Integrate RHS :  $4 x \operatorname{acos}{\left(x \right)} \operatorname{asin}{\left(x \right)} + 8 x \operatorname{acos}{\left(x \right)} + 8 x + 4 \sqrt{1 - x^{2}} \operatorname{acos}{\left(x \right)} - 4 \sqrt{1 - x^{2}} \operatorname{asin}{\left(x \right)} - 8 \sqrt{1 - x^{2}} + C_1$
+\item Solve :  $- e^{- y} = 4 x \operatorname{acos}{\left(x \right)} \operatorname{asin}{\left(x \right)} + 8 x \operatorname{acos}{\left(x \right)} + 8 x + 4 \sqrt{1 - x^{2}} \operatorname{acos}{\left(x \right)} - 4 \sqrt{1 - x^{2}} \operatorname{asin}{\left(x \right)} - 8 \sqrt{1 - x^{2}}$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = \log{\left(- \frac{1}{C_{1} + 4 x \operatorname{acos}{\left(x \right)} \operatorname{asin}{\left(x \right)} + 8 x \operatorname{acos}{\left(x \right)} + 8 x + 4 \sqrt{1 - x^{2}} \operatorname{acos}{\left(x \right)} - 4 \sqrt{1 - x^{2}} \operatorname{asin}{\left(x \right)} - 8 \sqrt{1 - x^{2}}} \right)}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = x \left(e^{x} + 3\right) y{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Classify :  $\frac{1}{y} dy = \leftx \left(e^{x} + 3\right)\right dx$
+\item Integrate LHS :  $\log{\left(y \right)}$
+\item Integrate RHS :  $\frac{3 x^{2}}{2} + \left(x - 1\right) e^{x} + C_1$
+\item Solve :  $\log{\left(y \right)} = \frac{3 x^{2}}{2} + \left(x - 1\right) e^{x}$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = C_{1} e^{\frac{3 x^{2}}{2} + x e^{x} - e^{x}}$
+
+\section*{Family: First-Order Linear}
+\textbf{Question:} $y{\left(x \right)} \operatorname{asin}{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 4 \sin{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Identify :  $P(x) = \operatorname{asin}{\left(x \right)}$
+\item Int Factor_Setup :  $\mu(x) = e^{\int \left\operatorname{asin}{\left(x \right)} \right dx}$
+\item Int Factor_Calc :  $\mu(x) = e^{x \operatorname{asin}{\left(x \right)} + \sqrt{1 - x^{2}}}$
+\item Multiply :  $\frac{d}{dx}(e^{x \operatorname{asin}{\left(x \right)} + \sqrt{1 - x^{2}}}y) = 4 e^{x \operatorname{asin}{\left(x \right)} + \sqrt{1 - x^{2}}} \sin{\left(x \right)}$
+\item Integrate :  $e^{x \operatorname{asin}{\left(x \right)} + \sqrt{1 - x^{2}}}y = 4 \int e^{x \operatorname{asin}{\left(x \right)}} e^{\sqrt{1 - x^{2}}} \sin{\left(x \right)}\, dx + C_1$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = \left(C_{1} + 4 \int e^{x \operatorname{asin}{\left(x \right)}} e^{\sqrt{1 - x^{2}}} \sin{\left(x \right)}\, dx\right) e^{- x \operatorname{asin}{\left(x \right)} - \sqrt{1 - x^{2}}}$
+
+\section*{Family: First-Order Linear}
+\textbf{Question:} $5 x y{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 3 \log{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Identify :  $P(x) = 5 x$
+\item Int Factor_Setup :  $\mu(x) = e^{\int \left5 x \right dx}$
+\item Int Factor_Calc :  $\mu(x) = e^{\frac{5 x^{2}}{2}}$
+\item Multiply :  $\frac{d}{dx}(e^{\frac{5 x^{2}}{2}}y) = 3 e^{\frac{5 x^{2}}{2}} \log{\left(x \right)}$
+\item Integrate :  $e^{\frac{5 x^{2}}{2}}y = - 3 x {{}_{2}F_{2}\left(\begin{matrix} \frac{1}{2}, \frac{1}{2} \\ \frac{3}{2}, \frac{3}{2} \end{matrix}\middle| {\frac{5 x^{2}}{2}} \right)} + \frac{3 \sqrt{10} \sqrt{\pi} \log{\left(x \right)} \operatorname{erfi}{\left(\frac{\sqrt{10} x}{2} \right)}}{10} + C_1$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = \left(C_{1} - 3 x {{}_{2}F_{2}\left(\begin{matrix} \frac{1}{2}, \frac{1}{2} \\ \frac{3}{2}, \frac{3}{2} \end{matrix}\middle| {\frac{5 x^{2}}{2}} \right)} + \frac{3 \sqrt{10} \sqrt{\pi} \log{\left(x \right)} \operatorname{erfi}{\left(\frac{\sqrt{10} x}{2} \right)}}{10}\right) e^{- \frac{5 x^{2}}{2}}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = 5 \left(\operatorname{acos}{\left(x \right)} + 3\right) y^{2}{\left(x \right)} \operatorname{acos}{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Classify :  $\frac{1}{y^{2}} dy = \left5 \left(\operatorname{acos}{\left(x \right)} + 3\right) \operatorname{acos}{\left(x \right)}\right dx$
+\item Integrate LHS :  $- \frac{1}{y}$
+\item Integrate RHS :  $5 x \operatorname{acos}^{2}{\left(x \right)} + 15 x \operatorname{acos}{\left(x \right)} - 10 x - 10 \sqrt{1 - x^{2}} \operatorname{acos}{\left(x \right)} - 15 \sqrt{1 - x^{2}} + C_1$
+\item Solve :  $- \frac{1}{y} = 5 x \operatorname{acos}^{2}{\left(x \right)} + 15 x \operatorname{acos}{\left(x \right)} - 10 x - 10 \sqrt{1 - x^{2}} \operatorname{acos}{\left(x \right)} - 15 \sqrt{1 - x^{2}}$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = - \frac{1}{C_{1} + 5 x \operatorname{acos}^{2}{\left(x \right)} + 15 x \operatorname{acos}{\left(x \right)} - 10 x - 10 \sqrt{1 - x^{2}} \operatorname{acos}{\left(x \right)} - 15 \sqrt{1 - x^{2}}}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = \left(5 x + 10\right) y{\left(x \right)} \tan{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Classify :  $\frac{1}{y} dy = \left\left(5 x + 10\right) \tan{\left(x \right)}\right dx$
+\item Integrate LHS :  $\log{\left(y \right)}$
+\item Integrate RHS :  $5 \left(\int x \tan{\left(x \right)}\, dx + \int 2 \tan{\left(x \right)}\, dx\right) + C_1$
+\item Solve :  $\log{\left(y \right)} = 5 \left(\int x \tan{\left(x \right)}\, dx + \int 2 \tan{\left(x \right)}\, dx\right)$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = \frac{C_{1} e^{5 \int x \tan{\left(x \right)}\, dx}}{\cos^{10}{\left(x \right)}}$
+
+\section*{Family: First-Order Linear}
+\textbf{Question:} $4 y{\left(x \right)} \tan{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 5 \cos{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Identify :  $P(x) = 4 \tan{\left(x \right)}$
+\item Int Factor_Setup :  $\mu(x) = e^{\int \left4 \tan{\left(x \right)} \right dx}$
+\item Int Factor_Calc :  $\mu(x) = \frac{1}{\cos^{4}{\left(x \right)}}$
+\item Multiply :  $\frac{d}{dx}(\frac{1}{\cos^{4}{\left(x \right)}}y) = \frac{5}{\cos^{3}{\left(x \right)}}$
+\item Integrate :  $\frac{1}{\cos^{4}{\left(x \right)}}y = - \frac{5 \log{\left(\sin{\left(x \right)} - 1 \right)}}{4} + \frac{5 \log{\left(\sin{\left(x \right)} + 1 \right)}}{4} - \frac{5 \sin{\left(x \right)}}{2 \sin^{2}{\left(x \right)} - 2} + C_1$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = \left(C_{1} - \frac{5 \log{\left(\sin{\left(x \right)} - 1 \right)}}{4} + \frac{5 \log{\left(\sin{\left(x \right)} + 1 \right)}}{4} - \frac{5 \sin{\left(x \right)}}{2 \left(\sin^{2}{\left(x \right)} - 1\right)}\right) \cos^{4}{\left(x \right)}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = 5 \left(\tan{\left(x \right)} + 1\right) y^{2}{\left(x \right)} \operatorname{acos}{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Classify :  $\frac{1}{y^{2}} dy = \left5 \left(\tan{\left(x \right)} + 1\right) \operatorname{acos}{\left(x \right)}\right dx$
+\item Integrate LHS :  $- \frac{1}{y}$
+\item Integrate RHS :  $5 \left(\int \tan{\left(x \right)} \operatorname{acos}{\left(x \right)}\, dx + \int \operatorname{acos}{\left(x \right)}\, dx\right) + C_1$
+\item Solve :  $- \frac{1}{y} = 5 \left(\int \tan{\left(x \right)} \operatorname{acos}{\left(x \right)}\, dx + \int \operatorname{acos}{\left(x \right)}\, dx\right)$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = - \frac{1}{C_{1} + 5 x \operatorname{acos}{\left(x \right)} - 5 \sqrt{1 - x^{2}} + 5 \int \tan{\left(x \right)} \operatorname{acos}{\left(x \right)}\, dx}$
+
+\section*{Family: First-Order Linear}
+\textbf{Question:} $x y{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 5 \operatorname{acos}{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Identify :  $P(x) = x$
+\item Int Factor_Setup :  $\mu(x) = e^{\int \leftx \right dx}$
+\item Int Factor_Calc :  $\mu(x) = e^{\frac{x^{2}}{2}}$
+\item Multiply :  $\frac{d}{dx}(e^{\frac{x^{2}}{2}}y) = 5 e^{\frac{x^{2}}{2}} \operatorname{acos}{\left(x \right)}$
+\item Integrate :  $e^{\frac{x^{2}}{2}}y = 5 \int e^{\frac{x^{2}}{2}} \operatorname{acos}{\left(x \right)}\, dx + C_1$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = \left(C_{1} + 5 \int e^{\frac{x^{2}}{2}} \operatorname{acos}{\left(x \right)}\, dx\right) e^{- \frac{x^{2}}{2}}$
+
+\section*{Family: First-Order Linear}
+\textbf{Question:} $3 y{\left(x \right)} \tan{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 4 \log{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Identify :  $P(x) = 3 \tan{\left(x \right)}$
+\item Int Factor_Setup :  $\mu(x) = e^{\int \left3 \tan{\left(x \right)} \right dx}$
+\item Int Factor_Calc :  $\mu(x) = \frac{1}{\cos^{3}{\left(x \right)}}$
+\item Multiply :  $\frac{d}{dx}(\frac{1}{\cos^{3}{\left(x \right)}}y) = \frac{4 \log{\left(x \right)}}{\cos^{3}{\left(x \right)}}$
+\item Integrate :  $\frac{1}{\cos^{3}{\left(x \right)}}y = 4 \int \frac{\log{\left(x \right)}}{\cos^{3}{\left(x \right)}}\, dx + C_1$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = \left(C_{1} + 4 \int \frac{\log{\left(x \right)}}{\cos^{3}{\left(x \right)}}\, dx\right) \cos^{3}{\left(x \right)}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = \left(\sin{\left(x \right)} + 5 \cos{\left(x \right)} + 3\right) y{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Classify :  $\frac{1}{y} dy = \left\sin{\left(x \right)} + 5 \cos{\left(x \right)} + 3\right dx$
+\item Integrate LHS :  $\log{\left(y \right)}$
+\item Integrate RHS :  $3 x + 5 \sin{\left(x \right)} - \cos{\left(x \right)} + C_1$
+\item Solve :  $\log{\left(y \right)} = 3 x + 5 \sin{\left(x \right)} - \cos{\left(x \right)}$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = C_{1} e^{3 x + 5 \sin{\left(x \right)} - \cos{\left(x \right)}}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = 5 x \left(x^{2} + 2\right) y^{2}{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Classify :  $\frac{1}{y^{2}} dy = \left5 x \left(x^{2} + 2\right)\right dx$
+\item Integrate LHS :  $- \frac{1}{y}$
+\item Integrate RHS :  $\frac{5 x^{4}}{4} + 5 x^{2} + C_1$
+\item Solve :  $- \frac{1}{y} = \frac{5 x^{4}}{4} + 5 x^{2}$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = - \frac{4}{C_{1} + 5 x^{4} + 20 x^{2}}$
+
+\section*{Family: First-Order Linear}
+\textbf{Question:} $y{\left(x \right)} \operatorname{asin}{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} = 2 e^{x}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Identify :  $P(x) = \operatorname{asin}{\left(x \right)}$
+\item Int Factor_Setup :  $\mu(x) = e^{\int \left\operatorname{asin}{\left(x \right)} \right dx}$
+\item Int Factor_Calc :  $\mu(x) = e^{x \operatorname{asin}{\left(x \right)} + \sqrt{1 - x^{2}}}$
+\item Multiply :  $\frac{d}{dx}(e^{x \operatorname{asin}{\left(x \right)} + \sqrt{1 - x^{2}}}y) = 2 e^{x \operatorname{asin}{\left(x \right)} + x + \sqrt{1 - x^{2}}}$
+\item Integrate :  $e^{x \operatorname{asin}{\left(x \right)} + \sqrt{1 - x^{2}}}y = 2 \int e^{x} e^{x \operatorname{asin}{\left(x \right)}} e^{\sqrt{1 - x^{2}}}\, dx + C_1$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = \left(C_{1} + 2 \int e^{x} e^{x \operatorname{asin}{\left(x \right)}} e^{\sqrt{1 - x^{2}}}\, dx\right) e^{- x \operatorname{asin}{\left(x \right)} - \sqrt{1 - x^{2}}}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = \left(\log{\left(x \right)} + 2 \operatorname{atan}{\left(x \right)} + 1\right) e^{y{\left(x \right)}}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Classify :  $\frac{1}{e^{y}} dy = \left\log{\left(x \right)} + 2 \operatorname{atan}{\left(x \right)} + 1\right dx$
+\item Integrate LHS :  $- e^{- y}$
+\item Integrate RHS :  $x \log{\left(x \right)} + 2 x \operatorname{atan}{\left(x \right)} - \log{\left(x^{2} + 1 \right)} + C_1$
+\item Solve :  $- e^{- y} = x \log{\left(x \right)} + 2 x \operatorname{atan}{\left(x \right)} - \log{\left(x^{2} + 1 \right)}$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = \log{\left(- \frac{1}{C_{1} + x \log{\left(x \right)} + 2 x \operatorname{atan}{\left(x \right)} - \log{\left(x^{2} + 1 \right)}} \right)}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = \left(4 \operatorname{acos}{\left(x \right)} + \operatorname{atan}{\left(x \right)} + 1\right) y{\left(x \right)}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Classify :  $\frac{1}{y} dy = \left4 \operatorname{acos}{\left(x \right)} + \operatorname{atan}{\left(x \right)} + 1\right dx$
+\item Integrate LHS :  $\log{\left(y \right)}$
+\item Integrate RHS :  $4 x \operatorname{acos}{\left(x \right)} + x \operatorname{atan}{\left(x \right)} + x - 4 \sqrt{1 - x^{2}} - \frac{\log{\left(x^{2} + 1 \right)}}{2} + C_1$
+\item Solve :  $\log{\left(y \right)} = 4 x \operatorname{acos}{\left(x \right)} + x \operatorname{atan}{\left(x \right)} + x - 4 \sqrt{1 - x^{2}} - \frac{\log{\left(x^{2} + 1 \right)}}{2}$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = \frac{C_{1} e^{4 x \operatorname{acos}{\left(x \right)} + x \operatorname{atan}{\left(x \right)} + x - 4 \sqrt{1 - x^{2}}}}{\sqrt{x^{2} + 1}}$
+
+\section*{Family: Separable}
+\textbf{Question:} $\frac{d}{d x} y{\left(x \right)} = \left(2 \operatorname{atan}{\left(x \right)} + 3\right) e^{y{\left(x \right)}}$
+
+\textbf{Steps:}
+\begin{enumerate}
+\item Classify :  $\frac{1}{e^{y}} dy = \left2 \operatorname{atan}{\left(x \right)} + 3\right dx$
+\item Integrate LHS :  $- e^{- y}$
+\item Integrate RHS :  $2 x \operatorname{atan}{\left(x \right)} + 3 x - \log{\left(x^{2} + 1 \right)} + C_1$
+\item Solve :  $- e^{- y} = 2 x \operatorname{atan}{\left(x \right)} + 3 x - \log{\left(x^{2} + 1 \right)}$
+\end{enumerate}
+\textbf{Final Result:} $y{\left(x \right)} = \log{\left(- \frac{1}{C_{1} + 2 x \operatorname{atan}{\left(x \right)} + 3 x - \log{\left(x^{2} + 1 \right)}} \right)}$
+
+\end{document}
