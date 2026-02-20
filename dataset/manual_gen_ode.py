@@ -46,7 +46,8 @@ def get_complex_expr_doubled(var1, var2, complexity=2):
 # Generate ODE of different families : 
 def generate_separable():
     """Expert for Separable ODEs: dy/dx = f(x)g(y)"""
-    f_x = get_complex_expr(x, complexity=2)
+    complexity = random.choice([1, 1, 1, 2, 2, 3])
+    f_x = get_complex_expr(x, complexity)
     g_y_sym = random.choice([y, y**2, sp.exp(y)])
     ode = sp.Eq(dy/dx, f_x * g_y_sym)
     lhs = sp.integrate(1/g_y_sym, y)
@@ -127,13 +128,15 @@ def main():
     args = parser.parse_args()
 
     dataset = []
-    generators = [generate_exact, generate_linear, generate_separable]
+    generators = [generate_separable, generate_exact]
 
     for i in range(args.samples):
         try:
             print(f"case {i+1} : ")
             gen_func = random.choice(generators)
             family, ode, steps, soln = gen_func()
+            if family == None:
+                continue
             latex_ode = sp.latex(ode)
             # latex_soln = sp.latex(soln)
             print(f"Function generated from: {family}\n")
