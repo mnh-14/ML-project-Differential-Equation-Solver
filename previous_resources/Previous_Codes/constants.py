@@ -1,4 +1,10 @@
-
+ACTION = 'action'
+REASONONG = 'reasoning'
+LEFT = 'left'
+RIGHT = 'right'
+PARAMS = 'params'
+WRT = 'wrt'
+EXPRESSION = 'expression'
 FAMILY = 'family'
 STEP = 'step'
 RESULT = 'result'

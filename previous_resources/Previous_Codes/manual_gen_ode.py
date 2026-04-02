@@ -13,6 +13,7 @@ x = sp.Symbol('x')
 y = sp.Symbol('y')
 dx = sp.Symbol('dx', commutative=False)
 dy = sp.Symbol('dy', commutative=False)
+dy_dx = sp.Symbol('\\frac{dy}{dx}', commutative=False)
 # dx = Differential(x)
 # dy = Differential(y)
 C1 = sp.Symbol('C1')
@@ -21,7 +22,7 @@ C1 = sp.Symbol('C1')
 # Generate expressions :
 def get_complex_expr(var, complexity=2):
     """Generates varied mathematical expressions to avoid duplicates."""
-    basics = [var, var**2, sp.sin(var), sp.cos(var), sp.tan(var), sp.exp(var), sp.acos(var), sp.asin(var), sp.atan(var), sp.log(var)]
+    basics = [var, 1/var, var**2, sp.sin(var), sp.cos(var), sp.tan(var), sp.exp(var), sp.log(var)]
     expr = random.choice(basics) * random.randint(1, 10)
     for _ in range(complexity - 1):
         other = random.choice(basics) + random.randint(1, 6)
@@ -31,7 +32,7 @@ def get_complex_expr(var, complexity=2):
 
 def get_complex_expr_doubled(var1, var2, complexity=2):
     """Generates varied mathematical expressions to avoid duplicates."""
-    vars_basic= [var1, var2]
+    vars_basic= [var1, var2, 1/var1, 1/var2]
     vars_extended = vars_basic + [var1**2, var2**2, var1*var2]
     basics_1 = [sp.sin(random.choice(vars_basic)), sp.cos(random.choice(vars_basic)), sp.exp(random.choice(vars_basic))]
     basics = basics_1 + [random.choice(vars_extended)]
@@ -46,10 +47,10 @@ def get_complex_expr_doubled(var1, var2, complexity=2):
 # Generate ODE of different families : 
 def generate_separable():
     """Expert for Separable ODEs: dy/dx = f(x)g(y)"""
-    complexity = random.choice([1, 1, 1, 2, 2, 3])
+    complexity = random.choices([1, 2, 3], weights=[0.6, 0.3, 0.1])[0]
     f_x = get_complex_expr(x, complexity)
     g_y_sym = random.choice([y, y**2, sp.exp(y)])
-    ode = sp.Eq(dy/dx, f_x * g_y_sym)
+    ode = sp.Eq(dy_dx, f_x * g_y_sym)
     lhs = sp.integrate(1/g_y_sym, y)
     rhs = sp.integrate(f_x, x)
     eqn = sp.Eq(lhs, rhs + C1)
@@ -68,9 +69,10 @@ def generate_separable():
 
 def generate_linear():
     """Expert for First-Order Linear: y' + P(x)y = Q(x)"""
-    P_x = get_complex_expr(x, complexity=1)
-    Q_x = get_complex_expr(x, complexity=1)
-    ode = sp.Eq(dy/dx + P_x * y, Q_x)
+    complexity = random.choices([1, 2], weights=[0.6, 0.4])[0]
+    P_x = get_complex_expr(x, complexity)
+    Q_x = get_complex_expr(x, complexity)
+    ode = sp.Eq(dy_dx + P_x * y, Q_x)
     
     mu_int = sp.integrate(P_x, x)
     mu = sp.exp(mu_int)
@@ -90,12 +92,13 @@ def generate_linear():
     ]
     
     soln = sp.solve(eqn, y)
-    return "First-Order Linear", ode, steps, [sp.latex(s) for s in soln]
+    return "First-Order Linear", sp.latex(ode), steps, [sp.latex(s) for s in soln]
 
 def generate_exact():
     """Expert for exact ODEs : M(x, y)dx + N(x, y)dy = 0"""
-    M = get_complex_expr_doubled(x, y)
-    g_y = random.choice([y**3, y**2, sp.exp(y)])
+    complexity = random.choices([1, 2, 3], weights=[0.6, 0.3, 0.1])[0]
+    M = get_complex_expr_doubled(x, y, complexity)
+    g_y = random.choice([y**3, y**2, y, sp.exp(y), sp.sin(y), sp.cos(y)])
     int_M_dx = sp.integrate(M, x) 
     diffed_int_M = sp.diff(int_M_dx, y) 
     g__y = sp.diff(g_y, y)
@@ -118,17 +121,17 @@ def generate_exact():
     ]
 
     soln = sp.Eq(int_M_dx + g_y, C1)
-    return "Exact", ode, steps, [sp.latex(soln),]
+    return "Exact", sp.latex(ode), steps, [sp.latex(soln),]
 
 
 def main():
     parser = argparse.ArgumentParser(description="Generate ODE Step-by-Step Dataset")
     parser.add_argument("--output", default="ode_dataset.json", help="Output JSON filename")
-    parser.add_argument("--samples", type=int, default=20, help="Number of samples to generate")
+    parser.add_argument("--samples", type=int, default=75, help="Number of samples to generate")
     args = parser.parse_args()
 
     dataset = []
-    generators = [generate_separable, generate_exact]
+    generators = [generate_linear]
 
     for i in range(args.samples):
         try:
@@ -137,7 +140,8 @@ def main():
             family, ode, steps, soln = gen_func()
             if family == None:
                 continue
-            latex_ode = sp.latex(ode)
+            latex_ode = ode
+            print(latex_ode)
             # latex_soln = sp.latex(soln)
             print(f"Function generated from: {family}\n")
             
