@@ -49,22 +49,45 @@ class ExecutionEngine:
         self.expressions[params[C.RESULT_AS]] = sp.integrate(exp, self.VARS.get(params[C.WRT]))
         # pass
 
-    def _differentiate(self, params):
+    def _differentiate(self, params : dict):
         exp_name = params.get(C.EXPRESSION)
         exp = self.expressions.get(exp_name, sp_latex.parse_latex(exp_name, symbol_map=self.VARS))
         self.expressions[params[C.RESULT_AS]] = sp.diff(exp, self.VARS.get(params[C.WRT]))
         # pass
 
-    def _int_factor_calculate(self, params):
+    def _int_factor_calculate(self, params : dict):
         exp = self.expressions.get(params.get(C.EXPRESSION))
         wrt = self.VARS.get(params.get(C.WRT))
         self.expressions[params.get(C.RESULT_AS)] = sp.exp(sp.integrate(exp, wrt))
         #pass
 
-    def _multiply(self, params):
-        op_1 = params.get(C.OPERAND1)
-        op_2 = params.get()
+    def _multiply(self, params : dict):
+        op_1 = self.expressions.get(params.get(C.OPERAND1), sp_latex.parse_latex(params.get(C.OPERAND1), symbol_map=self.VARS))
+        op_2 = None
+        if params.get(C.OPERAND_TYPE)[1] == C.EXPRESSION:
+            op_2 = self.expressions.get(params.get(C.OPERAND2), sp_latex.parse_latex(params.get(C.OPERAND2), symbol_map=self.VARS))
+        else:
+            op_2 = self.VARS.get(params.get(C.OPERAND2))
 
+        self.expressions[params.get(C.RESULT_AS)] = sp.Mul(op_1, op_2)
+        #pass
+
+    def _add(self, params : dict):
+        op_1 = self.expressions.get(params.get(C.OPERAND1), sp_latex.parse_latex(params.get(C.OPERAND1), symbol_map=self.VARS))
+        op_2 = None
+        if params.get(C.OPERAND_TYPE)[1] == C.EXPRESSION:
+            op_2 = self.expressions.get(params.get(C.OPERAND2), sp_latex.parse_latex(params.get(C.OPERAND2), symbol_map=self.VARS))
+        else:
+            op_2 = self.VARS.get(params.get(C.OPERAND2))
+
+        self.expressions[params.get(C.RESULT_AS)] = sp.Add(op_1, op_2)
+        #pass
+
+    def _solve(self, params : dict):
+        eqn = self.expressions.get(params.get(C.EQUATION), sp_latex.parse_latex(params.get(C.EQUATION)))
+        wrt = self.expressions.get(params.get(C.WRT), sp_latex.parse_latex(params.get(C.WRT)))
+        self.expressions[C.RESULT_AS] = sp.solve(eqn, wrt)
+        #pass
 
 
 
