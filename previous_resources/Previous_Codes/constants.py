@@ -27,10 +27,10 @@ ACT_ADD = 'Add'
 ACT_IF_CALC = 'IF Calc'
 
 # Legacy/alternate ACTION types (currently referenced in commented blocks)
-ACT_SEPARATE_VARIABLES = 'Separate Variables'
-ACT_FIND_PX = 'Find P(x)'
-ACT_INT_FACTOR_SETUP = 'Int Factor Setup'
-ACT_INT_FACTOR_CALC = 'Int Factor Calc'
+# ACT_SEPARATE_VARIABLES = 'Separate Variables'
+# ACT_FIND_PX = 'Find P(x)'
+# ACT_INT_FACTOR_SETUP = 'Int Factor Setup'
+# ACT_INT_FACTOR_CALC = 'Int Factor Calc'
 
 
 # for a solve

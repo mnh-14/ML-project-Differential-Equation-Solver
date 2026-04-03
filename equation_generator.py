@@ -100,7 +100,7 @@ def generate_linear():
     steps = [
         {C.ACTION: C.ACT_IDENTIFY, C.OP: "Find P(x)", C.PARAMS : {C.EXPRESSION: sp.latex(P_x), C.RESULT_AS: "P(x)"},
                                                             C.RESULT: f"P(x) = {sp.latex(P_x)}"},
-        {C.ACTION: C.ACT_IF_CALC, C.OP: "Calculate Set mu = exp(int P dx)", C.PARAMS : {C.EXPRESSION: "P(x)", C.RESULT_AS: "IF"},
+        {C.ACTION: C.ACT_IF_CALC, C.OP: "Calculate Set mu = exp(int P dx)", C.PARAMS : {C.EXPRESSION: "P(x)", C.RESULT_AS: "IF", C.WRT : "x"},
                                                             C.RESULT: f"\\mu(x) = e^{{\\int \\left({sp.latex(P_x)} \\right) dx}}"},
         {C.ACTION: C.ACT_MULTIPLY, C.OP: "Prepare right hand side", C.PARAMS : {C.OPERAND1: C.EQ_RIGHT, C.OPERAND2: "IF", C.OPERAND_TYPE: (C.EXPRESSION, C.EXPRESSION), C.RESULT_AS: "prepared right"},
                                                             C.RESULT: f"\\frac{{d}}{{dx}}({sp.latex(mu)}y) = {sp.latex(sp.simplify(mu*Q_x))}"},

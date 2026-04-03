@@ -34,19 +34,37 @@ class ExecutionEngine:
             raise ValueError("Invalid equation format. Expected an equation with '='.")
 
         lhs, rhs = self.latex_eq.split('=', 1)
-        self.expressions[C.EQ_LEFT] = sp_latex.parse_latex(lhs, local_dict=self.VARS)
-        self.expressions[C.EQ_RIGHT] = sp_latex.parse_latex(rhs, local_dict=self.VARS)
+        self.expressions[C.EQ_LEFT] = sp_latex.parse_latex(lhs, symbol_map=self.VARS)
+        self.expressions[C.EQ_RIGHT] = sp_latex.parse_latex(rhs, symbol_map=self.VARS)
         self.expressions[C.EQ_MAIN] = sp.Eq(self.expressions[C.EQ_LEFT], self.expressions[C.EQ_RIGHT])
     
 
-    def _separate_variables(self, params):
-        pass
+    def _identify(self, params):
+        self.expressions[params[C.RESULT_AS]] = sp_latex.parse_latex(params.get(C.EXPRESSION), symbol_map=self.VARS)
+        # pass
     
-    def _integrate(self, params):
-        pass
+    def _integrate(self, params : dict):
+        exp_name = params.get(C.EXPRESSION)
+        exp = self.expressions.get(exp_name, sp_latex.parse_latex(exp_name, symbol_map=self.VARS))
+        self.expressions[params[C.RESULT_AS]] = sp.integrate(exp, self.VARS.get(params[C.WRT]))
+        # pass
 
     def _differentiate(self, params):
-        pass
+        exp_name = params.get(C.EXPRESSION)
+        exp = self.expressions.get(exp_name, sp_latex.parse_latex(exp_name, symbol_map=self.VARS))
+        self.expressions[params[C.RESULT_AS]] = sp.diff(exp, self.VARS.get(params[C.WRT]))
+        # pass
+
+    def _int_factor_calculate(self, params):
+        exp = self.expressions.get(params.get(C.EXPRESSION))
+        wrt = self.VARS.get(params.get(C.WRT))
+        self.expressions[params.get(C.RESULT_AS)] = sp.exp(sp.integrate(exp, wrt))
+        #pass
+
+    def _multiply(self, params):
+        op_1 = params.get(C.OPERAND1)
+        op_2 = params.get()
+
 
 
 
@@ -64,3 +82,15 @@ class ExecutionEngine:
                 else:
                     raise ValueError("Missing parameters for Separate Variables action.")
             # Implement other actions as needed
+            elif action == C.ACT_INTEGRATE:
+                pass
+
+
+
+
+
+"""
+Execute:
+    for action in actions:
+        expressions[specific_result_name_for_that_action] = action_map[action_name](params)
+"""
