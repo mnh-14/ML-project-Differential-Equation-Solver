@@ -50,7 +50,7 @@ def generate_separable():
     complexity = random.choices([1, 2, 3], weights=[0.6, 0.3, 0.1])[0]
     f_x = get_complex_expr(x, complexity)
     # g_y_sym = random.choice([y, y**2, sp.exp(y), 1]) + random.randint(-5, 5) * random.choice([y, y**2, sp.exp(y), 1])
-    g_y_sym = random.choice([y, y**2, sp.exp(y), random.randint(-5, 5), random.randint(-5, 5) + random.randint(-5, 5) * y, random.randint(-5, 5) + random.randint(-5, 5) * y**2, y + y**2 + 1]) 
+    g_y_sym = random.choice([y, y**2, sp.exp(y), random.randint(-5, 5), random.randint(-5, 5) + random.randint(-5, 5) * y, random.randint(-5, 5) + random.randint(-5, 5) * y**2]) 
     ode = sp.Eq(dy_dx, f_x * g_y_sym)
     lhs = sp.integrate(1/g_y_sym, y)
     rhs = sp.integrate(f_x, x)
@@ -119,7 +119,7 @@ def generate_exact():
     """Expert for exact ODEs : M(x, y)dx + N(x, y)dy = 0"""
     complexity = random.choices([1, 2, 3], weights=[0.6, 0.3, 0.1])[0]
     M = get_complex_expr_doubled(x, y, complexity)
-    g_y = random.choice([y, y**2, sp.exp(y), sp.sin(y), sp.cos(y), random.randint(-5, 5), random.randint(-5, 5) + random.randint(-5, 5) * y, random.randint(-5, 5) + random.randint(-5, 5) * y**2, y + y**2 + 1]) 
+    g_y = random.choice([y, y**2, sp.exp(y), sp.sin(y), sp.cos(y), random.randint(-5, 5), random.randint(-5, 5) + random.randint(-5, 5) * y, random.randint(-5, 5) + random.randint(-5, 5) * y**2]) 
     psi = sp.integrate(M, x) 
     diffed_int_M = sp.diff(psi, y) 
     g__y = sp.diff(g_y, y)
@@ -151,13 +151,21 @@ def generate_exact():
 
 
 def main():
+    function_map = {
+        "generate_exact" : generate_exact,
+        "generate_linear" : generate_linear,
+        "generate_separable" : generate_separable
+    }
+
     parser = argparse.ArgumentParser(description="Generate ODE Step-by-Step Dataset")
     parser.add_argument("--output", default="ode_dataset.json", help="Output JSON filename")
     parser.add_argument("--samples", type=int, default=75, help="Number of samples to generate")
+    parser.add_argument("--func", type=str, nargs='+', choices=function_map.keys(), help="The name of the function to add to the list")
     args = parser.parse_args()
 
     dataset = []
-    generators = [generate_separable]
+    
+    generators = [function_map[name] for name in args.func]
 
     for i in range(args.samples):
         try:
