@@ -8,8 +8,8 @@ from previous_resources.Previous_Codes import constants as C
 # not a model executioner, rather something that uses sympy to execute the steps and get the final result, which can be used for evaluation
 class ExecutionEngine:
     VARS = {
-        'x': sp.Symbol('x'),
-        'y': sp.Symbol('y'),
+        'x': sp.Symbol('x', real=True),
+        'y': sp.Symbol('y', real=True),
         'dx': sp.Symbol('dx', immutable=True),
         'dy': sp.Symbol('dy', immutable=True),
         'C_1': sp.Symbol('C_1'),
@@ -86,7 +86,26 @@ class ExecutionEngine:
     def _solve(self, params : dict):
         eqn = self.expressions.get(params.get(C.EQUATION), sp_latex.parse_latex(params.get(C.EQUATION)))
         wrt = self.expressions.get(params.get(C.WRT), sp_latex.parse_latex(params.get(C.WRT)))
-        self.expressions[C.RESULT_AS] = sp.solve(eqn, wrt)
+        # self.expressions[C.RESULT_AS] = sp.solve(eqn, wrt)
+        solutions = self.expressions[C.RESULT_AS] = sp.solve(eqn, wrt)
+        
+        allowed_types = (sp.Symbol, sp.Rational, sp.Pow, sp.Add, sp.Mul, sp.sin, sp.cos, sp.tan, sp.log)
+    
+        clean_solutions = []
+        
+        for sol in solutions:
+            # Check if every part of the solution is in our allowed list
+            # .atoms() breaks the expression into its core building blocks
+            is_transcendental = any(not isinstance(atom, allowed_types) for atom in sol.atoms())
+            
+            if not is_transcendental:
+                clean_solutions.append(sol)
+                
+        if clean_solutions:
+            self.expressions[C.RESULT_AS] = clean_solutions
+        else:
+            # Return the original equation if no clean solution exists
+            self.expressions[C.RESULT_AS] = eqn
         #pass
 
 
