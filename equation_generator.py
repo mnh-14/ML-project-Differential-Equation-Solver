@@ -61,10 +61,12 @@ def generate_separable():
         return None, None, None, None, None 
     
     steps = [
-        {C.ACTION: "Separate Variables", C.OP: "Separate Variables", C.PARAMS : {C.LEFT : sp.latex(g_y_sym), C.RIGHT : sp.latex(f_x)}, C.RESULT: f"\\frac{{1}}{{{sp.latex(g_y_sym)}}} dy = \\left({sp.latex(f_x)}\\right) dx"},
-        {C.ACTION: "Integrate", C.OP: "Integrate Left Side", C.PARAMS : {C.EXPRESSION : C.LEFT, C.WRT : "y"}, C.RESULT: sp.latex(lhs)},
-        {C.ACTION: "Integrate", C.OP: "Integrate Right Side", C.PARAMS : {C.EXPRESSION : C.RIGHT, C.WRT : "x"}, C.RESULT: f"{sp.latex(rhs)} + C_1"},
-        {C.ACTION: "Solve", C.OP: "Isolate y", C.PARAMS : {C.EQUATION : (C.LEFT, C.RIGHT)}, C.RESULT: sp.latex(eqn)}
+        # {C.ACTION: C.ACT_SEPARATE_VARIABLES, C.OP: "Separate Variables", C.PARAMS : {C.LEFT : sp.latex(g_y_sym), C.RIGHT : sp.latex(f_x)}, C.RESULT: f"\\frac{{1}}{{{sp.latex(g_y_sym)}}} dy = \\left({sp.latex(f_x)}\\right) dx"},
+        {C.ACTION: C.ACT_IDENTIFY, C.OP: "Separate Variables", C.PARAMS : {C.EXPRESSION: sp.latex(g_y_sym), C.RESULT_AS: "left part"}, C.RESULT: f"\\frac{{1}}{{{sp.latex(g_y_sym)}}} dy = \\left({sp.latex(f_x)}\\right) dx"},
+        {C.ACTION: C.ACT_IDENTIFY, C.OP: "Separate Variables", C.PARAMS : {C.EXPRESSION: sp.latex(f_x), C.RESULT_AS: "right part"}, C.RESULT: f"\\frac{{1}}{{{sp.latex(g_y_sym)}}} dy = \\left({sp.latex(f_x)}\\right) dx"},
+        {C.ACTION: C.ACT_INTEGRATE, C.OP: "Integrate Left Side", C.PARAMS : {C.EXPRESSION : 'left part', C.WRT : "y", C.RESULT_AS: "integrated left"}, C.RESULT: sp.latex(lhs)},
+        {C.ACTION: C.ACT_INTEGRATE, C.OP: "Integrate Right Side", C.PARAMS : {C.EXPRESSION : "right part", C.WRT : "x", C.RESULT_AS: "integrated right"}, C.RESULT: f"{sp.latex(rhs)} + C_1"},
+        {C.ACTION: C.ACT_SOLVE, C.OP: "Isolate y", C.PARAMS : {C.EQUATION : ("integrated left", "integrated right"), C.WRT: "y", C.RESULT_AS: C.SOLUTION}, C.RESULT: sp.latex(eqn)}
     ]
     soln = sp.solve(eqn, y)
     return sp.latex(ode), "Separable", reasoning, steps, [sp.latex(s) for s in soln]
@@ -87,12 +89,26 @@ def generate_linear():
     if mu_int.has(sp.Integral) or int_rhs.has(sp.Integral):
         return None, None, None, None, None
     
+    # steps = [
+    #     {C.ACTION: "Find P(x)", C.OP: "Find P(x)", C.PARAMS : {}, C.RESULT: f"P(x) = {sp.latex(P_x)}"},
+    #     {C.ACTION: "Int Factor Setup", C.OP: "Set mu = exp(int P dx)", C.PARAMS : {}, C.RESULT: f"\\mu(x) = e^{{\\int \\left({sp.latex(P_x)} \\right) dx}}"},
+    #     {C.ACTION: "Int Factor Calc", C.OP: "Calculate mu", C.PARAMS : {}, C.RESULT: f"\\mu(x) = {sp.latex(mu)}"},
+    #     {C.ACTION: "Multiply", C.OP: "Apply mu to ODE", C.PARAMS : {}, C.RESULT: f"\\frac{{d}}{{dx}}({sp.latex(mu)}y) = {sp.latex(sp.simplify(mu*Q_x))}"},
+    #     {C.ACTION: "Integrate", C.OP: "Integrate", C.PARAMS : {C.EXPRESSION : sp.latex(sp.simplify(mu*Q_x)), C.WRT : "x"}, C.RESULT: sp.latex(eqn)},
+    # ]
+
     steps = [
-        {C.ACTION: "Find P(x)", C.OP: "Find P(x)", C.PARAMS : {}, C.RESULT: f"P(x) = {sp.latex(P_x)}"},
-        {C.ACTION: "Int Factor Setup", C.OP: "Set mu = exp(int P dx)", C.PARAMS : {}, C.RESULT: f"\\mu(x) = e^{{\\int \\left({sp.latex(P_x)} \\right) dx}}"},
-        {C.ACTION: "Int Factor Calc", C.OP: "Calculate mu", C.PARAMS : {}, C.RESULT: f"\\mu(x) = {sp.latex(mu)}"},
-        {C.ACTION: "Multiply", C.OP: "Apply mu to ODE", C.PARAMS : {}, C.RESULT: f"\\frac{{d}}{{dx}}({sp.latex(mu)}y) = {sp.latex(sp.simplify(mu*Q_x))}"},
-        {C.ACTION: "Integrate", C.OP: "Integrate", C.PARAMS : {C.EXPRESSION : sp.latex(sp.simplify(mu*Q_x)), C.WRT : "x"}, C.RESULT: sp.latex(eqn)},
+        {C.ACTION: C.ACT_IDENTIFY, C.OP: "Find P(x)", C.PARAMS : {C.EXPRESSION: sp.latex(P_x), C.RESULT_AS: "P(x)"},
+                                                            C.RESULT: f"P(x) = {sp.latex(P_x)}"},
+        {C.ACTION: C.ACT_IF_CALC, C.OP: "Calculate Set mu = exp(int P dx)", C.PARAMS : {C.EXPRESSION: "P(x)", C.RESULT_AS: "IF"},
+                                                            C.RESULT: f"\\mu(x) = e^{{\\int \\left({sp.latex(P_x)} \\right) dx}}"},
+        {C.ACTION: C.ACT_MULTIPLY, C.OP: "Prepare right hand side", C.PARAMS : {C.OPERAND1: C.EQ_RIGHT, C.OPERAND2: "IF", C.OPERAND_TYPE: (C.EXPRESSION, C.EXPRESSION), C.RESULT_AS: "prepared right"},
+                                                            C.RESULT: f"\\frac{{d}}{{dx}}({sp.latex(mu)}y) = {sp.latex(sp.simplify(mu*Q_x))}"},
+        {C.ACTION: C.ACT_MULTIPLY, C.OP: "Prepare left hand side", C.PARAMS : {C.OPERAND1: "IF", C.OPERAND2: "y", C.OPERAND_TYPE: (C.EXPRESSION, C.VAR), C.RESULT_AS: "prepared left"},
+                                                            C.RESULT: f"\\frac{{d}}{{dx}}({sp.latex(mu)}y) = {sp.latex(sp.simplify(mu*Q_x))}"},
+        {C.ACTION: C.ACT_INTEGRATE, C.OP: "Integrate", C.PARAMS : {C.EXPRESSION : "prepared right", C.WRT : "x", C.RESULT_AS: "integrated right"},
+                                                            C.RESULT: sp.latex(eqn)},
+        {C.ACTION: C.ACT_SOLVE, C.OP: "Isolate y", C.PARAMS : {C.EQUATION : ("prepared left", "integrated right"), C.WRT: "y", C.RESULT_AS: C.SOLUTION}, C.RESULT: sp.latex(eqn)}
     ]
     
     soln = sp.solve(eqn, y)
@@ -118,12 +134,15 @@ def generate_exact():
     # eqn = sp.Eq(N, diffed_int_M)
 
     steps = [
-        {C.STEP: "Identify", C.OP: "Find M(x, y) : ", C.PARAMS : {C.EXPRESSION : sp.latex(M)}, C.RESULT: f"M(x, y) = {sp.latex(M)}"},
-        {C.STEP: "Identify", C.OP: "Find N(x, y) : ", C.PARAMS : {C.EXPRESSION : sp.latex(N)}, C.RESULT: f"N(x, y) = {sp.latex(N)}"},
-        {C.STEP: "Integrate", C.OP: "Integrate", C.PARAMS : {C.EXPRESSION : sp.latex(M), C.WRT :"x"}, C.RESULT: sp.latex(psi) + " + g(y)"},
-        {C.STEP: "Differentiate", C.PARAMS : {C.EXPRESSION : sp.latex(psi) + " + g(y)", C.WRT :"y"}, C.OP: "Differentiate", C.RESULT: f"{sp.latex(diffed_int_M)} + g'(y)"},
-        {C.STEP: "Solve for g'(y)", C.PARAMS : {C.EQUATION : (C.LEFT, C.RIGHT)}, C.OP: "Solve", C.RESULT: sp.latex(g__y)},
-        {C.STEP: "Integrate", C.PARAMS : {C.EXPRESSION : sp.latex(g__y), C.WRT :"y"}, C.OP: "Integrate", C.RESULT: sp.latex(g_y) + " + C"},
+        {C.ACTION: C.ACT_IDENTIFY, C.OP: "Find M(x, y) : ", C.PARAMS : {C.EXPRESSION : sp.latex(M), C.RESULT_AS: "M(x, y)"}, C.RESULT: f"M(x, y) = {sp.latex(M)}"},
+        {C.ACTION: C.ACT_IDENTIFY, C.OP: "Find N(x, y) : ", C.PARAMS : {C.EXPRESSION : sp.latex(N), C.RESULT_AS: "N(x, y)"}, C.RESULT: f"N(x, y) = {sp.latex(N)}"},
+        {C.ACTION: C.ACT_INTEGRATE, C.OP: "Integrate", C.PARAMS : {C.EXPRESSION : "M(x, y)", C.WRT :"x", C.RESULT_AS: "psi(x,y)"}, C.RESULT: sp.latex(psi) + " + g(y)"},
+        {C.ACTION: C.ACT_DIFFERENTIATE, C.PARAMS : {C.EXPRESSION : "psi(x, y)", C.WRT :"y", C.RESULT_AS: "psi'(x,y)"}, C.OP: "Differentiate", C.RESULT: f"{sp.latex(diffed_int_M)} + g'(y)"},
+        {C.ACTION: C.ACT_ADD, C.PARAMS : {C.OPERAND1: "psi'(x,y)", C.OPERAND2: "g'(y)", C.OPERAND_TYPE: (C.EXPRESSION, C.VAR), C.RESULT_AS: "psi'(x,y) + g'(y)"}, C.OP: "Add g'(y)", C.RESULT: f"{sp.latex(psi)} + g'(y)"},
+        {C.ACTION: C.ACT_SOLVE, C.PARAMS : {C.EQUATION : ("psi'(x,y) + g'(y)", "N(x, y)"), C.WRT: "g'(y)", C.RESULT_AS: "g'(y)"}, C.OP: "Solve", C.RESULT: sp.latex(g__y)},
+        {C.ACTION: C.ACT_INTEGRATE, C.PARAMS : {C.EXPRESSION : "g'(y)", C.WRT: "y", C.RESULT_AS: "g(y)"}, C.OP: "Integrate", C.RESULT: sp.latex(g_y) + " + C"},
+        {C.ACTION: C.ACT_ADD, C.PARAMS : {C.OPERAND1: "psi(x,y)", C.OPERAND2: "g(y)", C.OPERAND_TYPE: (C.EXPRESSION, C.EXPRESSION), C.RESULT_AS: "psi(x,y) + g(y)"}, C.OP: "Form psi + g", C.RESULT: f"{sp.latex(psi)} + {sp.latex(g_y)} = C_1"},
+        {C.ACTION: C.ACT_SOLVE, C.PARAMS : {C.EQUATION : ("psi(x,y) + g(y)", "C_1"), C.WRT: "y", C.RESULT_AS: C.SOLUTION }, C.OP: "Solve for y"},
     ]
 
     soln = sp.Eq(psi + g_y, C1)
