@@ -49,7 +49,8 @@ def generate_separable():
     """Expert for Separable ODEs: dy/dx = f(x)g(y)"""
     complexity = random.choices([1, 2, 3], weights=[0.6, 0.3, 0.1])[0]
     f_x = get_complex_expr(x, complexity)
-    g_y_sym = random.choice([y, y**2, sp.exp(y)])
+    # g_y_sym = random.choice([y, y**2, sp.exp(y), 1]) + random.randint(-5, 5) * random.choice([y, y**2, sp.exp(y), 1])
+    g_y_sym = random.choice([y, y**2, sp.exp(y), random.randint(-5, 5), random.randint(-5, 5) + random.randint(-5, 5) * y, random.randint(-5, 5) + random.randint(-5, 5) * y**2, y + y**2 + 1]) 
     ode = sp.Eq(dy_dx, f_x * g_y_sym)
     lhs = sp.integrate(1/g_y_sym, y)
     rhs = sp.integrate(f_x, x)
@@ -62,7 +63,7 @@ def generate_separable():
     
     steps = [
         # {C.ACTION: C.ACT_SEPARATE_VARIABLES, C.OP: "Separate Variables", C.PARAMS : {C.LEFT : sp.latex(g_y_sym), C.RIGHT : sp.latex(f_x)}, C.RESULT: f"\\frac{{1}}{{{sp.latex(g_y_sym)}}} dy = \\left({sp.latex(f_x)}\\right) dx"},
-        {C.ACTION: C.ACT_IDENTIFY, C.OP: "Separate Variables", C.PARAMS : {C.EXPRESSION: sp.latex(g_y_sym), C.RESULT_AS: "left part"}, C.RESULT: f"\\frac{{1}}{{{sp.latex(g_y_sym)}}} dy = \\left({sp.latex(f_x)}\\right) dx"},
+        {C.ACTION: C.ACT_IDENTIFY, C.OP: "Separate Variables", C.PARAMS : {C.EXPRESSION: sp.latex(1/g_y_sym), C.RESULT_AS: "left part"}, C.RESULT: f"\\frac{{1}}{{{sp.latex(g_y_sym)}}} dy = \\left({sp.latex(f_x)}\\right) dx"},
         {C.ACTION: C.ACT_IDENTIFY, C.OP: "Separate Variables", C.PARAMS : {C.EXPRESSION: sp.latex(f_x), C.RESULT_AS: "right part"}, C.RESULT: f"\\frac{{1}}{{{sp.latex(g_y_sym)}}} dy = \\left({sp.latex(f_x)}\\right) dx"},
         {C.ACTION: C.ACT_INTEGRATE, C.OP: "Integrate Left Side", C.PARAMS : {C.EXPRESSION : 'left part', C.WRT : "y", C.RESULT_AS: "integrated left"}, C.RESULT: sp.latex(lhs)},
         {C.ACTION: C.ACT_INTEGRATE, C.OP: "Integrate Right Side", C.PARAMS : {C.EXPRESSION : "right part", C.WRT : "x", C.RESULT_AS: "integrated right"}, C.RESULT: f"{sp.latex(rhs)} + C_1"},
@@ -118,7 +119,7 @@ def generate_exact():
     """Expert for exact ODEs : M(x, y)dx + N(x, y)dy = 0"""
     complexity = random.choices([1, 2, 3], weights=[0.6, 0.3, 0.1])[0]
     M = get_complex_expr_doubled(x, y, complexity)
-    g_y = random.choice([y**3, y**2, y, sp.exp(y), sp.sin(y), sp.cos(y)])
+    g_y = random.choice([y, y**2, sp.exp(y), sp.sin(y), sp.cos(y), random.randint(-5, 5), random.randint(-5, 5) + random.randint(-5, 5) * y, random.randint(-5, 5) + random.randint(-5, 5) * y**2, y + y**2 + 1]) 
     psi = sp.integrate(M, x) 
     diffed_int_M = sp.diff(psi, y) 
     g__y = sp.diff(g_y, y)
@@ -156,13 +157,13 @@ def main():
     args = parser.parse_args()
 
     dataset = []
-    generators = [generate_linear]
+    generators = [generate_separable]
 
     for i in range(args.samples):
         try:
             print(f"case {i+1} : ")
             gen_func = random.choice(generators)
-            family, ode, steps, soln = gen_func()
+            ode, family, reasoning, steps, soln = gen_func()
             if family == None:
                 continue
             latex_ode = ode
@@ -172,6 +173,7 @@ def main():
             
             if family is not None:
                 dataset.append({
+                    C.REASONONG : reasoning,
                     C.FAMILY: family,
                     C.EQUATION: latex_ode,
                     C.Q_STEPS: steps,

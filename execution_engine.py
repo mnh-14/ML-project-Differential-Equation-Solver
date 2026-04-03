@@ -19,6 +19,15 @@ class ExecutionEngine:
         self.latex_eq: str = None
         self.steps: list = None
         self.expressions: dict = {}
+        self.functions = {
+            C.ACT_ADD : self._add,
+            C.ACT_DIFFERENTIATE : self._differentiate,
+            C.ACT_IDENTIFY : self._identify,
+            C.ACT_IF_CALC : self._int_factor_calculate,
+            C.ACT_INTEGRATE : self._integrate,
+            C.ACT_MULTIPLY : self._multiply,
+            C.ACT_SOLVE : self._solve
+        }
     
     def prepare_execution(self, latex_eq, steps):
         self.latex_eq = latex_eq
@@ -84,7 +93,9 @@ class ExecutionEngine:
         #pass
 
     def _solve(self, params : dict):
-        eqn = self.expressions.get(params.get(C.EQUATION), sp_latex.parse_latex(params.get(C.EQUATION)))
+        eqn_left = self.expressions.get(params.get(C.EQUATION)[0], sp_latex.parse_latex(params.get(C.EQUATION)[0]))
+        eqn_right = self.expressions.get(params.get(C.EQUATION)[1], sp_latex.parse_latex(params.get(C.EQUATION)[1]))
+        eqn = sp.Eq(eqn_left, eqn_right)
         wrt = self.expressions.get(params.get(C.WRT), sp_latex.parse_latex(params.get(C.WRT)))
         # self.expressions[C.RESULT_AS] = sp.solve(eqn, wrt)
         solutions = self.expressions[C.RESULT_AS] = sp.solve(eqn, wrt)
@@ -109,23 +120,11 @@ class ExecutionEngine:
         #pass
 
 
-
     def execute(self):
         for step in self.steps:
             action = step.get(C.ACTION)
             params = step.get(C.PARAMS, {})
-            if action == "Separate Variables":
-                left_expr = params.get(C.LEFT)
-                right_expr = params.get(C.RIGHT)
-                if left_expr and right_expr:
-                    self.expressions[C.EXP_LEFT] = sp.simplify(1/left_expr * self.expressions[C.EXP_LEFT])
-                    self.expressions[C.EXP_RIGHT] = sp.simplify(right_expr * self.expressions[C.EXP_RIGHT])
-                    self.expressions[C.EXP_MAIN] = sp.Eq(self.expressions[C.EXP_LEFT], self.expressions[C.EXP_RIGHT])
-                else:
-                    raise ValueError("Missing parameters for Separate Variables action.")
-            # Implement other actions as needed
-            elif action == C.ACT_INTEGRATE:
-                pass
+            self.functions.get(action)(params)
 
 
 
