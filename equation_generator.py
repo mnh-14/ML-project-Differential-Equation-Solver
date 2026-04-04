@@ -127,7 +127,7 @@ def generate_exact():
 
     ode = sp.Eq(M * dx + N * dy, 0)
 
-    reasoning = "The equation " + sp.latex(ode) + " satisfies the condition $\frac{\partial M}{\partial y} = \frac{\partial N}{\partial x}$, implying it is the total differential of a potential function $\psi(x, y)$. We can find $\psi$ by integrating M with respect to x and then adjusting for any remaining y-terms using N."
+    reasoning = "The equation " + sp.latex(ode) + " satisfies the condition $\\frac{\\partial M}{\\partial y} = \\frac{\\partial N}{\\partial x}$, implying it is the total differential of a potential function $\psi(x, y)$. We can find $\psi$ by integrating M with respect to x and then adjusting for any remaining y-terms using N."
 
     if psi.has(sp.Integral):
         return None, None, None, None, None
